@@ -1,0 +1,81 @@
+
+* {
+    margin: 0;
+    padding: auto;
+    color: rgb(54, 96, 134);
+}
+
+div {
+    color: white;
+    height: 500px;
+    margin: 10px 0;
+    border: solid 2px black;
+}
+
+.background-color {
+    background-color: blueviolet;
+}
+
+.background-img {
+    background-image: url(https://picsum.photos/id/237/200/300);
+}
+
+.background-repeat {
+    background-image: url(https://picsum.photos/id/237/200/300);
+    background-repeat: no-repeat;
+    /* background-repeat: repeat-x; */
+    /* background-repeat: repeat-y; */
+}
+
+.background-attachment {
+    background-image: url(https://picsum.photos/id/237/200/300);
+    background-attachment: scroll;
+}
+
+.background-position {
+    background-image: url(https://picsum.photos/id/237/200/300);
+    /* background-position: center; */
+    /* background-position: left; */
+    /* background-position: right; */
+    background-position: center right;
+    /* Horizontally right vertically center*/
+
+}
+
+.background-size {
+    background-image: url(https://picsum.photos/id/237/1000/500);
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* height */
+    background-size: cover;
+    /* width */
+}
+
+.background {
+    /* background-image: url(); */
+    background: no-repeat url(https://picsum.photos/id/237/200/300);
+}
+
+.background-flag {
+    background: linear-gradient(100deg, orange, white, green);
+}
+.toptobott{
+    text-align: center;
+    background: linear-gradient(skyblue, pink);
+}
+.lefttoright{
+    text-align: center;
+    background: linear-gradient(to right,red,yellow);
+}
+.dirdia{
+    text-align: center;
+    background: linear-gradient(to bottom right,green,yellow );
+}
+.angle{
+    text-align: center;
+    background: linear-gradient(180deg,blue,skyblue);
+}
+.rainbow{
+    text-align: center;
+    background: linear-gradient(to right, red, orange, yellow, green,blue, indigo, violet);
+}
