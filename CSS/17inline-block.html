@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: rgb(54, 96, 134);
+        }
+
+        .container {
+            width: 1250px;
+            margin: 0 auto;
+            border: solid 2px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .before .box {
+            width: 30%;
+            border: 2px solid;
+            margin: 10px;
+            display: inline;
+        }
+
+        .after .box {
+            width: 30%;
+            border: solid 2px;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .before a {
+            margin: 20px;
+        }
+
+        .after a {
+            margin: 20px;
+            display: inline-block;
+        }
+
+        .h-one p {
+            text-align: center;
+            color: purple;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="h-one">
+            <h1> Display: inline-Block</h1>
+            <p>Example:</p>
+        </div>
+        <!-- Example one Start -->
+        <div class="container">
+            <p><strong>Before giving display: inline-block</strong></p>
+            <p>Here margin top and bottom is not working.</p>
+            <div class="before">
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+            </div>
+            <p><strong>After giving display: inline-block</strong></p>
+            <p>Here margin top and bottom is working.</p>
+            <div class="after">
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+            </div>
+            <!-- Example one end -->
+            <!-- Example two start -->
+            <div class="boxes">
+                <!-- before box start -->
+                <div class="before">
+                    <p><strong>Before Applying display: inline-block</strong></p>
+                    <p style="color:brown;">Here all boxes are block elements. When we try to apply display inline to
+                        div boxes it is applied only to the box. To prevent this we need to apply diplay: inline-block.
+                    </p>
+
+                    <div class="box">
+                        <h1>element</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum cumque repudiandae facilis
+                            quasi
+
+                            iure
+                            ipsa consectetur ipsam fugiat temporibus quia.</p>
+                    </div>
+                    <div class="box">
+                        <h1>element</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum cumque repudiandae facilis
+                            quasi
+                            iure
+                            ipsa consectetur ipsam fugiat temporibus quia.</p>
+                    </div>
+                    <div class="box">
+                        <h1>element</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum cumque repudiandae facilis
+                            quasi
+                            iure
+                            ipsa consectetur ipsam fugiat temporibus quia.</p>
+                    </div>
+                </div>
+                <!-- before box end -->
+                <!-- after box start -->
+                <div class="after">
+                    <p><strong>After Applying display:inline-block</strong></p>
+                    <p style="color: brown;">After applying display: inline-block all the elements inside the div box is
+                        working as block element and only box is working as inline element. This property is very
+                        useful.</p>
+                    <div class="box">
+                        <h1>element</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum cumque repudiandae facilis
+                            quasi
+                            iure
+                            ipsa consectetur ipsam fugiat temporibus quia.</p>
+                    </div>
+                    <div class="box">
+                        <h1>element</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum cumque repudiandae facilis
+                            quasi
+                            iure
+                            ipsa consectetur ipsam fugiat temporibus quia.</p>
+                    </div>
+                    <div class="box">
+                        <h1>element</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum cumque repudiandae facilis
+                            quasi
+                            iure
+                            ipsa consectetur ipsam fugiat temporibus quia.</p>
+                    </div>
+                </div>
+                <!-- after box end -->
+            </div>
+            <!-- Example two end-->
+        </div>
+    </section>
+</body>
+
+</html>
