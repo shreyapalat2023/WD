@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./18style.css">
+
+
+</head>
+
+<body>
+    <section class="sec-one">
+        <div class="container">
+
+            <h1>CSS Flex</h1>
+            <ul>
+                <li>The flex layout provides an efficient and flexible way to layout, align, and distribute the space
+                    among
+                    elements within a container.</li>
+                <li>Before flexbox layouts, designers and developers had to use table, float, and position properties to
+                    create complex layouts.
+                </li>
+                <li>The flexbox layout provides an easy way to create responsive and dynamic designs that adapt to
+                    various
+                    screen sizes and devices.</li>
+
+                <!-- Flex Container and Flex Items START -->
+                <li>The flex container and flex items are the key concepts behind the flex layouts.</li>
+                <li>In order to create a flex layout, we first need to set up a flex container. Any element can be set
+                    as a
+                    flex container using <span style="color: green;">display: flex</span>declaration.</li>
+                <li>The elements within a flex container are referred to as flex items. The available space within the
+                    container can be distributed efficiently among the flex items.</li>
+            </ul>
+            <div class="img">
+                <img src="./images/css-flex-container-example.png" alt="">
+            </div>
+            <!-- Flex Container and Flex Items END -->
+            <h1>Flexbox Terminologies</h1>
+            <p>The following diagram shows the basic flexbox terminologies.</p>
+            <div class="img">
+                <img src="./images/css-flex-terminologies.png" alt="">
+            </div>
+            <p>The distribution and alignment of space within the flex container are adjusted with the help of the
+                following properties.</p>
+            <!-- CSS Flex container start -->
+            <h1>CSS Flex Container</h1>
+            <ul>
+                <li><strong>flex-direction:</strong>
+                    <p>The flex-direction property specifies the direction of flex items within the flex container.</p>
+                    <p>The possible value of the flex-direction property is row (default value), row-reverse, column,
+                        and column-reverse.</p>
+                </li>
+                <li><strong>flex-wrap</strong>
+                    <p>The flex-wrap value allows flex items to wrap in multiple lines. By default, all the flex items
+                        are squeezed in a single horizontal direction (row).</p>
+                    <p>he possible values for the flex-wrap property are nowrap (default value), wrap, and wrap-reverse.
+                    </p>
+                    <p>Flex-wrap: no-wrap</p>
+                    <div class="box-flexwrap-nowrap">
+                        <div class="inner-box">1</div>
+                        <div class="inner-box">2</div>
+                        <div class="inner-box">3</div>
+                        <div class="inner-box">4</div>
+                        <div class="inner-box">5</div>
+                        <div class="inner-box">6</div>
+                        <div class="inner-box">7</div>
+                        <div class="inner-box">8</div>
+                        <div class="inner-box">9</div>
+                        <div class="inner-box">10</div>
+                        <div class="inner-box">11</div>
+                        <div class="inner-box">12</div>
+                        <div class="inner-box">13</div>
+                        <div class="inner-box">14</div>
+                        <div class="inner-box">15</div>
+                    </div>
+                    <p>Flex-wrap: wrap</p>
+                    <div class="box-flexwrap-wrap">
+                        <div class="inner-box">1</div>
+                        <div class="inner-box">2</div>
+                        <div class="inner-box">3</div>
+                        <div class="inner-box">4</div>
+                        <div class="inner-box">5</div>
+                        <div class="inner-box">6</div>
+                        <div class="inner-box">7</div>
+                        <div class="inner-box">8</div>
+                        <div class="inner-box">9</div>
+                        <div class="inner-box">10</div>
+                        <div class="inner-box">11</div>
+                        <div class="inner-box">12</div>
+                        <div class="inner-box">13</div>
+                        <div class="inner-box">14</div>
+                        <div class="inner-box">15</div>
+                    </div>
+                </li>
+                <li>
+                    <strong>flex-flow</strong>
+                    <p>The flex-flow is a shorthand property to specify the flex-direction and flex-wrap property value.
+                    </p>
+                </li>
+                <li>
+                    <strong>justify-content</strong>
+                    <p>The justify-content property is used to distribute the available space between the flex items
+                        along the main axis.</p>
+                    <p>The space is distributed horizontally for flex-direction: row and vertically for flex-direction:
+                        column.</p>
+                    <p>The possible values for the justify-content property are flex-start, center, flex-end,
+                        space-between, space-around, and space-evenly.</p>
+                    <p>justify-content:flex-start</p>
+                    <div class="box-justifycontent-flexstart">
+                        <div class="inner-box">1</div>
+                        <div class="inner-box">2</div>
+                        <div class="inner-box">3</div>
+                        <div class="inner-box">4</div>
+                        <div class="inner-box">5</div>
+                        <div class="inner-box">6</div>
+                        <div class="inner-box">7</div>
+                    </div>
+                    <p>justify-content:flex-end</p>
+                    <div class="box-justifycontent-flexend">
+                        <div class="inner-box">1</div>
+                        <div class="inner-box">2</div>
+                        <div class="inner-box">3</div>
+                        <div class="inner-box">4</div>
+                        <div class="inner-box">5</div>
+                        <div class="inner-box">6</div>
+                        <div class="inner-box">7</div>
+                    </div>
+                    <p>justify-content:space-between</p>
+                    <div class="box-justifycontent-spacebetween">
+                        <div class="inner-box">1</div>
+                        <div class="inner-box">2</div>
+                        <div class="inner-box">3</div>
+                        <div class="inner-box">4</div>
+                        <div class="inner-box">5</div>
+                        <div class="inner-box">6</div>
+                        <div class="inner-box">7</div>
+                    </div>
+                    <p>justify-content:space-around</p>
+                    <div class="box-justifycontent-spacearound">
+                        <div class="inner-box">1</div>
+                        <div class="inner-box">2</div>
+                        <div class="inner-box">3</div>
+                        <div class="inner-box">4</div>
+                        <div class="inner-box">5</div>
+                        <div class="inner-box">6</div>
+                        <div class="inner-box">7</div>
+                    </div>
+                    <p>justify-content:space-evenly</p>
+                    <div class="box-justifycontent-spaceevenly">
+                        <div class="inner-box">1</div>
+                        <div class="inner-box">2</div>
+                        <div class="inner-box">3</div>
+                        <div class="inner-box">4</div>
+                        <div class="inner-box">5</div>
+                        <div class="inner-box">6</div>
+                        <div class="inner-box">7</div>
+                    </div>
+                </li>
+                <li>
+                    <strong>align-items</strong>
+                    <p>The align-items property distributes the available space between the flex items along the cross
+                        axis.</p>
+                    <p>The space is distributed vertically for flex-direction: row and horizontally for flex-direction:
+                        column.</p>
+                    <p>
+                        <strong style="color: red;">Note:</strong> It is important to set the height of the flex
+                        container while the flex-direction is set to row. Without the height, the flex items will not
+                        have any space to be aligned, and no effect will be visible.
+                    </p>
+                    <p>align-item: flex-start</p>
+                    <div class="box-alignitems-flexstart">
+                        <div class="inner-box">1</div>
+                        <div class="inner-box">2</div>
+                        <div class="inner-box">3</div>
+                        <div class="inner-box">4</div>
+                        <div class="inner-box">5</div>
+                        <div class="inner-box">6</div>
+                        <div class="inner-box">7</div>
+                    </div>
+                    <p>align-item: flex-end</p>
+                    <div class="box-alignitems-flexend">
+                        <div class="inner-box">1</div>
+                        <div class="inner-box">2</div>
+                        <div class="inner-box">3</div>
+                        <div class="inner-box">4</div>
+                        <div class="inner-box">5</div>
+                        <div class="inner-box">6</div>
+                        <div class="inner-box">7</div>
+                    </div>
+                    <p>align-item:center</p>
+                    <div class="box-alignitems-center">
+                        <div class="inner-box">1</div>
+                        <div class="inner-box">2</div>
+                        <div class="inner-box">3</div>
+                        <div class="inner-box">4</div>
+                        <div class="inner-box">5</div>
+                        <div class="inner-box">6</div>
+                        <div class="inner-box">7</div>
+                    </div>
+                    <p>align-item:baseline</p>
+                    <div class="box-alignitems-baseline">
+                        <div class="inner-box">1</div>
+                        <div class="inner-box2">2</div>
+                        <div class="inner-box">3</div>
+                        <div class="inner-box4">4</div>
+                        <div class="inner-box">5</div>
+                        <div class="inner-box">6</div>
+                        <div class="inner-box">7</div>
+                    </div>
+                    <p>align-item:stretch</p>
+                    <div class="box-alignitems-stretch">
+                        <div class="inner-box3">1</div>
+                        <div class="inner-box3">2</div>
+                        <div class="inner-box3">3</div>
+                        <div class="inner-box3">4</div>
+                        <div class="inner-box3">5</div>
+                        <div class="inner-box3">6</div>
+                        <div class="inner-box3">7</div>
+                    </div>
+
+                </li>
+                <li>
+                    <strong>align-content</strong>
+                    <p>The align-content property controls the alignment of flex lines when there is extra space in the
+                        cross-axis.</p>
+                    <p>The possible values of the align-content property are normal (default), flex-start, flex-end,
+                        center, space-between, space-around, space-evenly, and stretch.</p>
+                    <p><strong style="color: red;">Note</strong>The align-content property only affects the alignment of
+                        flex items in a multi-line flex container. If the flex container is single-line (i.e., if the
+                        flex-wrap property is set to no-wrap), then the align-content property will have no effect.
+                    </p>
+                    <p>align-content:flex-end</p>
+                    <div class="box-aligncontent-flexend">
+                        <div class="inner-box">1</div>
+                        <div class="inner-box">2</div>
+                        <div class="inner-box">3</div>
+                        <div class="inner-box">4</div>
+                        <div class="inner-box">5</div>
+                        <div class="inner-box">6</div>
+                        <div class="inner-box">7</div>
+                        <div class="inner-box">8</div>
+                        <div class="inner-box">9</div>
+                        <div class="inner-box">10</div>
+                        <div class="inner-box">11</div>
+                        <div class="inner-box">12</div>
+                        <div class="inner-box">13</div>
+                        <div class="inner-box">14</div>
+                        <div class="inner-box">15</div>
+                    </div>
+                </li>
+                <li>
+                    <strong>Gap Between Flex Items:</strong>
+                    <p>The row-gap and column-gap properties control the spacing between the flex items within the flex
+                        container.</p>
+                    <ul>
+                        <li>
+                            <strong>Css row-gap Property</strong>
+                            <p>The row-gap property sets the gap between rows of flex items across the cross-axis. </p>
+                            <p>row-gap:</p>
+                            <div class="box-rowgap">
+                                <div class="inner-box">1</div>
+                                <div class="inner-box">2</div>
+                                <div class="inner-box">3</div>
+                                <div class="inner-box">4</div>
+                                <div class="inner-box">5</div>
+                                <div class="inner-box">6</div>
+                                <div class="inner-box">7</div>
+                                <div class="inner-box">8</div>
+                                <div class="inner-box">9</div>
+                                <div class="inner-box">10</div>
+                                <div class="inner-box">11</div>
+                                <div class="inner-box">12</div>
+                                <div class="inner-box">13</div>
+                                <div class="inner-box">14</div>
+                                <div class="inner-box">15</div>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>CSS column-gap Property:</strong>
+                            <p>The column-gap property sets the gap between columns of flex items across the main axis.
+                            </p>
+                            <p>column-gap:</p>
+                            <div class="box-columngap">
+                                <div class="inner-box">1</div>
+                                <div class="inner-box">2</div>
+                                <div class="inner-box">3</div>
+                                <div class="inner-box">4</div>
+                                <div class="inner-box">5</div>
+                                <div class="inner-box">6</div>
+                                <div class="inner-box">7</div>
+                                <div class="inner-box">8</div>
+                                <div class="inner-box">9</div>
+                                <div class="inner-box">10</div>
+                                <div class="inner-box">11</div>
+                                <div class="inner-box">12</div>
+                                <div class="inner-box">13</div>
+                                <div class="inner-box">14</div>
+                                <div class="inner-box">15</div>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>CSS gap Property</strong>
+                            <p>The gap is the shorthand property that allows setting both row and column gaps between
+                                the flex items.</p>
+                        </li>
+                    </ul>
+                </li>
+                <!-- CSS Flex container end -->
+                <!-- CSS Flex Items start -->
+                <h1>CSS Flex Items</h1>
+                <p>
+                    Flex items are arranged and aligned based on the properties of the flexbox container.
+                </p>
+                <p>The following properties adjust the individual flex items within the flexbox container.</p>
+                <ul>
+                    <li>
+                        <strong>Order:</strong>
+                        <p>The flex items are arranged in the order they appear in the HTML document by default. We can
+                            use the order property to specify the order of flex items in the flex container.</p>
+                        <p>The default value of the order property is 0.</p>
+                        <p>Order:1</p>
+                        <div class="box-order">
+                            <div class="box1">1 <br /> Order : 3;</div>
+                            <div class="box2">2 <br /> Order : 1;</div>
+                            <div class="box3">3 <br /> Order : 2;</div>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>flex-grow:</strong>
+                        <p>The flex-grow property determines how much flex items expand relative to the other items in
+                            the flex container. The flex-grow property takes a unitless number representing a proportion
+                            of the remaining space in the container.</p>
+                        <p>The default value of the flex-grow is 0, meaning flex items do not expand by default.</p>
+                        <p>Flex-grow</p>
+                        <p><strong> Before: </strong></p>
+                        <div class="box-flexgrow">
+                            <div class=" inside-box">1 </div>
+                            <div class=" inside-box">2</div>
+                            <div class="inside-box">3</div>
+                            <div class=" inside-box">4</div>
+                            <div class="inside-box">5</div>
+                        </div>
+                        <p><strong> After: </strong></p>
+
+                        <div class="box-flexgrow">
+                            <div class="box-inside-flexgrow inside-box">1 <br>flex-grow:0(by default)</div>
+                            <div class="box2-inside-flexgrow inside-box">2 <br>flex-grow:1</div>
+                            <div class="box-inside-flexgrow inside-box">3</div>
+                            <div class="box4-inside-flexgrow inside-box">4 <br>flex-grow:2</div>
+                            <div class="box-inside-flexgrow inside-box">5</div>
+                        </div>
+                        <p>Here, the value of flex-grow determines how flex items expand in relation to each other.</p>
+                        <p>The flex-grow: 2 makes a flex item grow twice as much as the flex-grow: 1 item when there's
+                            extra space in the flex container.</p>
+                    </li>
+                    <li>
+                        <strong>flex-shrink</strong>
+                        <p>
+                            The flex-shrink property determines how much flex items shrink relative to the other items
+                            when there is not enough space in the flex container.
+                        </p>
+                        <p>
+                            The flex-shrink value represents a proportion factor for shrinking the flex item. The flex
+                            items shrink faster with the high value.
+                        </p>
+                        <p>
+                            The default value of the flex-shrink is 1, meaning flex items shrink equally to fit within
+                            the
+                            available space.
+                            Let's look at an example.
+                        </p>
+                        <p><strong> Before: </strong></p>
+                        <div class="box-flexshrink">
+                            <div class="inside-box-flexshrink">1 </div>
+                            <div class="inside-box-flexshrink">2</div>
+                            <div class="inside-box-flexshrink">3</div>
+                            <div class="inside-box-flexshrink">4</div>
+                            <div class="inside-box-flexshrink">5</div>
+                        </div>
+                        <p><strong>After:</strong></p>
+                        <div class="box-flexshrink">
+                            <div class="inside-box-flexshrink">1 <br>flex-shrink:1(by default)</div>
+                            <div class="box2-inside-flexshrink inside-box-flexshrink">2 <br>flex-shrink:2</div>
+                            <div class="inside-box-flexshrink">3</div>
+                            <div class="box4-inside-flexshrink inside-box-flexshrink">4 <br>flex-shrink:3</div>
+                            <div class="inside-box-flexshrink">5</div>
+                        </div>
+                        <p>In the above example, the initial width of all the flex items is 200px. Since the container
+                            doesn't have available space, all the flex items shrink proportionally.
+                        </p>
+                        <p>
+                            However, in the second container, the use of flex-shrink: 2 causes the third flex item to
+                            shrink more compared to the others, as there isn't enough space to accommodate all items at
+                            their natural sizes.
+                        </p>
+                        <p>
+                            <strong style="color: red;">Note:</strong>
+                            The flex-shrink property only comes into effect when the combined size of the flex items
+                            exceeds the size of the flex container.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>flex-basis</strong>
+                        <p>The flex-basis property defines the starting size of the flex item before any wrapping,
+                            growing, or shrinking occurs. It is an alternative to the width and height of the flex
+                            items.</p>
+                        <p>By default, the flex-basis property is set to auto, which uses the specified width/height
+                            property value for the item size.</p>
+                        <p>Let's look at an example.</p>
+                        <p><strong> Before: </strong></p>
+                        <div class="box-flexbasis">
+                            <div class="inside-box-flexbasis">1 </div>
+                            <div class="inside-box-flexbasis">2</div>
+                            <div class="inside-box-flexbasis">3</div>
+                            <div class="inside-box-flexbasis">4</div>
+                            <div class="inside-box-flexbasis">5</div>
+                        </div>
+                        <p><strong> After: </strong></p>
+                        <div class="box-flexbasis">
+                            <div class="inside-box-flexbasis">1 </div>
+                            <div class="inside-box-flexbasis">2</div>
+                            <div class="inside-box-flexbasis box3-inside-flexbasis">3 <br>flex-basis:200px</div>
+                            <div class="inside-box-flexbasis">4</div>
+                            <div class="inside-box-flexbasis">5</div>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>CSS flex Shorthand Property:</strong>
+                        <p>The flex property is the shorthand property for the flex-grow, flex-shrink, and flex-basis
+                            properties.</p>
+                    </li>
+                    <li>
+                        <strong>align-self</strong>
+                        <p>The align-self property is used to control the alignment of an individual flex item in the
+                            flex container. It allows us to override the default alignment set by the align-items
+                            property on the individual flex item.</p>
+                        <p>The align-self property is used to control the alignment of an individual flex item in the
+                            flex container. It allows us to override the default alignment set by the align-items
+                            property on the individual flex item.</p>
+                        <p>For Example,</p>
+                        <div class="box-alignself">
+                            <div class="inside-box-alignself box-inside-flexstart">1 <br>align-self:flex-start</div>
+                            <div class="inside-box-alignself box-inside-flexend">2 <br>align-self:flex-end</div>
+                            <div class="inside-box-alignself box-inside-center">3 <br>align-self:center</div>
+                            <div class="box-inside-stretch">4 <br>align-self:stretch</div>
+                            <div class="inside-box-alignself">5</div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- CSS Flex Items end -->
+        </div>
+    </section>
+</body>
+
+</html>
