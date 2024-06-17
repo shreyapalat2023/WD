@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+    <style>
+        * {
+            color: rgb(54, 96, 134);
+        }
+
+        .que {
+            font-size: 20px;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
+        <a class="navbar-brand" href="#"></a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading1">Overview</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading2">QA</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading3">Task</a>
+            </li>
+
+        </ul>
+    </nav>
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
+        data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+        <h1 id="scrollspyHeading1">Data Type</h1>
+        <p>
+            <strong>Definition:</strong>
+            <span>
+                In JavaScript, a datatype refers to the classification of the types of data that variables can hold.
+                JavaScript has several built-in datatypes, which can be categorized into two main groups: primitive
+                datatypes and non-primitive datatypes (also known as reference datatypes).
+            </span>
+        </p>
+
+        <h1 id="scrollspyHeading2">Question Answer</h1>
+        <p>
+        <details>
+            <summary><strong class="que">1. What are the various data types that exist in JavaScript?</strong></summary>
+            <p>
+                In programming, data types categorize the kinds of data that a programming language can operate on.
+                These
+                can broadly be classified into two categories: primitive and non-primitive (or reference) data types.
+            </p>
+
+
+            <!-- Primitive datatypes START -->
+            <h3>Primitive Data Types:</h3>
+            <strong>Definition:</strong>
+            <span>Primitive data types are the most basic data types available in a programming language. They directly
+                represent simple values and are not composed of other data types.</span> <br>
+            <strong>Characteristics:</strong>
+            <ul>
+                <li>They are immutable, meaning they cannot be modified</li>
+                <li>They have a fixed size determined by the programming language.</li>
+                <li>They are typically passed by value.</li>
+            </ul>
+            <p>There are seven primitive datatypes:</p>
+            <ul>
+                <li>
+                    <strong>Null:</strong>
+                    <span>Denotes the absence of any value or object.</span> <br>
+                    <strong>Example:</strong>
+                    <span> null</span>
+                </li>
+                <li>
+                    <strong>Number:</strong>
+                    <span>Numeric data type, which can be integer or floating-point.</span> <br>
+                    <strong>Example:</strong>
+                    <span>42, 3.14, 0xFF (hexadecimal), NaN (Not-a-Number), Infinity</span>
+                </li>
+                <li>
+                    <strong>BigInt:</strong>
+                    <span></span>
+                </li>
+                <li>
+                    <strong>Boolean:</strong>
+                    <span> Represents a logical entity, either true or false.</span> <br>
+                    <strong>Example:</strong>
+                    <span>true, false</span>
+                </li>
+                <li>
+                    <strong>String:</strong>
+                    <span>A sequence of characters, enclosed within single (''), double (" "), or backticks (``)
+                        quotes.</span> <br>
+                    <strong>Example:</strong>
+                    <span>"Hello, World!", 'JavaScript', ` `Hello, World!` `</span>
+                </li>
+                <li>
+                    <strong>Symbol:</strong>
+                    <span>Introduced in ECMAScript 6, represents a unique identifier. Symbols are often used as property
+                        keys in objects.</span> <br>
+                    <strong>Example:</strong>
+                    <span>Symbol('foo')</span>
+                </li>
+                <li>
+                    <strong>Undefined:</strong>
+                    <span>Denotes a variable that has been declared but not assigned a value.</span> <br>
+                    <strong>Example:</strong>
+                    <span>'undefined'</span>
+                </li>
+            </ul>
+            <!-- Primitive datatypes END -->
+            <!-- Non-Primitive datatypes START -->
+            <h3>Nonprimitive datatypes:</h3>
+            <strong>Definition:</strong>
+            <span>Non-primitive data types, also known as reference types, are more complex data types that are composed
+                of
+                multiple primitive or other non-primitive data types.</span> <br>
+            <strong>Characteristics:</strong>
+            <ul>
+                <li>They can hold multiple values and have dynamic sizes</li>
+                <li>They are mutable, meaning their values can be changed.</li>
+                <li>They are typically passed by reference.</li>
+            </ul>
+            <p>Lists of Non-primitive datatypes:</p>
+            <ul>
+                <li>
+                    <strong>Object:</strong>
+                    <span> A collection of key-value pairs, where values can be primitive types or other objects.</span>
+                    <details>
+                        <summary>Example:</summary>
+                        <pre>
+                            let person = {
+                                name: 'John',
+                                age: 30,
+                                isStudent: false
+                            };
+                            
+                        </pre>
+                    </details>
+                </li>
+                <li>
+                    <strong>Array:</strong>
+                    <span>A special type of object used to store lists of elements.</span>
+                    <details>
+                        <summary>Example:</summary>
+                        <pre>
+                            let colors = ['red', 'green', 'blue'];
+                        </pre>
+                    </details>
+                </li>
+                <li>
+                    <strong>Function:</strong>
+                    <span> A callable object that can be invoked to perform a particular task.</span>
+                    <details>
+                        <summary>Example:</summary>
+                        <pre>
+                            function add(a, b) {
+                                return a + b;
+                            }
+                        </pre>
+                    </details>
+                </li>
+                <li>
+                    <strong>Date:</strong>
+                    <span> Represents dates and times.</span>
+                    <details>
+                        <summary>Example:</summary>
+                        <pre>let today = new Date();
+                        </pre>
+                    </details>
+                </li>
+                <li>
+                    <strong>RegExp:</strong>
+                    <span> Represents regular expressions for pattern matching.</span>
+                    <details>
+                        <summary>Example:</summary>
+                        <pre>let pattern = /[a-z]+/g;
+                        </pre>
+                    </details>
+                </li>
+                <li>
+                    <strong>Map:</strong>
+                    <span> A collection of key-value pairs where keys can be of any data type.</span>
+                    <details>
+                        <summary>Example:</summary>
+                        <pre>
+                            let myMap = new Map();
+                            myMap.set('key1', 'value1');
+                        </pre>
+                    </details>
+                </li>
+                <li>
+                    <strong>Set:</strong>
+                    <span> A collection of unique values of any data type.</span>
+                    <details>
+                        <summary>Example:</summary>
+                        <pre>
+                            let mySet = new Set([1, 2, 3, 4, 5]);
+                        </pre>
+                    </details>
+                </li>
+                <li>
+                    <strong>Promise:</strong>
+                    <span> Represents the eventual completion (or failure) of an asynchronous operation, and its
+                        resulting
+                        value.</span>
+                    <details>
+                        <summary>Example:</summary>
+                        <pre>
+                            let promise = new Promise((resolve, reject) => {
+                            // Async operation
+                            if (success) {
+                                resolve('Success');
+                            } else {
+                                reject('Error');
+                            }
+                        });
+                        </pre>
+                    </details>
+                </li>
+                <li>
+                    <strong>Buffer(Node.js):</strong>
+                    <span> Used to deal with binary data directlyspan>
+                </li>
+                <li>
+                    <strong>Typed Arrays(e.g, Int8Array,Uint8Array):</strong>
+                    <span> Arrays with specific data types and fixed lengths, optimized for numerical operations.</span>
+                </li>
+            </ul>
+            <p>JavaScript is a dynamically typed language, meaning that variables are not bound to a specific data type,
+                and
+                data types are automatically converted as needed during operations.</p>
+        </details>
+        </p>
+        <h1 id="scrollspyHeading3">Task</h1>
+        <p>
+        <ul>
+            <li><a href="./2.1datatype_example.html">task1</a></li>
+        </ul>
+        </p>
+    </div>
+
+</body>
+
+</html>
