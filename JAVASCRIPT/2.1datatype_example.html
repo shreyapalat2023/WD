@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>datatype</title>
+</head>
+<body>
+    <h3>Data Types:</h3>
+    <h4>Primitive</h4>
+    <p id = "prim"></p>
+    <h4>Non-Primitive</h4>
+    <p id = "non-prim"></p>
+    <script>
+         // primitive
+
+        let a = 12;
+        let b = null;
+        let c = BigInt(12);
+        let d = true ;
+        // Boolean true/false
+        let e = "fname";
+        let f = Symbol("%") ;
+        let g = undefined;
+
+        let arr = [ typeof a, typeof b, typeof c, typeof d, typeof e, typeof f, typeof g]
+        document.getElementById("prim").innerHTML= arr;
+        // document.getElementById("prim").innerHTML= (typeof b );
+        // document.getElementById("prim").innerHTML= (typeof c );
+        // document.getElementById("prim").innerHTML= (typeof d );
+        // document.getElementById("prim").innerHTML= (typeof e );
+        // document.getElementById("prim").innerHTML= (typeof f );
+        // document.getElementById("prim").innerHTML= (typeof g );
+        
+        
+        // nonprimitive
+
+        let obj = {
+             name: "shreya",
+             age: 24,
+             female: true
+        }
+        // let obj = {
+
+        // }
+        // objects can be redeclared and reassigned
+
+        document.write(typeof obj)
+
+        let number = [ 1, 2, 3, 4, 5,"fname",undefined ]
+
+        console.log(typeof number);
+        console.log(number.length);
+        console.log(number[0]);
+    </script>
+</body>
+</html>
