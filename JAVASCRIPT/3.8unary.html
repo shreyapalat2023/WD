@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <style>
+        * {
+            color: rgb(54, 96, 134);
+        }
+
+        .que {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
+        <a class="navbar-brand" href="#"></a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading1">Overview</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading2">QA</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading3">Lists of Operators</a>
+            </li>
+        </ul>
+    </nav>
+    <div>
+        <h1>Operators:</h1>
+        <p>Operators are used to performing specific mathematical and logical computations on operands.</p>
+
+        <h1>Question Answer</h1>
+        <details>
+            <summary><strong class="que">1. Difference between “ == “ and “ === “ operators (with examples)</strong>
+            </summary>
+            <p>
+                In JavaScript, both the == (loose equality) and === (strict equality) operators are used for comparison,
+                but
+                they behave differently in terms of how they handle types and values.
+            </p>
+            <h4>Loose Equality (==) Operator:</h4>
+            <ul>
+                <li>The == operator compares the values of two operands after converting them to a common type.</li>
+                <li>It performs type coercion, meaning it may convert the operands to the same type before comparison.
+                </li>
+                <li>If the types of the operands are different, JavaScript attempts to convert them to a common type
+                    before
+                    making the comparison.</li>
+                <li>This can lead to unexpected results, especially when comparing different data types.</li>
+            </ul>
+            <details>
+                <summary>Example</summary>
+                <pre>
+                console.log(5 == "5"); // Output: true
+                console.log(1 == true); // Output: true
+                console.log(0 == false); // Output: true
+            </pre>
+            </details>
+            <h4>Strict Equality (===) Operator:</h4>
+            <ul>
+                <li>The === operator compares both the values and the types of two operands.</li>
+                <li>It does not perform type coercion, so the values must be of the same type to be considered equal.
+                </li>
+                <li>If the types of the operands are different, the === operator immediately returns false without
+                    attempting to convert them.</li>
+            </ul>
+            <details>
+
+                <summary>Example</summary>
+                <pre>
+            console.log(5 === "5"); // Output: false
+            console.log(1 === true); // Output: false
+            console.log(0 === false); // Output: false
+         </pre>
+            </details>
+        </details>
+        <h1>Lists of Operators:</h1>
+
+        <ul>
+            <li><a href="./3.1artithmetic.html">Arithmetic Operators</a></li>
+            <li><a href="./3.2assignment.html">Assignment Operators</a></li>
+            <li><a href="./3.3comparison.html">comparision Operators</a></li>
+            <li><a href="./3.4logical.html">logical Operators</a></li>
+            <li><a href="./3.5bitwise.html">Bitwise Operators</a></li>
+            <li><a href="./3.6ternary.html">Ternary Operators</a></li>
+            <li><a href="./3.7comma.html">Comma Operators</a></li>
+            <li><a href="./3.8unary.html">Unary Operators</a></li>
+            <li><a href="./3.9relational.html">Relational Operators</a></li>
+            <li><a href="./3.10bigint.html">BigInt Operators</a></li>
+            <li><a href="./3.11string.html">String Operators</a></li>
+        </ul>
+
+        <h2>JavaScript Unary Operators</h2>
+        <p>A unary operation is an operation with only one operand.</p>
+
+        <h3>typeof:</h3>
+        <p>It returns the operand type, The possible types that exist in javascript are undefined, Object, boolean,
+            number,
+            string, symbol, and function.</p>
+
+        <details>
+            <summary>Example:</summary>
+            <pre>
+            let a = 17;
+            let b = "GeeksforGeeks";
+            let c = "";
+            let d = null;
+
+            console.log("Type of a = " + (typeof a));
+            console.log("Type of b = " + (typeof b));
+            console.log("Type of c = " + (typeof c));
+            console.log("Type of d = " + (typeof d));
+            console.log("Type of e = " + (typeof e));
+
+            Output:
+            Type of a = number
+            Type of b = string
+            Type of c = string
+            Type of d = object
+            Type of e = undefined
+        </pre>
+        </details>
+
+        <h3>Delete</h3>
+        <p>This operator is more specifically used to delete JavaScript object properties</p>
+
+        <details>
+            <summary>Example:</summary>
+            <pre>
+            let emp = { 
+                firstName: "Raj", 
+                lastName: "Kumar", 
+                salary: 40000 
+            } 
+            
+            console.log(delete emp.salary); 
+            console.log(emp);
+
+            Output:
+            { firstName: 'Raj', lastName: 'Kumar' }
+            
+        </pre>
+        </details>
+    </div>
+
+</body>
+
+</html>
