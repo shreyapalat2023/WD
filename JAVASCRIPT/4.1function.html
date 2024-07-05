@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <style>
+        * {
+            color: rgb(54, 96, 134);
+        }
+
+        .que {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
+        <a class="navbar-brand" href="#"></a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading1">Overview</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading2">Benefits</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                    aria-expanded="false">Dropdown</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#scrollspyHeading3">Question Answer</a></li>
+                    <li><a class="dropdown-item" href="#scrollspyHeading4">Task</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
+        data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+        <h1 id="scrollspyHeading1">JavaScript Function</h1>
+        <p>
+        <p>
+            Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to a
+            procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as
+            a
+            function, it should take some input and return an output where there is some obvious relationship between
+            the
+            input and the output. To use a function, you must define it somewhere in the scope from which you wish to
+            call
+            it.
+        </p>
+        <p>A function is a block of code that performs a specific task.</p>
+        <p>Suppose you need to create a program to create a circle and color it. You can create two functions to solve
+            this
+            problem:</p>
+        <p>Notice that you can call a function as many times as you want. You can write one function and then call it
+            multiple times with different arguments.</p>
+        <ul>
+            <li>a function to draw the circle</li>
+            <li>a function to color the circle</li>
+        </ul>
+        <p>a function to color the circle</p>
+
+        <h3>Javascript setInterval()</h3>
+        <p>In JavaScript, a block of code can be executed in specified time intervals. These time intervals are called
+            timing events.</p>
+        <p>There are two methods for executing code at specific intervals</p>
+        <ul>
+            <li>setInterval()</li>
+            <li>setTimeout()</li>
+        </ul>
+        <details>
+            <summary>JavaScript setInterval()</summary>
+            <p>The setInterval() method repeats a block of code at every given timing event.</p>
+            <p>The commonly used syntax of JavaScript setInterval is:</p>
+            <pre>setInterval(function, milliseconds);</pre>
+        </details>
+        <p>Example1: Display a Text Once Every 1 Second</p>
+        <pre>
+            // program to display a text using setInterval method
+            function greet() {
+            console.log('Hello world');
+            }
+    
+            setInterval(greet, 1000);
+        </pre>
+        </p>
+        <!-- Second Heading START-->
+        <h1 id="scrollspyHeading2">Benefits of Using a Function</h1>
+        <p>
+        <ul>
+            <li>Function makes the code reusable. You can declare it once and use it multiple times.</li>
+            <li>Function makes the program easier as each small task is divided into a function.</li>
+            <li>Function increases readability.</li>
+        </ul>
+        <h3>JavaScript Function Syntax:</h3>
+        <pre>
+             A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().
+        
+            Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
+                    
+            The parentheses may include parameter names separated by commas:
+            (parameter1,parameter2, ...)
+                    
+            The code to be executed, by the function, is placed inside curly brackets: {} 
+        </pre>
+        <pre>
+            function name(parameter1, parameter2, parameter3) {
+                 // code to be executed
+            }
+                  
+        </pre>
+        <p>
+            Function parameters are listed inside the parentheses () in the function definition. <br>
+
+            Function arguments are the values received by the function when it is invoked. <br>
+
+            Inside the function, the arguments (the parameters) behave as local variables.
+        </p>
+        <!-- Function Invocaton START -->
+        <h4>Function Invocation:</h4>
+        <p>
+            The code inside the function will execute when "something" invokes (calls) the function:
+        </p>
+        <ul>
+            <li>When an event occurs (when a user clicks a button)
+            </li>
+            <li>When it is invoked (called) from JavaScript code</li>
+            <li>Automatically (self invoked)</li>
+        </ul>
+        <!-- Function Invocaton END -->
+        <!-- Function Return START -->
+        <h4>Function Return:</h4>
+
+        <p>
+            When JavaScript reaches a return statement, the function will stop executing. <br>
+
+            If the function was invoked from a statement, JavaScript will "return" to execute the code after the
+            invoking statement. <br>
+
+            Functions often compute a return value. The return value is "returned" back to the "caller"
+        </p>
+
+        <h3>Example:</h3>
+        <pre>
+            // Function is called, the return value will end up in x
+            let x = myFunction(4, 3);
+    
+            function myFunction(a, b) {
+                // Function returns the product of a and b
+                return a * b;
+            }
+        </pre>
+        <!-- Function Return END -->
+        <h4>Why Functions ?</h4>
+        <ul>
+            <li>With functions you can reuse code</li>
+            <li>You can write code that can be used many times</li>
+            <li>You can use the same code with different arguments, to produce different results.</li>
+        </ul>
+        <h4>Functions used as variable values</h4>
+        <p>
+            Functions can be used the same way as you use variables, in all types of formulas, assignments, and
+            calculations.
+        </p>
+        <!-- Local Variables START -->
+        <h4>Local Variables:</h4>
+        <p>
+            Variables declared within a JavaScript function, become LOCAL to the function. <br>
+
+            Local variables can only be accessed from within the function. <br>
+
+            Since local variables are only recognized inside their functions, variables with the same name can be used
+            in different functions. <br>
+
+            Local variables are created when a function starts, and deleted when the function is completed.
+        </p>
+        <!-- Local Variables END -->
+        <!-- Parameters vs Arguments START -->
+        <h3>Parameters vs Arguments</h3>
+        <p>
+            Function parameters are the names listed in the function definition. <br>
+
+            Function arguments are the real values passed to (and received by) the function.
+        </p>
+        <h5>Example</h5>
+        <pre>
+        function example(parameter) {
+            console.log(parameter); // Output = foo
+        }
+          
+          const argument = "foo";
+          
+          example(argument);
+        </pre>
+        <!-- Parameters vs Arguments END -->
+        <h4>Parameter Rules</h4>
+        <ul>
+            <li>JavaScript function definitions do not specify data types for parameters.</li>
+            <li>JavaScript functions do not perform type checking on the passed arguments.</li>
+            <li>JavaScript functions do not check the number of arguments received</li>
+        </ul>
+        <h4>Default Parameters</h4>
+        <p>
+            If a function is called with missing arguments (less than declared), the missing values are set to
+            undefined. <br>
+
+            Sometimes this is acceptable, but sometimes it is better to assign a default value to the parameter:
+        </p>
+        <h5>Example</h5>
+        <pre>
+        function myFunction(x, y) {
+            if (y === undefined) {
+              y = 2;
+            }
+            return x * y;
+          }
+          console.log(myFunction(4));
+    </pre>
+
+        <h4>Default Parameter Values:</h4>
+        <pre>
+        function myFunction(x, y = 10){
+            return x + y;
+        }
+        console.log(myFunction(5));
+    </pre>
+
+        <h4>Rest Parameters</h4>
+        <p>The rest parameter syntax allows a function to accept an indefinite number of arguments as an array</p>
+        <h6>Example</h6>
+        <pre>
+        function sum(...theArgs) {
+            let total = 0;
+            for (const arg of theArgs) {
+              total += arg;
+            }
+            return total;
+          }
+          
+          console.log(sum(1, 2, 3));
+          // Expected output: 6
+          
+          console.log(sum(1, 2, 3, 4));
+          // Expected output: 10
+          
+        </pre>
+        </p>
+        <!-- Second Heading END-->
+        <!-- Third Heading START-->
+        <h1 id="scrollspyHeading3">Question Answer</h1>
+        <p>
+        <!-- Question Answer START -->
+
+        <details>
+            <summary><strong class="que">1. What are some of the built-in methods in JavaScript?</strong></summary>
+            <p>
+                JavaScript provides a wide range of built-in methods for various data types and functionalities. Here
+                are
+                some of the commonly used built-in methods in JavaScript:
+            </p>
+            <h4>String Methods:</h4>
+            <ul>
+                <li>
+                    <strong>charAt():</strong>
+                    <span>Returns the character at a specified index.</span>
+                </li>
+                <li>
+                    <strong>concat():</strong>
+                    <span>Joins two or more strings.</span>
+                </li>
+                <li>
+                    <strong>indexOf()</strong>
+                    <span>: Returns the index within the calling string of the first occurrence of the specified
+                        value.</span>
+                </li>
+                <li>
+                    <strong>slice()</strong>
+                    <sapn>Extracts a section of a string and returns it as a new string..</span>
+                </li>
+                <li>
+                    <strong>split():</strong>
+                    <span>Splits a string into an array of substrings based on a specified separator.</span>
+                </li>
+                <li>
+                    <strong>toUpperCase(), toLowerCase():</strong>
+                    <span>Convert the string to uppercase or lowercase.</span>
+                </li>
+            </ul>
+            <h4>Array Methods:</h4>
+            <ul>
+                <li>
+                    <strong>push(), pop() :</strong>
+                    <span> Add/remove elements to/from the end of an array.</span>
+                </li>
+                <li>
+                    <strong>shift(), unshift() :</strong>
+                    <span> Add/remove elements to/from the beginning of an array.</span>
+                </li>
+                <li>
+                    <strong>concat():</strong>
+                    <span> Joins two or more arrays and returns a new array.</span>
+                </li>
+                <li>
+                    <strong>join() :</strong>
+                    <span> Joins all elements of an array into a string.</span>
+                </li>
+                <li>
+                    <strong>slice() :</strong>
+                    <span> Extracts a section of an array and returns a new array./span>
+                </li>
+                <li>
+                    <strong>indexOf(), lastIndexOf() :</strong>
+                    <span> Returns the index of the first/last occurrence of a specified value in an array.</span>
+                </li>
+            </ul>
+            <h4>Math Methods:</h4>
+            <ul>
+                <li>
+                    <strong>Math.abs():</strong>
+                    <span>Returns the absolute value of a number.</span>
+                </li>
+                <ul>
+                    <li>
+                        <strong>Math.round(), Math.floor(), Math.ceil():</strong>
+                        <span>Round a number to the nearest integer, round down, or round up, respectively..</span>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <strong>Math.max(), Math.min():</strong>
+                        <span>RReturns the maximum/minimum value from a list of numbers.</span>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <strong>Math.random()strong>
+                            <span>Returns a pseudo-random number between 0 and 1.</span>
+                    </li>
+                </ul>
+            </ul>
+            <h4>Object Methods:</h4>
+            <ul>
+                <li>
+                    <strong>Object.keys():</strong>
+                    <span> Returns an array of a given object's own enumerable property names.</span>
+                </li>
+                <li>
+                    <strong>Object.values():</strong>
+                    <span> Returns an array of a given object's own enumerable property values.</span>
+                </li>
+                <li>
+                    <strong>Object.entries()</strong>
+                    <span> Returns an array of a given object's own enumerable key-value pairs.</span>
+                </li>
+            </ul>
+            <h4>Date Methods:</h4>
+            <ul>
+                <li>
+                    <strong>getDate(), getMonth(), getFullYear():</strong>
+                    <span>Get the day, month, or year of a Date object.</span>
+                </li>
+                <li>
+                    <strong>getHours(), getMinutes(), getSeconds():</strong>
+                    <span>Get the hour, minute, or second of a Date object..</span>
+                </li>
+            </ul>
+        </details>
+        <!-- Question one END -->
+
+        <!-- Question two START -->
+
+        <details>
+            <summary>
+                <strongc class="que">2. What is the difference between Function declaration and Function
+                    expression?</strong>
+            </summary>
+            <p>
+                Function declaration and function expression are two different ways to define functions in JavaScript,
+                and
+                they have some key differences:
+            </p>
+            <details>
+                <summary>Function Declaration</summary>
+                <ul>
+                    <li>Function declarations define functions using the function keyword followed by the function name
+                        and
+                        the function body enclosed in curly braces.</li>
+                    <li>Function declarations are hoisted, which means they are available for use before the code
+                        execution
+                        reaches the actual function declaration.</li>
+                    <li>They can be called before they are declared in the code.</li>
+                </ul>
+                <p>Example</p>
+                <pre>
+                function myFunction() {
+                    // Function body
+                  }
+            </pre>
+            </details>
+            <details>
+                <summary>Function Expression:</summary>
+                <ul>
+                    <li>Function expressions define functions as part of an expression, typically by assigning them to a
+                        variable.</li>
+                    <li>Function expressions can be named or anonymous.</li>
+                    <li>They are not hoisted; they must be defined before they can be used</li>
+                </ul>
+                <p>Example of named function expression:</p>
+                <pre>
+                const getRectArea = function (width, height) {
+                    return width * height;
+                  };
+                  
+                  console.log(getRectArea(3, 4));
+                  // Expected output: 12
+             </pre>
+                <p>Example of an anounymous function expressions:</p>
+                <pre>
+                var myFunction = function() {
+                    // Function body
+                  };
+            </pre>
+            </details>
+            <!-- Question two END -->
+
+        </details>
+
+        <!-- Question three START -->
+
+        <details>
+            <summary><strong class="que">3. Self Invoking Functions</strong></summary>
+            <p>
+                A self-invoking function, also known as an Immediately Invoked Function Expression (IIFE), is a
+                JavaScript
+                function that runs as soon as it is defined. It is defined and executed all in one step.
+            </p>
+            <p>Example1</p>
+            <pre>
+                (function() {
+                    console.log("This is a self-invoking function.");
+                })();
+            </pre>
+            <ul>
+                <li>(function() { ... }) defines an anonymous function enclosed in parentheses.</li>
+                <li>() immediately invokes the function after its declaration.</li>
+            </ul>
+            <p>Example2</p>
+            <pre>
+            !function () {
+                console.log("Code runs!");
+              }();
+        </pre>
+         <!-- Question three END -->
+
+        </details>
+        <!-- Question four START -->
+
+        <details>
+            <summary><strong class="que">4. Recursion in a programming language </strong></summary>
+            <p>Recursion in programming refers to the technique where a function calls itself in order to solve a
+                problem.
+                Recursion provides an elegant and concise way to solve certain types of problems, especially those that
+                exhibit repetitive structures or can be broken down into smaller, similar subproblems.</p>
+            <p>Here are some key points about recursion:</p>
+            <details>
+                <summary>Base Case:</summary>
+                <p> Every recursive function must have a base case, which is a condition where the function stops
+                    calling
+                    itself and returns a value without further recursion. Without a base case, the recursion would
+                    continue
+                    indefinitely, leading to a stack overflow error.</p>
+            </details>
+            <details>
+                <summary>Recursive Case:</summary>
+                <p> In addition to the base case, a recursive function typically contains one or more recursive cases.
+                    These
+                    are situations where the function calls itself with modified input parameters, moving closer to the
+                    base
+                    case with each recursive call.</p>
+            </details>
+            <details>
+                <summary>Example: Factorial Function</summary>
+                <p>One classic example of recursion is the factorial function, which calculates the factorial of a
+                    non-negative integer. The factorial of a number n (written as n!) is the product of all positive
+                    integers less than or equal to n.</p>
+                <p>EXample</p>
+                <pre>
+                function factorial(n) {
+                    // Base case: factorial of 0 or 1 is 1
+                    if (n === 0 || n === 1) {
+                        return 1;
+                    }
+                    // Recursive case: n! = n * (n-1)!
+                    return n * factorial(n - 1);
+                }
+            </pre>
+            </details>
+        </details>
+        <!-- 
+            Question END
+         -->
+        </p>
+        <!-- Third Heading START-->
+        <!-- Fourth Heading START-->
+        <h1 id="scrollspyHeading4">Task</h1>
+        <p>
+            <ul>
+                <li><a href="function_getsum.html">task1</a></li>
+                <li><a href="function.getmax.html">task2</a></li>
+                <li><a href="function.yearstodays.html">task3</a></li>
+                <li><a href="function.farenheit_celsius.html">task4</a></li>
+                <li><a href="function_factorial.html">task5</a></li>
+                <li><a href="4.2function_practice_question_one.html">task6</a></li>
+            </ul>
+        </p>
+        <!-- Fourth Heading END-->
+    </div>
+    <script>
+
+        function sum(p, q) {
+            return p + q * 4 - 8;
+        }
+
+        let a = 4;
+        let b = 5;
+        let x = 8;
+        let z = 7;
+        let y = 9;
+
+        console.log(sum(a, b));
+        console.log(sum(x, z));
+        console.log(sum(x, y));
+
+    </script>
+</body>
+
+</html>
