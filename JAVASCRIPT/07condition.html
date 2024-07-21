@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condition</title>
+    <style>
+        * {
+            color: rgb(54, 96, 134);
+
+            /* font-size: 20px; */
+        }
+
+        .que {
+            font-size: 20px;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
+        <a class="navbar-brand" href="#"></a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading1">Overview</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading2">Types</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                    aria-expanded="false">Dropdown</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#scrollspyHeading3">Question Answer</a></li>
+                    <li><a class="dropdown-item" href="#scrollspyHeading4">Task</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
+        data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+        <h1 id="scrollspyHeading1"> Conditional Statements</h1>
+        <p>
+            JavaScript Conditional statements allow you to execute specific blocks of code based on conditions. If the
+            condition meets then a particular block of action will be executed otherwise it will execute another block
+            of
+            action that satisfies that particular <br>
+
+            There are several methods that can be used to perform Conditional Statements in JavaScript.
+        </p>
+        <h1 id="scrollspyHeading2">Types of Conditional Statements:</h1>
+        <p>
+        <h4>If Statement:</h4>
+        <p>The if statement is used to execute a block of code if a specified condition is true.</p>
+        <details>
+            <summary>Example</summary>
+            <pre>
+            if (condition) {
+                // Code to be executed if condition is true
+            }
+        </pre>
+        </details>
+        <h4>if else Statement</h4>
+        <p>The if...else statement is used to execute one block of code if the condition is true and another block of
+            code
+            if the condition is false.</p>
+        <pre>
+
+        if (condition1) {
+               Executes when condition1 is true
+        if (condition2) {
+                Executes when condition2 is true
+          }
+        }
+        </pre>
+        <h4>if..else if.. Statement:</h4>
+        <p>The if...else if...else statement allows you to specify multiple conditions and execute different blocks of
+            code
+            based on which condition is true.</p>
+        <pre>
+        if (1st condition) {
+            // Code for 1st condition
+        } else if (2nd condition) {
+            // code for 2nd condition
+        } else if (3rd condition) {
+            // Code for 3rd condition
+        } else {
+            //  code that will execute if all 
+            // above conditions are false
+        }
+        </pre>
+        <h4>switch Statement:</h4>
+        <p>The switch statement is used to select one of many code blocks to be executed.</p>
+        <pre>
+           switch (expression) {
+              case value1:
+                // Code to be executed if expression equals value1
+                break;
+               case value2:
+                // Code to be executed if expression equals value2
+                break;
+              default:
+                // Code to be executed if expression doesn't match any case
+            }
+        </pre>
+        <h4>Ternary Operator (Conditional Operator):</h4>
+        <p>The ternary operator condition ? expression1 : expression2 is a concise way to write conditional statements.
+            It
+            evaluates the condition and returns expression1 if the condition is true, otherwise it returns expression2.
+        </p>
+        <pre>
+        var result = (condition) ? expression1 : expression2;
+        </pre>
+        </p>
+        <h1 id="scrollspyHeading3">Question Answer
+        </h1>
+        <p>
+        <details>
+            <summary><strong class="que">1.Differene between exec() and test() method</strong></summary>
+            <p>In JavaScript, both exec() and test() are methods of the RegExp (regular expression) object used for
+                pattern
+                matching, but they have different purposes and return values:</p>
+            <details>
+                <summary>exec() Method:</summary>
+                <ul>
+                    <li>The exec() method is a method of the RegExp object that searches for a match in a specified
+                        string
+                    </li>
+                    <li>It returns an array containing information about the first match found, or null if no match is
+                        found
+                    </li>
+                    <li>If the regular expression has the global flag (g), subsequent calls to exec() will continue to
+                        search for matches in the same string, starting from the index of the last match.</li>
+                    <li>The returned array includes additional properties (index, input) indicating the index of the
+                        match
+                        in the string and the original input string, respectively.</li>
+                </ul>
+            </details>
+            <details>
+                <summary>test() Method:</summary>
+                <ul>
+                    <li>The test() method is also a method of the RegExp object that searches for a match in a specified
+                        string.
+                    </li>
+                    <li>It returns a boolean value indicating whether or not the pattern matches the string.</li>
+                    <li>Unlike exec(), test() does not return details about the match; it simply returns true if there
+                        is a
+                        match and false otherwise.
+                    </li>
+                    <li>Unlike exec(), test() does not return details about the match; it simply returns true if there
+                        is a
+                        match and false otherwise.
+                    </li>
+                </ul>
+            </details>
+        </details>
+        </p>
+        <h1 id="scrollspyHeading4">Task</h1>
+        <p>
+        <h4>Task1</h4>
+        <h4>This is to check whether a = 2</h4>
+        <p id="check"></p>
+        <ul>
+            <li><a href="./08iflese.html">Task2</a></li>
+            <li><a href="./8.1switch_statement.html">Task3</a></li>
+            <li><a href="./7.1practice_questionone.html">Task4</a></li>
+        </ul>
+        </p>
+    </div>
+    <script>
+
+        let a = 2;
+
+        if (a == 2) {
+            document.getElementById("check").innerHTML = "right";
+        }
+        else {
+            document.getElementById("check").innerHTML = "wrong";
+        }
+
+    </script>
+</body>
+
+</html>
