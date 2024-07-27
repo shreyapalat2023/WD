@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>if..else if.. Statement</h1>
+    <p>Get your marks.</p>
+
+    <script>
+
+        let marks = prompt("enter your marks")
+        console.log(marks);
+        marks = Number.parseInt(marks);
+        console.log(typeof marks);
+
+         if(marks < 35 ){
+            alert("You are not eligible");
+         }
+         else if (marks > 35 && marks <= 50){
+            alert("You are eligible");
+         }
+         else if(marks > 50 && marks <= 80){
+            alert("You are super eligible")
+         }
+         else if(marks > 80 && marks <= 100){
+            alert("Congratulations!! You ranked first")
+         }
+        else {
+            alert("call me");
+         }
+
+    </script>
+</body>
+</html>
