@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch statement</title>
+</head>
+<body>
+    <h1>Get Signal</h1>
+    <p id = "signal"></p>
+    <script>
+        let trafficlight = prompt("Enter color");
+
+        switch (trafficlight) {
+            case "red" :
+                document.getElementById("signal").innerHTML = "Stop immediately";
+                document.getElementById("signal").style.color = "red"
+            break;
+            case "yellow" :
+                document.getElementById("signal").innerHTML = "Prepare to stop.";
+            break;
+            case "green" :
+                document.getElementById("signal").  innerHTML = "Proceed or continue driving.";
+            break;
+            default:
+                document.getElementById("signal").innerHTML = "Invalid traffic light color."
+        }
+    </script>
+</body>
+</html>
