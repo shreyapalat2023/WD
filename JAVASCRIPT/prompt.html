@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PromptBox</title>
+    <style>
+        * {
+            color: rgb(54, 96, 134);
+
+        }
+
+        .syntax {
+            color: blue;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>This is Prompt box</h1>
+    <h1>Prompt box</h1>
+    <p>Use the prompt() function to take the user's input to do further actions. For example, use the prompt() function
+        in the scenario where you want to calculate EMI based on the user's preferred loan tenure.</p>
+    <p><strong>Syntax</strong></p>
+    <pre class="syntax">s
+        string prompt([message], [defaultValue]);
+    </pre>
     <script>
-        prompt("Please enter your name:","Shreya Palat");
+        prompt("Please enter your name:", "Shreya Palat");
     </script>
 </body>
+
 </html>
