@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> STAR PATTERN</title>
+    <style>
+        *{
+            color: rgb(54, 96, 134);
+        }
+        .h-one{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="h-one">ALL STAR PATTERN</h1>
+    <p id = "star1"></p>
+    <p id = "star2"></p>
+    <p id = "star3"></p>
+    <script>
+        // Print Star START
+        for (let index = 0; index < 10; index++) {
+            document.write("*")
+        }
+
+        document.write("<br>")
+        // Print Star END
+
+        // logic_1
+        // for(let index = 0; index < 225; index++){
+        //     if(index % 15 == 0){
+        //         document.write("<br>")
+        //     }
+        //     else{
+        //         document.write("*")
+        //     }
+        // }
+
+        // logic_2
+        // for(let index = 0 ; index < 10; index++) {
+        //     for(let k = 0; k < 10; k++){
+        //         document.write("*")
+        //     }
+        //     document.write("<br>")
+        // }
+
+        // SQUARE PATTERN START
+
+        for (let index = 0; index < 5; index++) {
+            for (let k = 0; k < 10; k++) {
+                document.write("*")
+            }
+            document.write("<br>")
+        }
+        // SQUARE PATTERN END
+        // RIGHT ANGLE PATTERN START
+
+        for (let index = 0; index < 11; index++) {
+            for (let i = 0; i < index; i++) {
+                document.write("*")
+            }
+            document.write("<br>")
+        }
+        // RIGHT ANGLE PATTERN END
+        // RIGHT ANGLE MIRRORED PATTERN START
+
+        document.write("<br>")
+        for (let n = 10; n >= 0; n--) {
+            for (let k = 1; k <= n; k++) {
+                document.write("*")
+            }
+            document.write("<br>")
+        }
+        // RIGHT ANGLE MIRRORED PATTERN END
+        // PYRAMID PATTERN START
+
+        n = 5;
+        for (let index = 0; index < n; index++) {
+            console.log("modulo 5 ", n);
+            console.log("modulo 5 ", index % 5);
+            if (index % 5 == 0) {
+                for (let i = 0; i <= 5; i++) {
+                    for (let j = 0; j <= i; j++) {
+                        document.write("*")
+                    }
+                    document.write("<br>")
+
+                }
+
+            }
+            else {
+                // console.log("inside else");
+                // document.write("else")
+                for (let i = 5; i > 0; i--) {
+                    if (index == 1)
+                        for (let j = 0; j < i; j++) {
+                            document.write("*")
+                        }
+                    document.write("<br>")
+                }
+                // document.write("test")
+            }
+        }
+        // PYRAMID PATTERN END
+        // LEFT ANGLE TRIANGLE START
+        let N = 10 ;
+        let str1 = "";
+        for(row = 0; row <= N; row++){
+            for(space = 0; space <= N -row; space++){
+                str1 += "&nbsp;&nbsp";
+            }
+            for(col = 0; col <= row; col++){
+                str1+="*";
+            }
+            str1 += "<br>";
+        }
+        document.getElementById("star3").innerHTML = str1;
+        // LEFT ANGLE TRIANGLE END
+        // PYRAMID PATTTERN START
+        let str2 = "";
+        let N1 = 10;
+        for(row1 = 1; row1 <= N1; row1++){
+            for(space1 = 0; space1 <= N1- row1; space1++){
+                // document.write("&nbsp&nbsp");
+                str2 += "&nbsp&nbsp"
+            }
+            for(col1 = 1; col1<= row1; col1++){
+                // document.write("*")
+                str2 += "*"
+            }
+            for(p1 = 2; p1<= row1;p1++){
+                // document.write("*")
+                str2 += "*"
+            }
+            // document.write("<br>")
+            str2 += "<br>"
+        }
+        document.getElementById("star1").innerHTML = str2;     
+        // PYRAMID PATTTERN END
+        // PYRAMID PATTTERN TWO START
+        let str3 = "";
+        let N2 = 10;
+        let M2 = 1;
+        for(row2 = 1; row2 <= N2; row2++){
+            for(let space = 0; space <= N2 - row2; space++){
+                str3+= "&nbsp;&nbsp;"
+            }
+            for(let p2 = 1;p2<=M2;p2++){
+                str3 += "*"
+            }
+            str3+= "<br>";
+            M2 += 2;
+        }
+        document.getElementById("star2").innerHTML = str3;
+        // PYRAMID PATTTERN TWO END
+    </script>
+</body>
+
+</html>
