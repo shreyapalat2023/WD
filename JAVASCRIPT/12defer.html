@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defer Data</title>
+    <style>
+        * {
+            color: rgb(54, 96, 134);
+        }
+
+        .img {
+            width: 50%;
+        }
+
+        .img img {
+            width: 100%;
+        }
+    </style>
+    <script src="./12.1defer.js" defer></script>
+</head>
+
+<body>
+    <h1>Defer attribute:</h1>
+    <p>This Boolean attribute is set to indicate to a browser that the script is meant to be executed after the document
+        has been parsed, but before firing DOMContentLoaded.
+
+    </p>
+    <h3>Document: DOM ContentLoaded event</h3>
+    <p>
+        The DOMContentLoaded event fires when the HTML document has been completely parsed, and all deferred scripts
+        have downloaded and executed. It doesn't wait for other things like images, subframes, and async scripts to
+        finish loading.
+    </p>
+    <div class="img">
+        <img src="./img/defer_data.jpg">
+    </div>
+    <button id="btn">Click me</button>
+    <h2>Reference</h2>
+    <ul>
+        <li><a
+                href="https://www.tutorialspoint.com/what-is-the-role-of-deferred-scripts-in-javascript#:~:text=JavaScript's%20defer%20attribute%20is%20being,files%20can%20be%20included%20afterwards.">tutorials
+                point</a></li>
+    </ul>
+</body>
+
+</html>
