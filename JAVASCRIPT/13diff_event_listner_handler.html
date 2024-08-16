@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <style>
+    * {
+      color: rgb(54, 96, 134);
+    }
+
+    .task {
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
+    <a class="navbar-brand" href="#"></a>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link" href="#scrollspyHeading1">Overview</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#scrollspyHeading2">Task</a>
+      </li>
+      <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+          aria-expanded="false">Dropdown</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+          <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+        </ul>
+      </li> -->
+    </ul>
+  </nav>
+  <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
+    data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+    <h1 id="scrollspyHeading1">What is an event?</h1>
+    <p>
+      Events are things that happen in the system you are programming — the system produces (or "fires") a signal of
+      some kind when an event occurs, and provides a mechanism by which an action can be automatically taken (that is,
+      some code running) when the event occurs.
+      Events are fired inside the browser window, and tend to be attached to a specific item that resides in it. This
+      might be a single element, a set of elements, the HTML document loaded in the current tab, or the entire browser
+      window.
+      There are many different types of events that can occur.
+    <p>For example:</p>
+    <ul>
+      <li>The user selects, clicks, or hovers the cursor over a certain element.</li>
+      <li>The user chooses a key on the keyboard.</li>
+      <li>The user resizes or closes the browser window.</li>
+      <li>A web page finishes loading.</li>
+      <li>A form is submitted.</li>
+      <li>A video is played, paused, or ends.</li>
+      <li>An error occurs.</li>
+    </ul>
+    <p>
+      To react to an event, you attach an <strong>event handler</strong> to it. This is a block of code (usually a
+      JavaScript function that you as a programmer create) that runs when the event fires.
+      When such a block of code is defined to run in response to an event, we say we are <strong>registering an event
+        handler</strong>.
+      Note: Event handlers are sometimes called <strong>event listeners</strong> — they are pretty much
+      interchangeable for our purposes, although strictly speaking, they work together.
+      The listener listens out for the event happening, and the handler is the code that is run in response to it
+      happening.
+    </p>
+    <div class="notecard note" id="sect1">
+      <p>
+        <button type="button" class="btn btn-outline-danger">Note:</button>
+        Web events are not part of the core JavaScript language — they are defined as part of
+        the APIs built into the browser.
+      </p>
+    </div>
+    </p>
+    <h1 id="scrollspyHeading2">Task</h1>
+    <p>
+    <details>
+      <summary><strong class="task">eventhandler vs eventlistner</strong></summary>
+      <ul>
+        <li><a href="./14eventhandler.html">Eventhandler</a></li>
+        <li><a href="./15eventlistner.html">Eventlistner</a></li>
+      </ul>
+    </details>
+    </p>
+  </div>
+</body>
+
+</html>
