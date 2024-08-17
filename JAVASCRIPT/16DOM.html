@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./16styledom.css">   
+   
+</head>
+
+<body>
+    <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
+        <a class="navbar-brand" href="#"></a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading1">Overview</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading2">DOM Methods</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                    aria-expanded="false">Dropdown</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#scrollspyHeading3">Question Answer</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
+        data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2 main-div" tabindex="0">
+        <h1 id="scrollspyHeading1"> DOM</h1>
+        <p>
+        <p>
+        <h1>Key Importance of DOM in JavaScript:</h1>
+        <p>The DOM is fundamental to JavaScript's role in web development, enabling the creation of rich, interactive,
+            and dynamic user interfaces.</p>
+        <ol>
+            <li>
+                <strong>Dynamic Content Manipulation:</strong>
+                <ul>
+                    <li>The DOM enables JavaScript to add, remove, or modify elements and content within an HTML
+                        document. This capability allows developers to create dynamic and interactive web pages that can
+                        respond to user actions without needing to reload the entire page.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Event Handling:</strong>
+                <ul>
+                    <li>The DOM provides a way to handle events (like clicks, mouse movements, keyboard input, etc.) in
+                        the document. JavaScript can listen for these events and execute specific code when they occur,
+                        enhancing the interactivity and user experience of web applications.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <strong>Styling and Animation:</strong>
+                <ul>
+                    <li>Through the DOM, JavaScript can modify the CSS styles of elements on the fly. This allows for
+                        dynamic styling changes, animations, and visual effects, improving the visual appeal and
+                        responsiveness of web pages.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Traversing and Querying</strong>
+                <ul>
+                    <li>The DOM provides methods to traverse and query the document's structure. JavaScript can navigate
+                        through the parent, child, and sibling relationships of elements to access and manipulate
+                        specific parts of the document, making it easier to implement complex interactions and
+                        behaviors.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Data Binding and Templates:</strong>
+                <ul>
+                    <li>With frameworks and libraries like React, Angular, and Vue.js, the DOM plays a crucial role in
+                        data binding and templating. These tools use the DOM to efficiently update the user interface in
+                        response to data changes, providing a seamless and responsive user experience..</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Integration with APIs:</strong>
+                <ul>
+                    <li>Many web APIs (like the Geolocation API, Web Storage API, etc.) rely on the DOM to interact with
+                        the document and provide additional functionalities. JavaScript can use these APIs to extend the
+                        capabilities of web applications, making them more powerful and versatile.</li>
+                </ul>
+            </li>
+        </ol>
+        <h1>What is the HTML DOM?</h1>
+        <p>The DOM is a W3C standard. <br>"The W3C <span class="imp-words">Document Object Model (DOM)</span> is a
+            platform and language-neutral
+            interface
+            that allows programs and scripts to dynamically <span class="imp-words">access and update the content,
+                structure, and style of a
+                document.</span></p>
+        The HTML DOM is a standard object model and programming interface for HTML. It defines:
+        <ul>
+            <li>The HTML elements as objects</li>
+            <li>The properties of all HTML elements</li>
+            <li>The methods to access all HTML elements</li>
+            <li>The events for all HTML elements</li>
+        </ul>
+        </p>
+        <p>When we try to access the html element. JavaScript automatically converts that element as as object.</p>
+        <p class="dom-acr"><strong class="dom-acy">Document</strong> stands for all of html.</p>
+        <p class="dom-acr"><strong class="dom-acy">Object</strong> stands for html elements.</p>
+        <p class="dom-acr"><strong class="dom-acy">Model</strong> stands for tree-like structure that contains all html elements.</p>
+        <p>In other words: The HTML DOM is a standard for how to <span class="imp-words">get, change, add, or
+                delete</span> HTML elements.</p>
+        </p>
+        <!-- DOM Tree START -->
+        <h1 id="dom-tree">DOM TREE</h1>
+        <div class="img">
+
+            <div class="img-tree">
+                <img src="./img/tree.jpg" alt="tree">
+            </div>
+            <div class="real-tree">
+
+                <img src="./img/DOM-TREE.png" alt="dom-tree">
+            </div>
+        </div>
+        <h1>What is Window Object?</h1>
+        <p>The window object represents an open window in a <span class="imp-words">browser.</span> It is a browser's
+            object (not Javascript's) and is
+            automatically created by browser.</p>
+        <p>It is a <span class="imp-words">global object</span> with lots of properties and methods.</p>
+        <!-- DOM Tree END -->
+
+
+        <!-- Changing HTML elements START -->
+        <h1>Changing HTML elments</h1>
+        <table class="ws-table-all notranslate" border="1">
+            <tbody>
+                <tr>
+                    <th style="width:50%">Property</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><em>element</em>.innerHTML =&nbsp; <em>new html content</em></td>
+                    <td>Change the inner HTML of an element</td>
+                </tr>
+                <tr>
+                    <td><em>element</em>.<em>attribute = new value</em></td>
+                    <td>Change the attribute value of an HTML element</td>
+                </tr>
+                <tr>
+                    <td><em>element</em>.style.<em>property = new style</em></td>
+                    <td>Change the style of an HTML element</td>
+                </tr>
+                <tr>
+                    <th style="width:50%">Method</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><em>element</em>.setAttribute<em>(attribute, value)</em></td>
+                    <td>Change the attribute value of an HTML element</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Changing HTML elements END -->
+        <!-- Adding and Deleting elements START -->
+        <h1>Adding and Deleting Elements</h1>
+        <table class="ws-table-all notranslate" border="1">
+            <tbody>
+                <tr>
+                    <th style="width:50%">Method</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>document.createElement(<em>element</em>)</td>
+                    <td>Create an HTML element</td>
+                </tr>
+                <tr>
+                    <td>document.removeChild(<em>element</em>)</td>
+                    <td>Remove an HTML element</td>
+                </tr>
+                <tr>
+                    <td>document.appendChild(<em>element</em>)</td>
+                    <td>Add an HTML element</td>
+                </tr>
+                <tr>
+                    <td>document.replaceChild(<em>new, old</em>)</td>
+                    <td>Replace an HTML element</td>
+                </tr>
+                <tr>
+                    <td>document.write(<em>text</em>)</td>
+                    <td>Write into the HTML output stream</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Adding and Deleting elements END -->
+        <div>
+            <h1 id="scrollspyHeading2">HTML DOM Methods</h1>
+            <p>
+            <p>
+                HTML DOM methods are actions you can perform (on HTML Elements). <br>
+
+                HTML DOM properties are values (of HTML Elements) that you can set or change. <br>
+                In the DOM, all elements are defined as objects.
+            </p>
+            <ul>
+                <li><a href="./17.1getelementbyid.html">DOM getElementById()</a></li>
+                <li>
+                    <a href="./17.2getelementbyclass.html">HTML DOM getElementsByClassName() Method</a>
+                </li>
+                <li><a href="./17.3getelementbyname.html">HTML DOM getElementsByName() Method</a></li>
+                <li><a href="./17.4getelementsbytagname.html">HTML DOM getElementsByTagName() Method</a></li>
+                <li><a href="./17.5queryselector.html">HTML DOM querySelector() Method</a>
+                </li>
+                <li><a href="./17.6QuerySelecorAll.html">HTML DOM querySelectorAll() Method</a></li>
+            </ul>
+        </div>
+        </p>
+        <h1 id="scrollspyHeading3">Question Answer</h1>
+        <p>
+            <!-- Question one START -->
+        <details>
+            <summary><strong class="que">1. What are the different ways an HTML element can be accessed in a JavaScript
+                    code?</strong></summary>
+            <p>
+                There are several ways to access HTML elements in JavaScript code:
+            </p>
+            <details>
+                <summary>getElementById:</summary>
+                <p>This method retrieves an element by its unique id attribute.</p>
+                <p>Example</p>
+                <pre>
+                        var element = document.getElementById("elementId");
+                    </pre>
+            </details>
+            <details>
+                <summary>getElementsByClassName:</summary>
+                <p>This method returns a collection of elements that have a specified class name.</p>
+                <p>Example</p>
+                <pre>
+                    var elements = document.getElementsByClassName("className");
+                </pre>
+            </details>
+            <details>
+                <summary>getElementsByTagName:</summary>
+                <p>This method returns a collection of elements with a specified tag name.</p>
+                <p>Example</p>
+                <pre>
+                    var elements = document.getElementsByTagName("tagName");
+                </pre>
+                <pre>
+                    var elements = document.querySelectorAll("selector");
+                </pre>
+            </details>
+            <details>
+                <summary>Using the "name" Attribute:</summary>
+                <p>You can also access elements using the name attribute, primarily for form elements.</p>
+                <p>Example</p>
+                <pre>
+                    var element = document.getElementsByName("elementName")[0]; // Returns the first element with the specified name
+                </pre>
+            </details>
+            <details>
+                <summary>Accessing Nested Elements:</summary>
+                <p>You can navigate through the DOM to access nested elements using properties like parentNode,
+                    childNodes,
+                    firstChild, lastChild, nextSibling, and previousSibling.</p>
+                <p>Example</p>
+                <pre>
+                        var childElement = parentElement.childNodes[0]; // Accessing the first child node
+                    </pre>
+            </details>
+        </details>
+        </details>
+        <!-- Question one END -->
+        <!-- Question TWO START -->
+        <details>
+            <summary><strong class="que">2. What is the difference between Document and Window in JavaScript?</strong>
+            </summary>
+            <p>
+                In JavaScript, both Document and Window are core objects that represent different aspects of a web page,
+                var parentElement = document.getElementById("parentElementId");
+                but
+                they serve different purposes and have distinct properties and methods:
+            </p>
+            <details>
+                <summary><strong>Window Object:</strong></summary>
+                <ul>
+                    <li>The Window object represents the browser window or tab in which the web page is displayed.</li>
+                    <li>It is the global object in client-side JavaScript and serves as the root object for all other
+                        objects in
+                        the browser's JavaScript environment.</li>
+                    <li>It contains properties and methods related to the browser window, such as window.innerWidth,
+                        window.innerHeight, window.location, window.alert(), window.setTimeout(), etc.</li>
+                    <li>It provides access to browser features like navigation, resizing, history, and more.</li>
+                    <li>Each browser window/tab has its own Window object.</li>
+                </ul>
+            </details>
+            <details>
+                <summary><strong>Document Object:</strong></summary>
+                <ul>
+                    <li>The Document object represents the HTML document loaded in the browser window or tab.</li>
+                    <li>It is a property of the Window object (window.document).</li>
+                    <li>It provides access to the content of the web page and allows manipulation of the HTML elements,
+                        their
+                        attributes, and the document structure.</li>
+                    <li>It contains properties and methods for accessing and modifying the document's content, such as
+                        document.getElementById(), document.querySelector(), document.createElement(), document.title,
+                        etc.
+                    </li>
+                    <li>It represents the DOM (Document Object Model) tree structure, which is a hierarchical
+                        representation
+                        of
+                        the HTML elements on the page.
+                    </li>
+                    <li>Each web page loaded in the browser has its own Document object.
+                    </li>
+                </ul>
+            </details>
+        </details>
+        <!-- Question TWO END -->
+        </p>
+        <h1>Task</h1>
+        <button onclick="createpara()">createparagraph</button>
+    </div>
+
+    <script>
+        function createpara() {
+            let para = document.createElement("p")
+            let paraa = document.createTextNode("Paragraph is created.");
+            para.appendChild(paraa);
+            document.body.appendChild(para)
+        }
+    </script>
+</body>
+
+</html>

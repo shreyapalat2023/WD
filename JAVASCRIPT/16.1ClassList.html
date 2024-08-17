@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Class-List
+    </title>
+    <style>
+        .intro{
+            background-color: pink;        }
+        .newClass{
+            background-color: green;
+            color:darkblue;
+        }
+        .newClass2{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Element: classList property</h1>
+    <p>The Element.classList is a read-only property that returns a live DOMTokenList collection of the class attributes of the element. This can then be used to manipulate the class list.</p>
+    <p>A DOMTokenList representing the contents of the element's class attribute. If the class attribute is not set or empty, it returns an empty DOMTokenList, i.e. a DOMTokenList with the length property equal to 0.</p>
+    <h2>Question1. Create a &lt;p&gt; tag in html. give it a class & some styling.Now create a new class in CSS and try to append this class to the  &lt;p&gt; element. </p> </h2>
+    <p class="intro" id = "mypara">Hi! My name is Shreya.</p>
+    <p>Did you notice, how you overwrite th e class name when you add a new one? Solve this problem using classList.</p>
+    <p class="intro" id="mypara2">Hi! My name is Shreya.</p>
+
+    <script>
+        const introduction = document.getElementById("mypara");
+        introduction.setAttribute("class","newClass");
+
+        introduction2 = document.getElementById("mypara2");
+        introduction2.classList.add("newClass2");
+        
+    </script>
+</body>
+</html>
