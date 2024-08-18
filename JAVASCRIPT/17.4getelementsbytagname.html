@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{color : rgb(54, 96, 134)};
+    </style>
+</head>
+<body>
+    <h1>HTML DOM getElementsByTagName() Method</h1>
+    <p>The getElementsByTagName() method in the HTML DOM allows the selection of elements by their tag name. It returns a collection of elements with the specified tag name within the specified document or element.To extract any info just iterate through all the elements using the length property. </p>
+    <p>Syntax</p>
+    <pre>
+        let elements = document.getElementsByTagName(name);
+    </pre>
+    <ul>
+        <li>
+            elements is a collection of all the found elements in the order they appear with the given tag name.
+        </li>
+        <li>
+            name is a string representing the name of the elements. The special string “*” represents all elements.
+        </li>
+    </ul>
+    <p>Example</p>
+    <p>In this example, we will change the properties of multiple elements using document.getElementsByTagName() function.</p>
+    <div>
+        <p>This the first paragraph</p>
+        <p>This the first paragraph</p>
+        <p>This the first paragraph</p>
+    </div>
+    <button onclick="changeBgColor()">Click here</button>
+
+    <script>
+        function changeBgColor(){
+            let doc = document.getElementsByTagName("p");
+            for(let i = 0; i < doc.length; i++){
+                doc[i].style.backgroundColor= "green";
+                doc[i].style.color = "white"
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{color : rgb(54, 96, 134)};
+    </style>
+</head>
+<body>
+    <h1>HTML DOM querySelectorAll() Method</h1>
+    <p>The querySelectorAll() method in HTML is used to return a collection of an element's child elements that match a specified CSS selector(s), as a static NodeList object. The NodeList object represents a collection of nodes. The nodes can be accessed by index numbers. The index starts at 0.</p>
+    <p>Example:</p>
+    <p>Changing the size of the element.</p>
+    <h1>DOM</h1>
+    <div id = "yellow">
+        <p>This is paragrph 1</p>
+        <p>This is paragrph 2</p>
+    </div>
+    <button onclick="myFunction()">Click me</button>
+
+    <script>
+        function myFunction(){
+            let x = document.getElementById("yellow").querySelectorAll("p");
+            for(let i = 0; i < x.length; i++){
+                x[i].style.fontSize = "40px";
+                // x[i].style.color = "White";
+            }
+        }
+    </script>
+</body>
+</html>

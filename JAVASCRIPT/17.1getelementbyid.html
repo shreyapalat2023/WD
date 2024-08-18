@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            color: rgb(54, 96, 134);
+        }
+    </style>
+</head>
+
+<body>
+    <h2>HTML DOM getElementById() Method</h2>
+    <p>
+        The getElementById() method returns the elements that have given an ID which is passed to the function. This
+        function is a widely used HTML DOM method in web designing to change the value of any particular element or get
+        a particular element. If the passed ID to the function does not exist then it returns null.
+    </p>
+    <p>
+    <p>
+        <strong style="color: red;">Note:</strong>
+        Each ID needs to be unique. If there are multiple elements with the same ID, only the first one will be
+        returned.
+    </p>
+    <p>Syntax:</p>
+    <pre>
+            document.getElementById( element_ID )
+        </pre>
+    </p>
+    <p><strong>Example1</strong></p>
+    <p>This example describes the getElementById() method where element_id is used to change the color of the text on
+        clicking the button.</p>
+    <h1>DOM</h1>
+    <h1 id="head"> getElementById Method</h1>
+    <button onclick="changeColor()">click here to change color</button>
+    <button onclick="changeContent()">click here to change the content</button>
+    <script>
+        //    Function to change the color of element
+        function changeColor() {
+            document.getElementById("head").style.color = "green"
+        }
+        function changeContent() {
+            document.getElementById("head").innerHTML = "Hello World!"
+        }
+    </script>
+</body>
+
+</html>

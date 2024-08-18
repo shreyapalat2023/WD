@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            *{color : rgb(54, 96, 134)};
+    </style>
+</head>
+<body>
+    <h1>HTML DOM getElementsByName() Method</h1>
+    <p>The getElementsByName() method returns collection of all elements of particular document by name. This collection is called node list and each element of the node list can be visited with the help of the index. </p>
+    <p>This function returns collection of elements. By using the build in method length we can find the total number of elements presents inside that particular element. Below example illustrates it clearly. </p>
+    <p>Syntax</p>
+    <pre>
+        document.getElementsByName(name)
+    </pre>
+    <p>Example</p>
+    <p>Since document.getElementsByName() method returns an array containing of objects if we want to get value of any object then we should use document.getElementsByName(“element_name”)[index].value. Otherwise we will get result undefined. Below program explains it clearly. </p>
+    <h1>DOM</h1>
+    <h2>getElementsByName() Method</h2>
+    <h4 name = ga>Hello</h4>
+    <h4 name = ga>World!</h4>
+    <h4 name = ga>Hello</h4>
+    <input type="text" name = "ma">
+    <input type="button" onclick="findValue()" value="Click me to get value">
+    <input type="button" onclick="findLength()" value="Click here to find length">
+
+    <script>
+        function findLength() {
+            var x = document.getElementsByName("ga");
+            alert("Total element with name ga are:" + x.length);
+        }
+        function findValue(){
+            var y = document.getElementsByName("ma")
+            alert(y[0].value);
+        }
+    </script>
+</body>
+</html>

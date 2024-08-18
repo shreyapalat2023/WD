@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{color : rgb(54, 96, 134)};
+    </style>
+</head>
+<body>
+    <h1>HTML DOM querySelector() Method</h1>
+    <p>The querySelector() method finds and returns the first HTML element that matches a specific CSS selector. If the selector is invalid, it throws an error.</p>
+    <p>Syntax</p>
+    <pre>
+        element.querySelector(selectors);
+    </pre>
+    <p>CSS selectors identify HTML elements by id, class, type, attributes, or attribute values. Multiple selectors can be separated by commas.</p>
+    <p>Example:</p>
+    <p>This example describes the use of the DOM querySelector() method to select the very first matching element for the specific selector.</p>
+    <div id = "green">
+        <p>This is pragraph 1</p>
+        <p>This is pragraph 2</p>
+    </div>
+    <button onclick="changeColor()">Click me</button>
+
+    <script>
+        function changeColor(){
+            let x = document.getElementById("green");
+            x.querySelector("p").style.backgroundColor = "Pink";
+            x.querySelector("p").style.color = "White"
+        }
+    </script>
+</body>
+</html>

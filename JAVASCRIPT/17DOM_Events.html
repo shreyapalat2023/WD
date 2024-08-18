@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Introduction to events</h1>
+    <p>
+        Events are things that happen in the system you are programming, which the system tells you about so your code
+        can react to them.
+    </p>
+    <p>For example, if the user clicks a button on a webpage, you might want to react to that action by displaying an
+        information box. In this article, we discuss some important concepts surrounding events, and look at how they
+        work in browsers. This won't be an exhaustive study; just what you need to know at this stage.
+    </p>
+    <ul>
+        <li>
+            <strong>onclick:</strong>
+            Triggered when an element is clicked.
+        </li>
+        <li>
+            <strong>onmouseover:</strong>
+            Fired when the mouse pointer moves over an element.
+        </li>
+        <li>
+            <strong>onkeydown:</strong>
+            Fired when a key is pressed down..
+        </li>
+        <li>
+            <strong>onkeyup:</strong>
+            Fired when a key is released.
+        </li>
+        <li>
+            <strong>onchange:</strong>
+            Triggered when the value of an input element changes.
+        </li>
+        <li>
+            <strong>onload:</strong>
+            Occurs when a page has finished loading.
+        </li>
+        <li>
+            <strong>onsubmit:</strong>
+            Fired when a form is submitted.
+        </li>
+        <li>
+            <strong>onfocus:</strong>
+            Occurs when an element gets focus.
+        </li>
+        <li>
+            <strong>onblur:</strong>
+            Fired when an element loses focus.
+        </li>
+    </ul>
+    <!-- Event Object START -->
+     <h1>Event Object</h1>
+     <p>It is a special object that has details about the event.</p>
+     <p>All event handlers have access to the Event Object's properties and methods.</p>
+     <pre>
+        node.event = (e) => {
+            //handle here
+        }
+     </pre>
+     <strong>Ex.</strong><span>e.target, e.type, e.clienttX, e.clientY</span>
+    <!-- Event Object END -->
+    </div>
+    
+    <h1>Excercise:</h1>
+    <p id="para">This is my para</p>
+    <input type="text" name="getname" id="inp" class="inb">
+    <input type="text" name="getname">
+    <button id="btn" class="inb" onclick="myfunction()">clickme</button>
+    <script>
+        function myfunction() {
+            const data = document.getElementById("inp");
+            console.log(data.value);
+        }
+        const para = document.getElementById("para").innerHTML = "Hello";
+
+        console.log(para);
+
+        const user = document.getElementById("inp");
+
+        console.log(user);
+
+        const info = document.getElementsByClassName("inb"); //Html Collection
+
+        console.log(info[0]);
+
+        // const info1 = document.getElementsByName("getname"); //nodelist
+
+        // console.log(info1);
+
+        const info2 = document.getElementsByTagName("input")
+        console.log(info2);
+    </script>
+
+</body>
+
+</html>
