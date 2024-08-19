@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Functions:</h1>
+    <p>
+        A JavaScript function is a block of code designed to perform a particular task.
+
+        A JavaScript function is executed when "something" invokes it (calls it).
+    </p>
+
+    <h3>JavaScript Function Syntax:</h3>
+    <pre>
+     A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().
+
+    Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
+            
+    The parentheses may include parameter names separated by commas:
+    (parameter1,parameter2, ...)
+            
+    The code to be executed, by the function, is placed inside curly brackets: {} 
+    </pre>
+    <pre>
+    function name(parameter1, parameter2, parameter3) {
+         // code to be executed
+    }
+          
+    </pre>
+
+    <p>
+        Function parameters are listed inside the parentheses () in the function definition. <br>
+
+        Function arguments are the values received by the function when it is invoked. <br>
+        
+        Inside the function, the arguments (the parameters) behave as local variables.
+    </p>
+
+    <h4>Function Invocation:</h4>
+    <p>
+        The code inside the function will execute when "something" invokes (calls) the function: 
+    </p>
+    <ul>
+        <li>When an event occurs (when a user clicks a button)
+        </li>
+        <li>When it is invoked (called) from JavaScript code</li>
+        <li>Automatically (self invoked)</li>
+    </ul>
+
+    <h4>Function Return:</h4>
+
+    <p>
+        When JavaScript reaches a return statement, the function will stop executing. <br>
+
+        If the function was invoked from a statement, JavaScript will "return" to execute the code after the invoking statement. <br>
+        
+        Functions often compute a return value. The return value is "returned" back to the "caller" 
+    </p>
+
+    <h3>Example:</h3>
+    <pre>
+        // Function is called, the return value will end up in x
+        let x = myFunction(4, 3);
+
+        function myFunction(a, b) {
+        // Function returns the product of a and b
+        return a * b;
+        }
+    </pre>
+
+    <h4>Why Functions ?</h4>
+    <ul>
+        <li>With functions you can reuse code</li>
+        <li>You can write code that can be used many times</li>
+        <li>You can use the same code with different arguments, to produce different results.</li>
+    </ul>
+    <h4>Functions used as variable values</h4>
+    <p>
+        Functions can be used the same way as you use variables, in all types of formulas, assignments, and calculations.
+    </p>
+
+    <h4>Local Variables:</h4>
+    <p>
+        Variables declared within a JavaScript function, become LOCAL to the function. <br>
+
+        Local variables can only be accessed from within the function. <br>
+
+        Since local variables are only recognized inside their functions, variables with the same name can be used in different functions. <br>
+
+        Local variables are created when a function starts, and deleted when the function is completed.
+    </p>
+
+    <!-- Parameters vs Arguments START -->
+    <h3>Parameters vs Arguments</h3>
+    <p>
+        Function parameters are the names listed in the function definition. <br>
+
+        Function arguments are the real values passed to (and received by) the function. 
+    </p>
+    <h5>Example</h5>
+    <pre>
+        function example(parameter) {
+            console.log(parameter); // Output = foo
+          }
+          
+          const argument = "foo";
+          
+          example(argument);
+    </pre>
+
+    <h4>Parameter Rules</h4>
+    <ul>
+        <li>JavaScript function definitions do not specify data types for parameters.</li>
+        <li>JavaScript functions do not perform type checking on the passed arguments.</li>
+        <li>JavaScript functions do not check the number of arguments received</li>
+    </ul>
+    <h4>Default Parameters</h4>
+    <p>
+        If a function is called with missing arguments (less than declared), the missing values are set to undefined. <br>
+
+        Sometimes this is acceptable, but sometimes it is better to assign a default value to the parameter: 
+    </p>
+    <h5>Example</h5>
+    <pre>
+        function myFunction(x, y) {
+            if (y === undefined) {
+              y = 2;
+            }
+            return x * y;
+          }
+          console.log(myFunction(4));
+    </pre>
+
+    <h4>Default Parameter Values:</h4>
+    <pre>
+        function myFunction(x, y = 10){
+            return x + y;
+        }
+        console.log(myFunction(5));
+    </pre>
+
+    <h4>Rest Parameters</h4>
+    <p>The rest parameter syntax allows a function to accept an indefinite number of arguments as an array</p>
+    <h6>Example</h6>
+    <pre>
+        function sum(...theArgs) {
+            let total = 0;
+            for (const arg of theArgs) {
+              total += arg;
+            }
+            return total;
+          }
+          
+          console.log(sum(1, 2, 3));
+          // Expected output: 6
+          
+          console.log(sum(1, 2, 3, 4));
+          // Expected output: 10
+          
+    </pre>
+    
+    
+   
+    <script>
+        // function myFunction(){
+        //     let num1 = "1000"
+        //     return num1;
+        // }
+
+        // console.log(myFunction());
+        // console.log(myFunction());
+        // console.log(myFunction());
+        // console.log(myFunction());
+        // console.log(myFunction());
+
+        // undefined parameter
+
+        function myFunction(x, y) {
+            if (y === undefined) {
+              y = 2;
+            }
+            return x * y;
+          }
+          console.log(myFunction(4));
+
+        //   default parameter
+
+        function mySecondFunction(x, y = 10){
+            return x + y;
+        }
+        console.log(mySecondFunction(5));
+
+        // Rest Parameter
+
+        function sum(...theArgs) {
+            let total = 0;
+            for(const arg of theArgs){
+                total += arg;
+            }
+            return total;
+        }
+
+        console.log(sum(1,3,4,5));
+
+        console.log(sum(3,6,6,4,5));
+        
+    </script>
+</body>
+</html>
