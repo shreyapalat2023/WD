@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            color: rgb(54, 96, 134);
+        }
+
+        .que {
+            font-size: 20px;
+        }
+
+        .task {
+            font-size: 20px;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
+        <a class="navbar-brand" href="#"></a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading1">Overview</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading2">Question Answer</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                    aria-expanded="false">Dropdown</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#scrollspyHeading3">Task</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
+        data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+        <h1 id="scrollspyHeading1">JavaScript Scope</h1>
+        <p>
+            <!-- JavaScript Scope START -->
+        <p>Scope determines the accessibility (visibility) of variables.</p>
+        <p>
+            In JavaScript, scope refers to the context in which variables, functions, and objects are accessible during
+            runtime. It determines the visibility and lifetime of these identifiers within your code. Understanding
+            scope is crucial for writing maintainable and bug-free JavaScript code.</p>
+        <!-- JavaScript Closure START -->
+        <!-- Closures START -->
+        <h1>JavaScript Closure</h1>
+        <p>A closure is the combination of a function bundled together (enclosed) with references to its surrounding
+            state (the lexical environment). In other words, a closure gives you access to an outer function's scope
+            from an inner function. In JavaScript, closures are created every time a function is created, at function
+            creation time.</p>
+        <P>A closure “closes over” its lexical scope, </P>
+        <!-- Closures END -->
+        </p>
+        <h1 id="scrollspyHeading2">Question Answer</h1>
+        <p>
+            <!-- Question Answer START -->
+        <details>
+            <summary>
+                <strong class="que">1. What are the scopes of a variable in JavaScript?</strong>
+            </summary>
+            <p>JavaScript variables have 3 types of scope:</p>
+            <ul>
+                <li>Block scope</li>
+                <li>Function scope</li>
+                <li>Global scope</li>
+            </ul>
+            <!-- Block scope START-->
+            <h3>Block Scope</h3>
+            <p>
+                Before ES6 (2015), JavaScript variables had only Global Scope and Function Scope. <br>
+
+                ES6 introduced two important new JavaScript keywords: let and const. <br>
+
+                These two keywords provide Block Scope in JavaScript. <br>
+
+                Variables declared inside a { } block cannot be accessed from outside the block:
+            </p>
+            <details>
+                <summary>Example</summary>
+                <pre>
+            if (true) {
+                let blockVar = 30;
+                console.log(blockVar); // Accessible inside the block
+            }
+            
+            console.log(blockVar); // Error: blockVar is not defined
+        </pre>
+            </details>
+            <p>
+                Variables declared with the var keyword can NOT have block scope. <br>
+
+                Variables declared inside a { } block can be accessed from outside the block.
+            </p>
+            <h5>Example:</h5>
+            <pre>
+            {
+                var x = 2;
+              }
+              // x CAN be used here
+        </pre>
+            <!-- Blcok Scope END -->
+            <!-- Local Scope START -->
+            <h3>Local Scope</h3>
+            <p>Variables declared within a JavaScript function, are LOCAL to the function:</p>
+            <pre>
+               // code here can NOT use carName
+  
+               function myFunction() {
+               let carName = "Volvo";
+               // code here CAN use carName
+               }
+
+               // code here can NOT use carName
+            </pre>
+            <p>
+                Since local variables are only recognized inside their functions, variables with the same name can be
+                used
+                in
+                different functions. <br>
+
+                Local variables are created when a function starts, and deleted when the function is completed.
+            </p>
+            <!-- Local Scope END -->
+
+            <!-- Function scope START -->
+            <h3>Function Scope</h3>
+            <p>
+                JavaScript has function scope: Each function creates a new scope. <br>
+
+                Variables defined inside a function are not accessible (visible) from outside the function. <br>
+
+                Variables declared with var, let and const are quite similar when declared inside a function.
+            </p>
+            <h3>They all have Function Scope:</h3>
+
+            <pre>
+            function testFunction() {
+                if (true) {
+                    var functionVariable = "I'm in a function";
+                    console.log(functionVariable); // Accessible
+                }
+                console.log(functionVariable); // Accessible
+            }
+        </pre>
+            <!-- Function Scope END -->
+            <!-- Global scope START -->
+            <h3>Global JavaScript Variables:</h3>
+            <p>A variable declared outside a function, becomes GLOBAL.</p>
+            <h5>Example</h5>
+            <pre>
+            var globalVariable = "I'm global";
+
+            function testFunction() {
+                console.log(globalVariable); // Accessible
+            }
+        </pre>
+            <h4>Global Scope</h4>
+            <p>
+                Variables declared Globally (outside any function) have Global Scope. <br>
+
+                Global variables can be accessed from anywhere in a JavaScript program. <br>
+
+                Variables declared with var, let and const are quite similar when declared outside a block.
+            </p>
+            <!-- Automatically Global START-->
+            <h3>Automatically global variables</h3>
+            <p>
+                If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL
+                variable.
+                <br>
+
+                This code example will declare a global variable carName, even if the value is assigned inside a
+                function.
+            </p>
+            <h6>Example:</h6>
+            <pre>
+           myFunction();
+
+           // code here can use carName
+
+           function myFunction() {
+           carName = "Volvo";
+          }
+             </pre>
+            <!--Automatically Global END-->
+        </details>
+        <!--Question two START  -->
+        <details>
+            <summary><strong class="que">2. What are Closures in JavaScript?</strong></summary>
+            <p>A closure is the combination of a function bundled together (enclosed) with references to its surrounding
+                state (the lexical environment). In other words, a closure gives you access to an outer function's scope
+                from an inner function. In JavaScript, closures are created every time a function is created, at
+                function
+                creation time.</p>
+            <details>
+                <summary>Example</summary>
+                <pre>
+                function outerFunction() {
+                    var outerVariable = 'I am from outer function';
+                    
+                    function innerFunction() {
+                        console.log(outerVariable); // Accessing outerVariable from the outer function
+                    }
+                
+                    return innerFunction; // returning the inner function
+                }
+                
+                var closureExample = outerFunction(); // outerFunction executed, closureExample now holds innerFunction
+                
+                closureExample(); // Even though outerFunction execution is finished, innerFunction still has access to outerVariable
+            </pre>
+            </details>
+        </details>
+        <!-- Question TWO END -->
+        <!-- Question THREE START -->
+        <details>
+            <summary><strong class="que"> 3. Characteristics of javascript strict-mode</strong></summary>
+            <p>
+                "use strict"; Defines that JavaScript code should be executed in "strict mode". <br>
+                The "use strict" directive was new in ECMAScript version 5.
+
+                It is not a statement, but a literal expression, ignored by earlier versions of JavaScript. <br>
+
+                The purpose of "use strict" is to indicate that the code should be executed in "strict mode". <br>
+
+                With strict mode, you can not, for example, use undeclared variables. <br>
+
+                Strict mode is declared by adding "use strict"; to the beginning of a script or a function.
+            </p>
+            <details>
+                <summary>Example1</summary>
+                <pre>
+                "use strict";
+                x = 3.14;       
+                // This will cause an error because x is not declared
+            </pre>
+            </details>
+            <p>
+                Declared inside a function, it has local scope (only the code inside the function is in strict mode):
+            </p>
+
+            <details>
+                <summary>Example2</summary>
+                <pre>
+                x = 3.14;       // This will not cause an error.
+                myFunction();
+        
+                function myFunction() {
+                "use strict";
+                y = 3.14;   // This will cause an error
+                }
+            </pre>
+            </details>
+            <h4>NOTE:</h4>
+            <p>
+                The "use strict" directive can only be applied to the body of functions with simple parameters. Using
+                "use
+                strict" in functions with rest, default, or destructured parameters is a syntax error.
+            </p>
+            <details>
+                <summary>Example3</summary>
+                <pre>
+                function sum(a = 1, b = 2) {
+                    // SyntaxError: "use strict" not allowed in function with default parameter
+                    "use strict";
+                    return a + b;
+                  }
+            </pre>
+            </details>
+        </details>
+        <!-- Question THREE  END -->
+        <!-- Question FOUR START -->
+        <details>
+            <summary>
+                <strong class="que">4. currying in JavaScript (with examples)</strong>
+            </summary>
+            <p>
+                Currying is a functional programming technique in JavaScript where a function with multiple arguments is
+                transformed into a sequence of nested functions, each taking a single argument. The curried function
+                returns
+                a new function with each argument partially applied until all arguments have been provided, at which
+                point
+                the original function is called with all the arguments.
+            </p>
+            <h4>Why is currying useful in JavaScript?</h4>
+            <ul>
+                <li>It helps us to create a higher-order function</li>
+                <li>It reduces the chances of error in our function by dividing it into multiple smaller functions that
+                    can
+                    handle one responsibility.</li>
+                <li>It is very useful in building modular and reusable code
+                </li>
+                <li>It helps us to avoid passing the same variable multiple times</li>
+                <li>It makes the code more readable</li>
+            </ul>
+        </details>
+        <!-- Question four END -->
+        <!-- Question FIVE START -->
+
+        <details>
+            <summary>
+                <strong class="que">5. Role of deferred scripts</strong>
+            </summary>
+            <p>
+                JavaScript's defer attribute is being used to load JavaScript resources (script files) just after HTML
+                document's core content has loaded.
+            </p>
+            <p>
+                The user does not have to wait to view the page's primary content after loading JavaScript tools; the
+                remaining script files can be included afterwards.
+            </p>
+            <img src="./defer_data.jpg" alt="image">
+
+        </details>
+        <!-- Question FIVE END -->
+        <!-- Question SIX START -->
+        <details>
+            <summary>
+                <strong class="que"> 6. What is Lexical Scoping?</strong>
+            </summary>
+            <p>Lexical scope is a fundamental concept in programming that determines the accessibility of variables and
+                functions within a program</p>
+            <p>In other words, lexical scope refers to the ability of a function scope to access variables from the
+                parent
+                scope. When there is lexical scope, the innermost, inner and outermost functions may access all
+                variables
+                from their parent scopes all the way up to the global scope.</p>
+        </details>
+        <!-- Question SIX END -->
+        </p>
+        <h1 id="scrollspyHeading3">TASK</h1>
+        <p>
+        <ul>
+            <li>
+                <details>
+                    <summary>Task1</summary>
+                    <h4>This is to add two numbers.</h4>
+                    <script>
+                        function makeAdder(x) {
+                            return function (y) {
+                                return x + y;
+                            };
+                        }
+
+                        const add5 = makeAdder(5);
+                        const add10 = makeAdder(10);
+
+                        document.write(add5(3)); // 7
+                        document.write(add10(2));  // 12
+                    </script>
+                </details>
+            </li>
+            <li><a href="./19.2closure_task.html">task2</a></li>
+            <li><a href="./19.1currying_in_js.html">task3</a></li>
+        </ul>
+        </p>
+    </div>
+</body>
+
+</html>
