@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+    <style>
+        * {
+            color: rgb(54, 96, 134);
+            /* font-size: 20px; */
+        }
+
+        .que {
+            font-size: 20px;
+        }
+        .head-str{
+            color: white;
+            background-color: violet;
+            width: 25%;
+            padding: 5px;
+            border-radius: 10%;
+        }
+    </style>
+    <script defer src="21stringmethods.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
+        <a class="navbar-brand" href="#"></a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading1">Overview</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading2">String</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                    aria-expanded="false">Dropdown</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#scrollspyHeading3">String Methods</a></li>
+                    <li><a class="dropdown-item" href="#scrollspyHeading4">Task</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
+        data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+        <h1 id="scrollspyHeading1">JavaScript String</h1>
+        <p>
+            <p>The String object is used to represent and manipulate a sequence of characters.</p>
+            <p>
+                Strings are useful for holding data that can be represented in text form. Some of the most-used operations
+                on
+                strings are to check their length, to build and concatenate them using the + and += string operators,
+                checking
+                for the existence or location of substrings with the indexOf() method, or extracting substrings with the
+                substring() method.
+            </p>
+            <p><strong style="color: red;">Note:</strong>JavaScript Strings are immutable. We cannot make any changes in strings instead it will creat new string.</p>
+        <!-- Create Strings START -->
+        <h2>Creating Strings:</h2>
+        <p>Strings can be created as primitives, from string literals, or as objects, using the String() constructor:
+        </p>
+        <pre>
+            const string1 = "A string primitive";  //single quotes
+            const string2 = 'Also a string primitive'; //double quotes
+            const string3 = `Yet another string primitive`; //Backticks
+        </pre>
+        <pre>const string4 = new String("A String object");
+        </pre>
+        <p>Single quotes and double quotes are practically the same and you can use either of them.</p>
+        <p>Backticks are generally used when you need to include variables or expressions into a string. This is done by
+            wrapping variables or expressions with ${variable or expression} as shown above.</p>
+        <p>You can also write a quote inside another quote. For example,</p>
+        <pre>
+                const name = 'My name is "Peter".';
+            </pre>
+        <p>However, the quote should not match the surrounding quotes. For example,</p>
+        <pre>
+                const name = 'My name is 'Peter'.'; // error
+            </pre>
+        <!-- Create Strings END-->
+        <!-- Template literal  START-->
+        <h3>Using Template Literals</h3>
+        <p>Template Literals in JS is a way to have embedded expressions in strings.</p>
+        <h6 class="head-str">String Interpolation:</h6>
+        <p>To create strings by doing substitution of placeholders.</p>
+        <p>
+            You can create strings using Template Literals. Template literals allow you to embed expressions withinbackticks (`) for dynamic string creation, making it more readable and versatile.
+        </p>
+        <p>Example</p>
+        <pre>
+                let str = 'Template Litral String';
+                let newStr = `String created using ${str}`;
+            </pre>
+        </p>
+        <!-- Template literal END-->
+        <!-- Multiline String START -->
+        <h3>Multiline String</h3>
+        <p>You can create a multiline string using backticks (“) with template literals. The backticks allows you to
+            span
+            the string across multiple lines, preserving the line breaks within the string.</p>
+        <p>This is not possible with single or double quote</p>
+        <p>Example</p>
+        <pre>
+        let str = `
+        This is a
+        multiline
+        string`;
+        </pre>
+        <!-- Multiline String END -->
+        <!--Access String Characters START  -->
+        <h3>Access String Characters</h3>
+        <p>You can access the characters in a string in two ways.</p>
+        <ul>
+            <li>One way is to treat strings as an array.</li>
+        </ul>
+        <details>
+            <summary>Example</summary>
+            <pre>
+            const a = 'hello';
+            console.log(a[1]); // "e"
+        </pre>
+        </details>
+        <ul>
+            <li>Another way is to use the method charAt().</li>
+        </ul>
+        <details>
+            <summary>Example</summary>
+            <pre>
+            const a = 'hello';
+            console.log(a.charAt(1)); // "e"
+        </pre>
+        </details>
+        <!--Access String Characters 
+    END  -->
+        <!-- Strings are immutable START -->
+        <h3>JavaScript Strings are immutable</h3>
+        <ul>
+            <li>In JavaScript, strings are immutable. That means the characters of a string cannot be changed.</li>
+        </ul>
+        <details>
+            <summary>Example</summary>
+            <pre>
+            let a = 'hello';
+            a[0] = 'H';
+            console.log(a); // "hello"
+        </pre>
+        </details>
+        <ul>
+            <li>However, you can assign the variable name to a new string.</li>
+        </ul>
+        <details>
+            <summary>Example</summary>
+            <pre>
+            let a = 'hello';
+            a = 'Hello';
+            console.log(a); // "Hello"
+        </pre>
+        </details>
+        <!-- Strings are immutable 
+    END -->
+        <!-- JavaScript String Objects START -->
+
+        <h3>JavaScript String Objects</h3>
+        <p>You can also create strings using the new keyword.</p>
+        <details>
+            <summary>Example</summary>
+            <pre>
+            const a = 'hello';
+            const b = new String('hello');
+
+            console.log(a); // "hello"
+            console.log(b); // "hello"
+
+            console.log(typeof a); // "string"
+            console.log(typeof b); // "object"
+        </pre>
+        </details>
+        <!-- JavaScript String Objects END -->
+        <h1 id="scrollspyHeading2">JavaScript String Methods</h1>
+        <p>
+            <!-- Javascript String Methods START -->
+        <details>
+            <summary>String length</summary>
+            <p>The length property returns the length of a string</p>
+            <p>Example</p>
+            <pre>
+            // defining a string
+            let sentence = "I love Programiz.";
+            
+            // returns number of characters in the sentence string
+            let len = sentence.length;
+            
+            console.log(len);
+            
+            // Output:
+            // 17
+        </pre>
+        </details>
+        <details>
+            <summary>String charAt()</summary>
+            <p>The charAt() method returns the character at the specified index in a string.</p>
+            <p>Example</p>
+            <pre>
+                // string declaration
+                const string = "Hello World!";
+    
+                // finding character at index 1
+                let index1 = string.charAt(1);
+                
+               console.log("Character at index 1 is " + index1);
+    
+              // Output:
+              // Character at index 1 is e
+            </pre>
+        </details>
+        <details>
+            <summary>String charCodeAt()</summary>
+            <p>The charCodeAt() method returns an integer between 0 and 65535 representing the UTF-16 code unit at the
+                given
+                index.</p>
+            <p>Example</p>
+            <pre>
+                // string definition
+                const greeting = "Good morning!";
+    
+                // UTF-16 code unit of character at index 5
+                let result = greeting .charCodeAt(5);
+                
+                console.log(result);
+                
+                // Output: 109
+            </pre>
+        </details>
+        <!-- String at() START -->
+        <details>
+            <summary>String at ()</summary>
+            <p>The at() method returns the character at a specified index (position) in a string.</p>
+        </details>
+        <!-- String at() END -->
+        <!-- String slice() START -->
+        <details>
+            <summary>String slice()</summary>
+            <p>The slice() method extracts and returns a section of a string.</p>
+            <p>Example</p>
+            <pre>
+            const message = "JavaScript is fun";
+            
+            // slice the substring from index 0 to 10
+            let result = message.slice(0, 10);
+            console.log(result);
+            
+            // Output: JavaScript
+        </pre>
+        </details>
+        <!-- String slice() END -->
+        <!-- String substring() START -->
+        <details>
+            <summary>String substring()</summary>
+            <p>The substring() method returns a specified part of the string between start and end indexes.</p>
+            <p>Example</p>
+            <pre>
+            const message = "JavaScript is fun.";
+
+            // get the substring starting from index 0 to 10
+            let result = message.substring(0, 10);
+            console.log(result);
+            
+            // Output: JavaScript
+        </pre>
+        </details>
+        <!-- String substring() 
+        END -->
+        <!-- String substr() 
+            START -->
+        <details>
+            <summary>String substr()</summary>
+            <p>substr() is similar to slice().</p>
+            <p>The difference is that the second parameter specifies the length of the extracted part.</p>
+            <p>Example</p>
+            <pre>
+            let str = "Apple, Banana, Kiwi";
+            let part = str.substr(7, 6);
+            //Output: Banana
+        </pre>
+        </details>
+        <!-- String substr() END -->
+        <!-- String toUpperCase() START -->
+        <details>
+            <summary>String toUpperCase()</summary>
+            <p>The toUpperCase() method returns the string converted to uppercase.</p>
+            <p>Example</p>
+            <pre>
+            const message = "javascript is fun";
+            
+            // convert message to uppercase
+            const upperMessage = message.toUpperCase();
+            console.log(upperMessage);
+            
+            // Output: JAVASCRIPT IS FUN
+        </pre>
+        </details>
+        <!-- String toUpperCase() END -->
+        <!-- String toLowerCase() START -->
+        <details>
+            <summary>String toLowerCase()</summary>
+            <p>The toLowerCase() method returns the string converted to lowercase.</p>
+            <p>Example</p>
+            <pre>
+            const message = "JAVASCRIPT IS FUN";
+            
+            // convert message to lowercase
+            const lowerMessage = message.toLowerCase();
+            console.log(lowerMessage);
+            
+            // Output: javascript is fun
+        </pre>
+        </details>
+        <!-- String toLowerCase() END -->
+        <!-- String coccat() START -->
+        <details>
+            <summary>String concat()</summary>
+            <p>concat() joins two or more strings</p>
+            <p>Example</p>
+            <pre>
+            let text1 = "Hello";
+            let text2 = "World!";
+            let text3 = text1.concat(" ", text2); 
+            //output: Hello World!
+        </pre>
+        </details>
+        <!-- String concat() END -->
+        <!-- String trim() START -->
+
+        <details>
+            <summary>String concat()</summary>
+            <p>The trim() method removes whitespace from both ends of a string.</p>
+            <p>Example1</p>
+            <pre>
+            const message = "   JAVASCRIPT IS FUN    ";
+
+            // remove leading and trailing whitespaces
+            const newMessage = message.trim();
+            console.log(newMessage);
+            
+            // Output: JAVASCRIPT IS FUN
+        </pre>
+            <p>Example2</p>
+            <pre>
+            let str = "   foo  ";
+            console.log(str.trim()); // 'foo'
+            
+            // trim() removes whitespace only from the edges
+            let str1 = "  A B C D  ";
+            console.log(str1.trim()); // 'A B C D'
+        </pre>
+        </details>
+        <!-- String trim() END -->
+        <!-- String trimStart() START -->
+        <details>
+            <summary>String trimStart()</summary>
+            <p>The trimStart() method works like trim(), but removes whitespace only from the start of a string.</p>
+            <p>Example</p>
+            <pre>
+            let text1 = "     Hello World!     ";
+            let text2 = text1.trimStart();
+            //Output: Hello World!
+        </pre>
+        </details>
+        <!-- String trimStart() END -->
+        <!-- String trimEnd() START -->
+        <details>
+            <summary>String trimEnd()</summary>
+            <p>The trimEnd() method works like trim(), but removes whitespace only from the end of a string.</p>
+            <p>Example</p>
+            <pre>
+            let text1 = "     Hello World!     ";
+            let text2 = text1.trimEnd();
+            //Output: Hello World!
+        </pre>
+        </details>
+        <!-- String trimEnd() END -->
+        <!-- String padStart() END -->
+        <details>
+            <summary>String padStart()</summary>
+            <p>It pads a string with another string (multiple times) until it reaches a given length.</p>
+            <p>The padStart() method pads a string from the start.</p>
+            <p>Example:Pad a string with "0" until it reaches the length 4</p>
+            <pre>
+            let text = "5";
+            let padded = text.padStart(4,"0");
+            //Output: 0005
+        </pre>
+        </details>
+        <!-- String padStart() END -->
+        <!-- String padEnd() END -->
+        <details>
+            <summary>String padStart()</summary>
+            <p>It pads a string with another string (multiple times) until it reaches a given length.
+            <p>
+            <p>The padEnd() method pads a string from the end.</p>
+            <p>Example:Pad a string with "0" until it reaches the length 4</p>
+            <pre>
+            let text = "5";
+            let padded = text.padEnd(4,"0");
+            //Output: 5000
+        </pre>
+        </details>
+        <!-- String padEnd() END -->
+        <!-- String repeat() END -->
+        <details>
+            <summary>String repeat()</summary>
+            <p>The repeat() method returns a string with a number of copies of a string.
+            <p>
+            <p>The repeat() method returns a new string.</p>
+            <p>The repeat() method does not change the original string.</p>
+            <p>Example</p>
+            <pre>
+            let text = "Hello world!";
+            let result = text.repeat(2);
+            //Output: Hello World!Hello World!
+        </pre>
+        </details>
+        <!-- String repeat() END -->
+        <!-- String replace() END -->
+        <details>
+            <summary>String replace()</summary>
+            <p>The replace() method replaces a specified value with another value in a string
+            <p>
+            <p>Example</p>
+            <pre>
+                    let text = "Hello";
+            let newText = text.replace("Hello", "World")
+            console.log(newText);
+            //Output: World
+        </pre>
+        </details>
+        <!-- String replace() END -->
+        <!-- String replaceAll() START -->
+        <details>
+            <summary>String replace()</summary>
+            <p>The replaceAll() method allows you to specify a regular expression instead of a string to be replaced.
+            <p>
+        </details>
+        <!-- String replaceAll() END -->
+        <!-- String Split() START -->
+        <details>
+            <summary>String split()</summary>
+            <p>A string can be converted to an array with the split() method.
+            <p>
+            <p>Example</p>
+            <pre>
+                    let text = "abcd";
+            let newText = text.split(",")
+            console.log(newText[0]);
+            //Output: a
+        </pre>
+            <p>If the separator is omitted, the returned array will contain the whole string in index [0].</p>
+            <p>If the separator is "", the returned array will be an array of single characters</p>
+        </details>
+        <!-- String split() END -->
+        <!-- Javascript String Methods END -->
+        </p>
+        <h1 id="scrollspyHeading3">TASK</h1>
+        <p>
+        <details>
+            <summary><strong>string methods</strong></summary>
+            <p id="string"></p>
+            <p id="charat"></p>
+            <p id="at"></p>
+            <p id="slice"></p>
+            <p id="substring"></p>
+            <p id="substr"></p>
+            <p id="uppercase"></p>
+            <p id="lowercase"></p>
+            <p id="concat"></p>
+            <p id="padstart"></p>
+            <p id="padend"></p>
+            <p id="repeat"></p>
+            <p id="split"></p>
+        </details>
+        </p>
+        <h2>Practice Question</h2>
+        <div>
+            <a href="./21.1practice_question_string.html">PQ</a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
