@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            color: rgb(54, 96, 134);
+            /* font-size: 20px; */
+        }
+
+        .que {
+            font-size: 20px;
+        }
+
+        .img {
+            width: 50%;
+        }
+
+        .image {
+            width: 50%;
+        }
+    </style>
+    <!-- <script defer src="./22.class_object.js"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
+        <a class="navbar-brand" href="#"></a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading1">Overview</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading2">Building Block</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                    aria-expanded="false">Dropdown</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#scrollspyHeading3">Principle</a></li>
+                    <li><a class="dropdown-item" href="#scrollspyHeading4">OOPS Concept</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#scrollspyHeading5">Question Answer:</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
+        data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+        <h1 id="scrollspyHeading1">Object Oriented Programming Structure/System</h1>
+        <p>
+        <p><strong>Definition:</strong> the name suggests, Object-Oriented Programming or OOPs refers to languages that
+            use
+            objects in programming. Object-oriented programming aims to implement real-world entities like inheritance,
+            hiding, polymorphism, etc in programming. The main aim of OOP is to bind together the data and the functions
+            that operate on them so that no other part of the code can access this data except that function.</p>
+        <ul>
+            <li>OOP is a programming paradigm where problems are modeled in the form of classes and objects. The main
+                focus
+                is on the data (object) rather than on the procedure or the functions used to manipulate that data.</li>
+            <li>An object is an abstract representation of things and concepts we encounter in the real world, such as
+                employees, organizations, cars, electronics, or anything you can think of. And a class is a blueprint
+                for
+                creating objects.</li>
+            <li>Thus, classes are small chunks of reusable code from which multiple objects can be created. This makes
+                programs written using OOP easy to execute, modify, and debug. Thus, object-oriented programming is very
+                useful for building large and complex software.</li>
+        </ul>
+        </p>
+        <h1 id="scrollspyHeading2">Building Blocks of OOP</h1>
+        <p>
+        <p>
+            To understand how OOP works, we first need to know its components. Once we do that, we can explore how the
+            core
+            OOP principles are applied to these components.
+        </p>
+        <!-- Class START -->
+        <details>
+            <summary><strong>Classes</strong></summary>
+            <p>
+                A class is a blueprint for objects. It is like the technical design of a house or a car. In such
+                designs,
+                you specify the features of the house. Using those features as a guide, you can then build as many
+                houses as
+                you want.
+            </p>
+            <p>
+                Classes and objects work in a similar way. If you want to create a program that processes information
+                about
+                your employees, you will need to start by creating an Employee class.
+            </p>
+            <p>This class will contain</p>
+            <ul>
+                <li>employee data in the form of variables (name, salary, job position, etc.) and</li>
+                <li>methods to process that data (calculating bonus, evaluating performance, etc.).</li>
+            </ul>
+        </details>
+        <!--Class END  -->
+        <!--Object START  -->
+        <details>
+            <summary><strong>Objects</strong></summary>
+            <p>
+                Once we've created a class, we can create objects from the class. An object is like a real house or a
+                real
+                car that you make from the blueprint.
+
+            </p>
+            <p>A javaScript object is an entity having state and behavior (properties and methods).</p>
+            <p>JS objects have a special property called prototype.</p>
+            <p>We can set prototype using _ _proto_ _</p>
+            <p>
+                <span style="color: red;">Note:</span>
+                If object & prototype have same method, object's method will be used.
+            </p>
+            <p>
+                You can make as many objects as you want from a class. For example, if you have a class named Employee,
+                you
+                can make objects <strong>employee1, employee2, ..., employeeN.</strong>
+            </p>
+            <p>
+                Each of these objects is an individual instance of the Employee class. So it has its own individual data
+                that is separate from other objects of the class. The figure below illustrates this point.
+            </p>
+            <div class="imgg">
+                <img class="image" src="./img/class-object.png" alt="image">
+            </div>
+
+            <p>
+                Now, each Employee object will have its own copy of name, salary, and the calculate_bonus() method. This
+                is
+                how we can model real-world concepts using classes and objects.
+            </p>
+        </details>
+        <!--Object END  -->
+        <!--Attributes START  -->
+        <details>
+            <summary>
+                <strong>Attributes</strong>
+            </summary>
+            <p>
+                These are the data or information associated with the object. In the Employee class we've described
+                above,
+                name and salary are the class attributes since they give the required information on the objects.
+            </p>
+        </details>
+        <!--Attributes END  -->
+        <!--Methods START  -->
+        <details>
+            <summary><strong>Methods</strong></summary>
+            <p>
+                These are the procedures and logic that are used to manipulate the object data or attributes. Methods
+                can
+                also be used to create new information about that object.
+            </p>
+            <p>
+                In our Employee class, we have included a method named calculate_bonus() to calculate the bonus received
+                by
+                an employee.
+            </p>
+        </details>
+        <!--Methods END  -->
+
+        </p>
+        <h1 id="scrollspyHeading3">Principles of Object-Oriented Programming OOPS Concepts:</h1>
+        <p>
+        <p>
+            As programmers, we need to implement certain key features if we want to model an object properly. These key
+            features are the four foundational principles of OOP, which are
+        </p>
+        <div class="img">
+            <img src="./img/four_pillars.jpg" alt="image" width="100%">
+        </div>
+        </p>
+        <h1 id="scrollspyHeading4">OOPS Concepts:</h1>
+        <p>
+        <ul>
+            <li><a href="./22.1Encapsulation.html">Encapsulation</a></li>
+            <li><a href="./22.2inheritance.html">Inheritance</a></li>
+            <li><a href="./22.3this.html">Use of this</a></li>
+            <li><a href="./22.4constructor.html">Constructor</a></li>
+            <li><a href="./22.5abstraction.html">Abstraction</a></li>
+            <li><a href="./22.6access_modifier.html">Access Modifier</a></li>
+            <li><a href="./22.7static.html">Static Method</a></li>
+            <li><a href="./22.8call_apply_bind.html">call_apply_bind</a></li>
+            <li><a href="./22.11JSON_and_JavaScript.html">JavaScript and JSON</a></li>
+        </ul>
+        </p>
+        <h1 id="scrollspyHeading5">Queston Answer</h1>
+        <p>
+            <!-- Question Answer START -->
+            <!-- Question ONE start -->
+        <details>
+            <summary class="que"><strong>1. How do you create an object in JavaScript?</strong></summary>
+            <p>In JavaScript, you can create objects using several methods.</p>
+            <p>Here are a few common ways:</p>
+            <h4>Object Literal</h4>
+            <p>Example</p>
+            <pre>
+            var myObject = {
+                property1: value1,
+                property2: value2,
+                method1: function() {
+                    // method implementation
+                }
+            };
+        </pre>
+            <h4>Using the new keyword with a Constructor Function</h4>
+            <p>Example</p>
+            <pre>
+            function Person(name, age) {
+                this.name = name;
+                this.age = age;
+                this.sayHello = function() {
+                    console.log("Hello, my name is " + this.name);
+                };
+            }
+            
+            var person1 = new Person("Alice", 30);
+        </pre>
+            <h4>Using Object.create() with a Prototype Object:</h4>
+            <p>Example</p>
+            <pre>
+            var personProto = {
+                sayHello: function() {
+                    console.log("Hello, my name is " + this.name);
+                }
+            };
+            
+            var person1 = Object.create(personProto);
+            person1.name = "Alice";
+        </pre>
+        </details>
+        <!-- Question ONE start -->
+        <!-- Question TWO START -->
+        <details>
+            <summary class="que"><strong>2.What is the this keyword in JavaScript?</strong></summary>
+
+            <p>
+                In JavaScript, the this keyword refers to the context in which a function is executed. Its value is
+                determined by how a function is called, rather than where it's written in the code. The value of this is
+                dynamic and can change based on different factors:
+            </p>
+            <details>
+                <summary>Global Context:</summary>
+                <p>
+                    In the global scope (outside of any function), this refers to the global object (window in browsers,
+                    global in Node.js).
+                </p>
+                <p>Example</p>
+                <pre>
+                console.log(this === window); // true in a browser environment
+            </pre>
+
+            </details>
+            <details>
+                <summary>Function context:</summary>
+                <p>
+                    Inside a function, this usually refers to the object that the function is a method of.
+                </p>
+                <p>Example</p>
+                <pre>
+                const obj = {
+                    name: 'John',
+                    greet: function() {
+                      console.log('Hello, ' + this.name);
+                    }
+                  };
+                  
+                  obj.greet(); // Output: Hello, John
+            </pre>
+            </details>
+            <details>
+                <summary>Constructor Context:</summary>
+                <p>
+                    When a function is used as a constructor with the new keyword, this refers to the newly created
+                    instance.
+                </p>
+                <p>Example</p>
+                <pre>
+                function Person(name) {
+                    this.name = name;
+                  }
+                  
+                  const john = new Person('John');
+                  console.log(john.name); // Output: John
+            </pre>
+            </details>
+            <details>
+                <summary>Event Handler Context:</summary>
+                <p>
+                    In event handlers, this typically refers to the element that triggered the event.
+                </p>
+                <pre>
+                <button onclick="console.log(this.textContent)">Click me</button>
+            </pre>
+            </details>
+            <details>
+                <summary>Explicit Binding:</summary>
+                <p>
+                    You can explicitly set the value of this using call(), apply(), or bind() methods.
+                </p>
+                <pre>
+                function greet() {
+                    console.log('Hello, ' + this.name);
+                  }
+                  
+                  const obj = { name: 'John' };
+                  
+                  greet.call(obj); // Output: Hello, John
+            </pre>
+            </details>
+            <details>
+                <summary>Arrow Functions:</summary>
+                <p>
+                    Arrow functions do not have their own this. They lexically capture the this value of the enclosing
+                    context.
+                    javascript
+                </p>
+                <pre>
+                const obj = {
+                    name: 'John',
+                    greet: function() {
+                      const innerFunction = () => {
+                        console.log('Hello, ' + this.name);
+                      };
+                      innerFunction();
+                    }
+                  };
+                  
+                  obj.greet(); // Output: Hello, John
+            </pre>
+            </details>
+        </details>
+        <!-- Question TWO END -->
+        <!-- Question THREE START -->
+        <details>
+            <summary class="que "><strong>3. What are object prototypes</strong></summary>
+            <p>Prototypes are the mechanism by which JavaScript objects inherit features from one another.</p>
+            <p>
+                JavaScript prototypes are used to access the properties and methods of objects. Inherited
+                properties are originally defined in the prototype or parent object. The Date object is
+                inherited from Date.prototype, Array object inherits from Array.prototype, etc. The prototypes
+                may be used to add new properties and methods to the existing objects and object constructor.
+            </p>
+            <h4>The prototype chain</h4>
+            <pre>
+                let myObje = {
+                    city : "Madrid",
+                    greet(){
+                        // let city = "Madrid"
+                        console.log("Greetings from" + this.city);
+                    }
+                }
+                myObje.greet();
+            </pre>
+            <p>
+                This is an object with one data property, city, and one method, greet(). If you type the
+                object's name followed by a period into the console, like myObject., then the console will pop
+                up a list of all the properties available to this object. You'll see that as well as city and
+                greet, there are lots of other properties!
+            </p>
+            <h4>What are these extra properties, and where do they come from?</h4>
+            <p>
+                Every object in JavaScript has a built-in property, which is called its prototype. The prototype
+                is itself an object, so the prototype will have its own prototype, making what's called a
+                prototype chain. The chain ends when we reach a prototype that has null for its own prototype.
+            </p>
+            <p><strong style="color: red;">Note:</strong>The property of an object that points to its prototype
+                is not called prototype. Its name is not standard, but in practice all browsers use __proto__.
+                The standard way to access an object's prototype is the Object.getPrototypeOf() method.
+
+            </p>
+            <p>When you try to access a property of an object: if the property can't be found in the object itself, the
+                prototype is searched for the property. If the property still can't be found, then the prototype's
+                prototype is searched, and so on until either the property is found, or the end of the chain is reached,
+                in which case undefined is returned.</p>
+        </details>
+
+        <!-- Question THREE END -->
+        <!-- Question FOUR START -->
+        <details>
+            <summary class="que"><strong> 4. Use of a constructor function (with examples)</strong></summary>
+            <p>A constructor function in JavaScript is a function used for creating and initializing objects. It serves
+                as a blueprint for creating multiple instances of similar objects. Here's an example of how to use a
+                constructor function:</p>
+            <p>Example</p>
+            <pre>
+                    // Define a constructor function for creating Person objects
+                    function Person(name, age) {
+                    this.name = name;
+                    this.age = age;
+                    }
+
+                    // Create instances of Person using the constructor function
+                   let person1 = new Person('John', 30);
+                   let person2 = new Person('Alice', 25);
+
+                   // Accessing properties of the created objects
+                   console.log(person1.name); // Output: John
+                   console.log(person2.age);  // Output: 25
+            </pre>
+            <ul>
+                <li>We define a constructor function Person which takes name and age parameters and assigns them to the
+                    respective properties of the created object (this.name and this.age).</li>
+                <li>We create two instances of the Person object using the new keyword followed by the constructor
+                    function name.</li>
+                <li>We then access the properties of the created objects using dot notation (person1.name, person2.age).
+                </li>
+            </ul>
+        </details>
+        <!-- Question FOUR END -->
+        <!-- Question five start -->
+        <details>
+            <summary class="que"><strong>5. Prototypal vs Classical Inheritance</strong></summary>
+            <p>Prototypal and classical inheritance are two different approaches to implementing inheritance in
+                object-oriented programming.</p>
+            <!-- Protypal Inheritance START -->
+            <h4>Protypal Inheritance:</h4>
+            <p>
+                In prototypal inheritance, objects inherit directly from other objects. Each object has an internal link
+                to another object called its prototype. If a property or method is not found on the object itself,
+                JavaScript looks up the prototype chain until it finds the property or method or reaches the end of the
+                chain (the base object).
+            </p>
+            <p>Example</p>
+            <pre>
+                    // Parent object (prototype)
+                    var mammal = {
+                        vertebrate: true,
+                        breathe: function() {
+                            console.log("Inhale... Exhale...");
+                        }
+                    };
+                    
+                    // Child object inheriting from parent
+                    var cat = Object.create(mammal);
+                    cat.meow = function() {
+                        console.log("Meow!");
+                    };
+                    
+                    // Test
+                    cat.breathe(); // Inhale... Exhale...
+                    cat.meow();    // Meow!
+                    
+                </pre>
+            <p>
+                In this example, mammal is a prototype object with a breathe method. We create a new object cat using
+                Object.create(), inheriting from mammal. Then, we add a new method meow to the cat object. cat inherits
+                the breathe method from its prototype.
+            </p>
+            <!-- Protypal Inheritance END -->
+            <!-- Classical Inheritance START -->
+            <h4>Classical Inheritance:</h4>
+            <p>
+                Classes act as blueprints for creating objects. Objects inherit properties and behaviors from classes
+                through a hierarchical structure.
+            </p>
+            <p>
+                In this model, classes are used to create objects, and inheritance is achieved through class-based
+                relationships. Subclasses inherit properties and behaviors from their parent classes.
+            </p>
+            <p>
+                Classical inheritance often involves concepts like polymorphism, encapsulation, and inheritance
+                hierarchies.
+            </p>
+            <p>Example</p>
+            <pre>
+                    class Caar {
+                        constructor(name , color){
+                            this.name = name;
+                            this.color = color;
+                        }
+                    }
+        
+                    class ParentCar extends Caar {
+                        constructor(name,color,company) {
+                            super(name,color)
+                            this.company = company;
+                        }
+                        say(){
+                            return (`Name of Car is ${this.name}. This car have ${this.color} color and company name is ${this.company}`);
+                        }
+                    }
+        
+                    const myCar = new ParentCar("LandOVer","grey", "Jaguar");
+                    console.log(myCar.say());
+                    //Output:Name of Car is LandOVer. This car have grey color and company name is Jaguar
+                </pre>
+            <!-- Classical Inheritance END -->
+        </details>
+        <script>
+            class Caar {
+                constructor(name, color) {
+                    this.name = name;
+                    this.color = color;
+                }
+            }
+
+            class ParentCar extends Caar {
+                constructor(name, color, company) {
+                    super(name, color)
+                    this.company = company;
+                }
+                say() {
+                    return (`Name of Car is ${this.name}. This car have ${this.color} color and company name is ${this.company}`);
+                }
+            }
+
+            const myCar = new ParentCar("LandOVer", "grey", "Jaguar");
+            console.log(myCar.say());
+        </script>
+        <!-- Question five start -->
+        <!-- Question Answer END -->
+        </p>
+    </div>
+    <script>
+        // function addition
+        // class MathOperation {
+        //     addition(a,b){
+        //         return a + b
+        //     }
+        // }
+        // Creating an object with new keyword START
+        // let MathOperationobj = new MathOperation()
+        // console.log(MathOperationobj);
+        // Creating an object with new keyword END
+
+        // access / calling methods of class of out side of the class with the help of class instance START
+        // let res = MathOperationobj.addition(50,90)
+        // console.log(res);
+        // access / calling methods of class of out side of the class with the help of class instance END   
+
+    </script>
+</body>
+
+</html>

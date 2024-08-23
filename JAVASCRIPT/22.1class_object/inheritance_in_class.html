@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+
+<body>
+    <h1>Inheritance in class</h1>
+    <p><span style="color: red;">Note:</span>If child & Parent have same method, child's method will be used.</p>
+    <script>
+
+        class Person {
+            constructor(name) {
+                console.log("From Parent");
+                this.species = "homo sepiens"
+                this.name = name;
+            }
+            eat() {
+                console.log("eat");
+            }
+            sleep() {
+                console.log('sleep');
+            }
+            work() {
+                console.log("Do nothing");
+            }
+        }
+
+        class Engineer extends Person {
+            construcor(name) {
+                console.log("Form child");
+                super(name);//to invoke parent class constructor
+            }
+            work() {
+                // eat(); wrong way to inherit methods 
+                super.eat();
+                console.log("I am an engineer");//This will override
+            }
+        }
+
+        let engiobj = new Engineer("shreya")
+        console.log(engiobj);
+        engiobj.work(); 
+    </script>
+</body>
+
+</html>

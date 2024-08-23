@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor</title>
+    <style>
+        * {
+            color: rgb(54, 96, 134);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript Class constructor</h1>
+    <p>
+        The constructor() method is a special method for creating and initializing objects created within a class.
+    </p>
+    <p>
+        The constructor() method is called automatically when a class is initiated, and it has to have the exact name
+        "constructor", in fact, if you do not have a constructor method, JavaScript will add an invisible and empty
+        constructor method.
+    </p>
+    <p>When we want to do something when initializing object we can use contructor.</p>
+    <p>
+        <strong style="color: red;">Note:</strong>A class cannot have more than one constructor() method. This will
+        throw a SyntaxError.
+    </p>
+    <p>We cannot return anything in constructor.</p>
+    <p>There is no requirement of calling constructor.</p>
+    <h4>Syntax:</h4>
+    <pre>
+        class Person {
+            construcor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+        }
+
+        const person1 = new Person("Shreya",24);
+        console.log(person1.name,person1.age) //Output: Shreya 24
+    </pre>
+    <p>You can also have a default constructor if you don't need to pass any initial values:</p>
+    <h4>Syntax:</h4>
+    <pre>
+        class Animal {
+            construcor() {
+                this.type = 'Unknown';
+            }
+
+            identify() {
+                console.log(`This is a ${this.type}.`);
+            }
+        }
+        const animal1 = Animal();
+        animal1.identify(); //Outpur: This is a Unknown.
+    </pre>
+    <script>
+
+        class Polygon {
+            constructor() {
+                this.name = 'Polygon';
+            }
+        }
+
+        const poly1 = new Polygon();
+        console.log("Output 1:");
+        console.log(poly1.name);
+        // Expected output: "Polygon"
+
+        //Example for books START 
+
+        class ExampleOfThisForBooks {
+
+            authorName = "Chetanbhai Bhagu" // data member
+            constructor(name) {
+                this.authorName = name
+
+            }
+            twoIdiots() {
+                // let authorName = "Chetanbhai Bhagu"
+                // authorName
+                return "Story of twoIdiots written by" + this.authorName
+            }
+            threestates() {
+                return "Story of threestaes written by" + this.authorName
+            }
+            southMovie() {
+                return "Story of southMovie " + this.twoIdiots() + this.threestates()
+            }
+        }
+
+        // obj = new ExampleOfThisForBooks();
+        // console.log(obj.twoIdiots());
+        // console.log(obj.threestates());
+
+        Obj = new ExampleOfThisForBooks("rajni")
+        Obj1 = new ExampleOfThisForBooks("chiranjavi")
+        console.log("Output 2:");
+
+
+        console.log(Obj.southMovie());
+        console.log(Obj1.twoIdiots());
+        //Exmple for books END 
+
+        // Example for databese START
+        class crud {
+            dbConnection = ""
+            constructor(dbname) {
+                this.dbConnection = dbname
+            }
+            select() { };
+            insert() { };
+            update() { };
+            delete() { };
+        }
+
+        let Project1 = new crud("Project 1 database")
+        let Project2 = new crud("Project 2 database")
+        let Project3 = new crud("Project 3 database")
+        console.log("Output 3:");
+        console.log(Project1.dbConnection);
+        console.log(Project2.dbConnection);
+        console.log(Project3.dbConnection);
+        // Example for databese END
+
+        // Example Person START
+        
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+        }
+        
+        const person1 = new Person("Shreya", 24);
+        console.log("Output4:");
+        console.log(person1.name,person1.age);
+        
+        // Example Person END
+
+        // Example Animal START
+        class Animal {
+            constructor() {
+                this.type = "Unknown";
+            }
+            identify() {
+                console.log(`This is a ${this.type}`);
+            }
+        }
+
+        const animal1 = new Animal();
+        console.log("Output5:");
+        animal1.identify();
+        // Example Animal END
+    </script>
+</body>
+
+</html>

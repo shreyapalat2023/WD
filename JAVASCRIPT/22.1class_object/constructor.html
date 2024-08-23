@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor</title>
+</head>
+
+<body>
+    <h1>Constructor in Objects</h1>
+    <script>
+        class ToyotaCar {
+            constructor(brand,mileage) {
+                console.log("creating new object");
+                this.brand = brand;
+                this.mileage = mileage;
+            }
+
+            start() {
+                console.log("start");
+            }
+
+            stop() {
+                console.log("stop");
+            }
+
+            setBrand(brand) {
+                this.brand = brand;
+            }
+        }
+
+        let fortuner = new ToyotaCar("fortuner", 10); //constructor will invoke
+        // fortuner.setBrand("fortuner");
+        let lexus = new ToyotaCar("lexus",12);
+        // lexus.setBrand("lexus");
+    </script>
+</body>
+
+</html>

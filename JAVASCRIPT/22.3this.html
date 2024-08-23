@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this</title>
+    <style>
+        * {
+            color: rgb(54, 96, 134);
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        -The <strong>this</strong> keyword refers to the context where a piece of code, such as a function's body, is supposed to run.
+        Most typically, it is used in object methods, where <strong>this</strong> refers to the object that the method is attached to,
+        thus allowing the same method to be reused on different objects. 
+    </p>
+
+    <p>
+        -The value of <strong>this</strong> in JavaScript depends on how a function is invoked (runtime binding), not how it is defined.
+        When a regular function is invoked as a method of an object (obj.method()), this points to that object. When
+        invoked as a standalone function (not attached to an object: func()), this typically refers to the global object
+        (in non-strict mode) or undefined (in strict mode). The Function.prototype.bind() method can create a function
+        whose this binding doesn't change, and methods apply() and call() can also set the this value for a particular
+        call.
+    </p>
+    <p>
+        -Arrow functions differ in their handling of <strong>this:</strong> they inherit this from the parent scope at the time they are
+        defined. This behavior makes arrow functions particularly useful for callbacks and preserving context. However,
+        arrow functions do not have their own this binding. Therefore, their this value cannot be set by bind(), apply()
+        or call() methods, nor does it point to the current object in object methods.
+    </p>
+
+    <p>
+        <h1>What the hell is this?</h1>
+        -If you are coming from another language, which is Object-Oriented, such as Java, you are no doubt familiar with
+        the concept of <mark>this</mark> keyword is used inside of a class and refers to the current instance. No more, no
+        less.
+    </p>
+
+    <p>
+        -In Javascript, this is yet another concept, which behaves in an unexpected way. Like other concepts such as new
+        operator or classes, it tricks you into making some false assumptions based on concepts which you know from
+        other languages. Because the syntax and naming are the same or very similar, yet the concept is different.
+        What's more, its behavior is not the same depending on whether you are in the strict mode or not.
+    </p>
+    <p>
+        -Every time a function is invoked, this is assigned a reference to an object based on how the function was
+        called. Is it a regular function? A method called on an object? Fat arrow function? Method of an ES6 class?
+        That's the key to understanding the topic. What's confusing about this is that the very same function can have a
+        different value of this based on circumstances. Turns out that this does not depend on the function itself but
+        rather on how the function is called. The same function will have different this when called as a method of an
+        object and when provided as a callback function. You need to be careful because the functions can be passed
+        around and in such case, this may be different from what you expected
+    </p>
+    <script>
+        // Use of this START
+        class ExampleOfThisForBooks{
+
+
+            authorName = "Chetanbhai Bhagu"// data member
+            twoIdiots(){ 
+                // let authorName = "Chetanbhai Bhagu"
+                // authorName
+                return "Story of twoIdiots written by"+this.authorName 
+            }
+            threestaes(){ 
+                return "Story of threestaes written by"+this.authorName 
+            }
+            southMovie(){
+                return "Story of southMovie "+this.twoIdiots()+this.threestaes() 
+            }
+        }
+
+        Obj = new ExampleOfThisForBooks
+        // console.log(Obj.twoIdiots()); 
+        console.log(Obj.southMovie()); 
+        // Use of this END
+
+    </script>
+</body>
+
+</html>

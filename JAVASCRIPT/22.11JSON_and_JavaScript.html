@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+    <style>
+         * {
+            color: rgb(54, 96, 134);
+            /* font-size: 20px; */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Reference: Programmiz -->
+    <h1>JavaScript and JSON</h1>
+    <p>JSON stands for Javascript Object Notation. JSON is a text-based data format that is used to store and transfer
+        data.</p>
+    <h5>JSON Syntax:</h5>
+    <pre>
+        {
+        "name": "John",
+        "age": 22,
+        "gender": "male",
+    
+        }
+    </pre>
+    <p>In JSON, the data are in key/value pairs separated by a comma ,.</p>
+    <p>JSON was derived from JavaScript. So, the JSON syntax resembles JavaScript object literal syntax. However, the
+        JSON format can be accessed and be created by other programming languages too.</p>
+    <p><strong style="color: red;">Note:</strong>JSON data requires double quotes for the key.</p>
+    <!--JavaScript Objects VS JSON START  -->
+    <h2>JavaScript Objects VS JSON</h2>
+    <p>Though the syntax of JSON is similar to the JavaScript object, JSON is different from JavaScript objects.</p>
+    <table border="1">
+        <tr>
+            <th>JSON</th>
+            <th>JavaScript Object</th>
+        </tr>
+        <tr>
+            <td>The key in key/value pair should be in double quotes.</td>
+            <td>The key in key/value pair can be without double quotes.</td>
+        </tr>
+        <tr>
+            <td>JSON cannot contain functions.</td>
+            <td>JavaScript objects can contain functions.</td>
+        </tr>
+        <tr>
+            <td>JSON can be created and used by other programming languages.</td>
+            <td>JavaScript objects can only be used in JavaScript.</td>
+        </tr>
+    </table>
+    <!--JavaScript Objects VS JSON START  -->
+
+    <!-- Converting JSON to JavaScript Object START-->
+    <h3>Converting JSON to JavaScript Object</h3>
+    <p>You can convert JSON data to a JavaScript object using the built-in JSON.parse() function.</p>
+    <!-- Converting JSON to JavaScript Object END-->
+    <!-- Converting JavaScript Object to JSON START-->
+    <h3>Converting JavaScript Object to JSON
+    </h3>
+    <p>You can also convert JavaScript objects to JSON format using the JavaScript built-in JSON.stringify() function.
+    </p>
+    <!-- Converting JavaScript Object to JSON END-->
+
+    <!-- USE OF JSON START -->
+    <h3>Use of JSON</h3>
+    <p>JSON is the most commonly used format for transmitting data (data interchange) from a server to a client and
+        vice-versa. JSON data are very easy to parse and use. It is fast to access and manipulate JSON data as they only
+        contain texts.</p>
+    <p>JSON is language independent. You can create and use JSON in other programming languages too.</p>
+    <!-- USE OF JSON END -->
+     <script src="./22.11JSON.js"></script>
+
+</body>
+
+</html>

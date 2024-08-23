@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>strict</title>
+    <style>
+        * {
+            color: rgb(54, 96, 134);
+            /* font-size: 20px; */
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Static Methods</h1>
+    <p>Static class methods are defined on the class itself.</p>
+    <p>You cannot call a static method on an object, only on an object class.</p>
+    <p>The static keyword defines a static method or field for a class, or a static initialization block </p>
+    <p> Static properties cannot be directly accessed on instances of the class</p>
+    <details>
+        <summary>Example</summary>
+        <pre>
+            class Car {
+                constructor(name){
+                    this.name = name
+                }
+                static hello(){
+                    return "Hello!!";
+                }
+            }
+    
+            const myCar = new Car();
+            console.log(Car.hello()); 
+            //You can call 'hello()' on the Car Class;
+            
+            //But NOT on a Car Object
+            // console.log(myCar.hello());
+            //This will raise an error
+        </pre>
+    </details>
+    <script>
+        class Car {
+            constructor(name){
+                this.name = name
+            }
+            static hello(){
+                return "Hello!!";
+            }
+        }
+
+        const myCar = new Car();
+        console.log(Car.hello()); 
+        //You can call 'hello()' on the Car Class;
+
+        //But NOT on a Car Object
+        // console.log(myCar.hello());
+        //This will raise an error
+        class ClassWithStaticMethod {
+            static staticProperty = 'someValue';
+            static staticMethod() {
+                return 'static method has been called.';
+            }
+            static {
+                console.log('Class static initialization block called');
+            }
+        }
+
+        console.log(ClassWithStaticMethod.staticProperty);
+        // Expected output: "someValue"
+        console.log(ClassWithStaticMethod.staticMethod());
+        // Expected output: "static method has been called."
+
+
+    </script>
+</body>
+</html>

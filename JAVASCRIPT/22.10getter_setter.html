@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            color: rgb(54, 96, 134);
+            /* font-size: 20px; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>JavaScript Getter and Setter</h1>
+    <p>In JavaScript, there are two kinds of object properties:</p>
+
+    <details>
+        <summary><strong>Data Property</strong></summary>
+        <pre>
+            const student = {
+
+                // data property
+                firstName: 'Monica';
+            };
+        </pre>
+    </details>
+    <details>
+        <summary><strong>Accessor Property</strong></summary>
+        <p>In JavaScript, accessor properties are methods that get or set the value of an object. For that, we use these
+            two keywords:</p>
+        <ul>
+            <li>get-to define a getter method to get the propety value</li>
+            <li>set-to define a setter method to set the prroperty value</li>
+        </ul>
+    </details>
+    <!-- JavaScript Getter START -->
+    <h2>JavaScript Getter</h2>
+    <p>In JavaScript, getter methods are used to access the properties of an object. For example,</p>
+    <pre>
+        const student = {
+
+            // data property
+            firstName: 'Monica',
+            
+            // accessor property(getter)
+            get getName() {
+                return this.firstName;
+            }
+        };
+        
+        // accessing data property
+        console.log(student.firstName); // Monica
+        
+        // accessing getter methods
+        console.log(student.getName); // Monica
+        
+        // trying to access as a method
+        console.log(student.getName()); // error
+    </pre>
+    <p>In the above program, a getter method getName() is created to access the property of an object.</p>
+    <p>And also when accessing the value, we access the value as a property.</p>
+    <p>When you try to access the value as a method, an error occurs.</p>
+    <!-- JavaScript Getter END -->
+    <!-- JavaScript Setter START -->
+    <h2>JavaScript Setter</h2>
+    <p>In JavaScript, setter methods are used to change the values of an object. For example,</p>
+    <pre>
+        const student = {
+            firstName: 'Shreya',
+            
+            //accessor property(setter)
+            set changeName(newName) {
+                this.firstName = newName;
+            }
+        };
+        
+        console.log(student.firstName); // Shreya
+        
+        // change(set) object property using a setter
+        student.changeName = 'Sarah';
+        
+        console.log(student.firstName); // Sarah
+    </pre>
+    <p>As shown in the above program, the value of firstName is Shreya.</p>
+    <p>Then the value is changed to Sarah.</p>
+    <!-- JavaScript Setter START -->
+    <!-- JavaScript Object.defineProperty START -->
+    <h2>JavaScript Object.defineProperty()</h2>
+    <p>In JavaScript, you can also use Object.defineProperty() method to add getters and setters. For example,</p>
+    <pre>
+        const student = {
+            firstName: 'Monica'
+        }
+        
+        // getting property
+        Object.defineProperty(student, "getName", {
+            get : function () {
+                return this.firstName;
+            }
+        });
+        
+        // setting property
+        Object.defineProperty(student, "changeName", {
+            set : function (value) {
+                this.firstName = value;
+            }
+        });
+        
+        console.log(student.firstName); // Monica
+        
+        // changing the property value
+        student.changeName = 'Sarah';
+        
+        console.log(student.firstName); // Sarah
+    </pre>
+    <p>The syntax for using Object.defineProperty() is:</p>
+    <pre>
+        Object.defineProperty(obj, prop, descriptor)
+    </pre>
+    <!-- JavaScript Object.defineProperty END -->
+    <script>
+        const student = {
+            firstname: "Shreya",
+            get getName() {
+                return this.firstname;
+            },
+            set changeName(newName) {
+                this.firstname = newName;
+            }
+        }
+        console.log(student.firstname);//Shreya
+        console.log(student.getName);//Shreya
+        //  console.log(student.getName()); //error
+        student.changeName = "Sarah";
+        console.log(student.firstname);
+        console.log(student.getName);
+
+        const studentt = {
+            firstname: "aman",
+            get getaName(){
+                return this.firstname
+            },
+            set changeName(newName){
+                this.firstname = newName;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

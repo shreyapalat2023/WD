@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            color: rgb(54, 96, 134);
+            /* font-size: 20px; */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript Class super</h1>
+    <p>
+        The super keyword is used to call the constructor of its parent class to access the parent's properties and
+        methods.
+    </p>
+    <div id="demo"></div>
+    <script>
+        // class Car {
+        //     constructor(brand) {
+        //         this.carname = brand;
+        //     }
+        //     present() {
+        //         return 'I have a ' + this.carname;
+        //     }
+        // }
+
+        // class Model extends Car {
+        //     constructor(brand, mod) {
+        //         super(brand);
+        //         this.model = mod;
+        //     }
+        //     show() {
+        //         return this.present() + ', it is a ' + this.model;
+        //     }
+        // }
+        mycar = new Model("Ford", "Mustang");
+        document.getElementById("demo").innerHTML = mycar.show();
+    </script>
+</body>
+
+</html>

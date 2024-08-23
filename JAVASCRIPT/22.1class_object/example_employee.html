@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Employee</title>
+    <style>
+        * {
+            color: rgb(54, 96, 134);
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Practical Use Case:</h2>
+    <p>Consider a scenario where you have a base class for Employee and specialized classes for Manager and Developer
+    </p>
+    <p>This example shows how you can use inheritance to create specific employee types with additional properties and
+        behaviors while still sharing common functionality from the base class.</p>
+
+    <h4>Base Class vs Derived Class</h4>
+    <ol>
+        <li><strong>Base class:</strong>This class has a constructor that initialized the "name" and "id" properties and
+            a method "getDetails".</li>
+        <li><strong>Derived Class:</strong>Here, We have Two Derived Classes Manager and Developer which inherit name
+            and id properties of base class Employee. They both have their own constructor that calls the parent class's
+            constructor using "super" keyword. It also add a "getDetails()" method and override the method in base
+            class.</li>
+    </ol>
+    <script src="./example_employee.js"></script>
+
+</body>
+
+</html>

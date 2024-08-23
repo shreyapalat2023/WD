@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstraction</title>
+    <style>
+        * {
+            color: rgb(54, 96, 134);
+            /* font-size: 20px; */
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        <strong>Abstraction:</strong>
+        Abstraction means displaying only essential information and hiding the details.
+        Data abstraction refers to providing only essential information about the data to the outside world, hiding the
+        background details or implementation.
+    </p>
+
+    <script>
+        // Encapsulation example
+        class person {
+            #data = "something"
+            constructor(name, id) {
+                this.name = name;
+                this.id = id;
+            }
+            add_Address(add) {
+                this.add = add;
+            }
+            getDetails() {
+                console.log(`Name is ${this.name}, Address is: ${this.add}`);
+            }
+        }
+
+        class fulldetailsofperson extends person {
+            detailwithmobile(mob) {
+                console.log(`Name is ${this.name}, Address is: ${this.add}, Mobile : ${this.data}`, `Id is :${this.id}`);
+            }
+        }
+
+        // let person3 = new person('Mukul', 21);
+        let person3 = new fulldetailsofperson("mukul", 674)
+        person3.add_Address('Delhi');
+        
+        person3.getDetails();
+        person3.detailwithmobile("98666");
+
+        //  let nameObj = {
+        //     name: "Tony"
+        // }
+
+        // let PrintName = {
+        //     name: "steve",
+        //     sayHi: function (age,add) {
+        //         console.log(this.name + " age is " + age,"Address "+add);
+        //     }
+        // }
+
+        // PrintName.sayHi.call(nameObj, 42,"silver radiance");
+
+        
+        </script>
+</body>
+
+</html>

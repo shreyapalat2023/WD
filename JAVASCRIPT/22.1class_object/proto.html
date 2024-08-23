@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype</title>
+</head>
+<body>
+    <h1>JavaScript Object Prototype</h1>
+    <p>Js objects have a special property called prototype.</p>
+    <p>We can set prototype _ _proto_ _</p>
+    <script>
+        // const student = {
+        //     fullName: "Shreya Palat",
+        //     marks : 89.5,
+        //     printMarks: function (){
+        //         console.log("marks =",this.marks);
+        //     }
+        // }
+
+        const employee = {
+            calcTax(){
+                console.log("tax rate is 10%");
+            }
+        }
+        const karanArjun = {
+            salary: 50000,
+            calcTax(){
+                console.log("tax rate id 20%"); //This will override
+            }
+        }
+
+        karanArjun.__proto__ = employee
+        karanArjun.calcTax();
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Modifiers</title>
+    <style>
+        * {
+            color: rgb(54, 96, 134);
+            /* font-size: 20px; */
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Access modifiers in JavaScript play a significant role in controlling the visibility and accessibility of class
+        members. Although JavaScript is not traditionally an object-oriented programming (OOP) language, the
+        introduction of classes and access modifiers in ECMAScript 6 (ES6) allowed developers to implement OOP
+        principles into their applications.
+    </p>
+    <p>Types of Access Modifiers</p>
+    <ul>
+        <li>Public</li>
+        <li>Private</li>
+        <li>Protected</li>
+    </ul>
+    <script>
+        class AccessModi {
+            #DataMember = "Value of private Data Member"
+            publicDatamember = "value of Public Data Member"
+            memberFunciton(){
+                 console.log("Inside function calling datamember and its value is "+ this.#DataMember); //Here, we can use private property inside the class.
+                 console.log("Inside function calling datamember and its value is "+ this.publicDatamember);
+            }
+            otherMemberFun(){
+                console.log("Inside function calling datamemeber and its value is" + this.#DataMember);
+            }
+        }
+
+        class AccessModiChild extends AccessModi {
+            childMemberFunction(){
+                console.log("Inside function calling datamember and its value is"+ this.publicDatamember);
+            }
+        }
+
+        const ObjectofAccessModi = new AccessModiChild();
+        console.log(ObjectofAccessModi.Datamember);
+        ObjectofAccessModi.memberFunciton();
+        ObjectofAccessModi.childMemberFunction();
+        ObjectofAccessModi.otherMemberFun();
+    </script>
+</body>
+</html>
