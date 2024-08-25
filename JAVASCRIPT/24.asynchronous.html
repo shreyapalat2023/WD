@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            color: rgb(54, 96, 134);
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Asynchronous JavaScript</h1>
+    <p>
+        Asynchronous JavaScript is a programming approach that enables the non-blocking execution of tasks, allowing
+        concurrent operations, improved responsiveness, and efficient handling of time-consuming operations in web
+        applications, JavaScript is a single-threaded and synchronous language. The code is executed in order one at a
+        time, But Javascript may appear to be asynchronous in some situations.
+    </p>
+    <p>
+        There are several methods that can be used to perform asynchronous javascript tasks, which are listed below:
+    <ul>
+        <li>Using callback</li>
+        <li>Using Promises</li>
+    </ul>
+    </p>
+    <div>
+        "1. What is Callback in JavaScript?
+        2. Difference between Async/Await and Generators
+    </div>
+    <p id="data"></p>
+    <script>
+        // function myFunction(callback) {
+        //     setTimeout(() => {
+        //         const data = {
+        //             name: "aman",
+        //             age: 21
+        //         }
+        //         callback(data);
+        //     }, 3000)
+        // }
+        // function callbackFunction(data) {
+        //     console.log("Data:", data.age);
+        // }
+        // myFunction(callbackFunction);
+
+
+
+        function myFunction(callback) {
+            setTimeout(() => {
+                const data = {
+                    name: "aman",
+                    age: 21
+                }
+                callback(data)
+            }, 3000)
+        }
+
+        function callbackfunction(data) {
+            console.log("data:" + data.age);
+        }
+        myFunction(callbackfunction)
+
+
+        // function sum(a,b){
+        //     console.log(a + b);
+        // }
+        function calculator(a, b, sumCallback) {
+            sumCallback(a, b);
+        }
+        calculator(1, 2, (a, b) => {
+            console.log(a + b);;
+        });
+        //calling callbackFunction without parantheses, with parentheses it will throw an error
+        // calculator(1,2,sum);
+
+    </script>
+</body>
+
+</html>
