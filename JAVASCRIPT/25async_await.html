@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            color: rgb(54, 96, 134);
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript Async</h1>
+    <div style="text-align: center;">
+        <p>"async and await make promises easier to write"
+        </p>
+
+        <p>async makes a function return a Promise</p>
+
+        <p>await makes a function wait for a Promise </p>
+    </div>
+    <p>Syntax</p>
+    <pre>
+        async function myFunction() {
+            return "Hello";
+          }
+    </pre>
+    <h4>Await Syntax</h4>
+    <p>The await keyword can only be used inside an async function.</p>
+    <p>The await keyword makes the function pause the execution and wait for a resolved promise before it continues:</p>
+    <pre>
+        let value = await promise;
+    </pre>
+    <script>
+        // async function myDisplay() {
+        //     let myPromise = new Promise(function (resolve, reject) {
+        //         resolve("I love Coding !!");
+        //     });
+        //     document.getElementById("demo").innerHTML = await myPromise;
+        // }
+
+        // myDisplay();
+
+
+        // function myDisplay() {
+        //     let myPromise = new Promise(function (resolve, reject) {
+        //         setTimeout(function () {
+        //             resolve("I love Coding!!")
+        //         }, 3000)
+        //         reject("error")
+        //     })
+        // };
+        // myPromise.then(function () {
+        //     console.log("success");
+        // }).catch(function(){
+        //     console.log("error");
+        // })
+
+        function myDisplay(){
+            let myPromise = new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    resolve("I love Coding!!")
+                },3000)
+                reject("error")
+            })
+        };
+        myPromise.then(function(){
+            console.log("Success");
+        }).catch(function(){
+            console.log("error");
+        })
+
+    </script>
+</body>
+
+</html>
