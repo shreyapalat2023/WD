@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Specific Date</title>
+    <style>
+        h1 {
+            color: green;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-decoration: underline;
+        }
+
+        h3 {
+            color: coral;
+        }
+
+        strong {
+            color: goldenrod;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Disable Multiple Specific Date</h1>
+    <h3>Explanation:</h3>
+    <ul>
+        <li><strong>const disabledDates:</strong>This declares a constant variable named disabledDates that stores an
+            array of strings. Each string represents a specific date in the format YYYY-MM-DD that is disabled. Users
+            are not allowed to select these dates.</li>
+        <li><strong>dateInput.addEventListener('input', ...):</strong>This line adds an event listener to the dateInput
+            element. It listens for the input event, which is triggered whenever the user changes the value of the input
+            field (i.e., when a date is selected or manually typed).</li>
+        <li><strong>disabledDates.includes(this.value):</strong> The includes method checks if the current value of the
+            input field (the selected date) is in the disabledDates array.</li>
+        <ul>
+            <li>If this.value matches any date in the disabledDates array, includes returns true; otherwise, it returns
+                false.</li>
+        </ul>
+    </ul>
+    <form action="">
+        <input type="date" id="dateinput">
+    </form>
+
+    <script>
+        const dateinput = document.getElementById("dateinput");
+        const disabledDates = ['2024-09-05', '2024-09-15', '2024-09-25'];
+
+        dateinput.addEventListener("input", function () {
+            if (disabledDates.includes(this.value)) {
+                alert("This date is disabled!!");
+                this.value = ""
+
+            };
+
+        })
+    </script>
+</body>
+
+</html>

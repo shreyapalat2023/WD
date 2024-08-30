@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+</head>
+
+<body>
+    <h2>Regular Expression</h2>
+    <p>A regular expression is a sequence of characters that forms a search pattern. Regular expressions can be used to perform all types of text search and text replacement operations</p>
+    <p>The test() method returns true if it finds a match otherwise false.</p>
+    <p id="demo"></p>
+    <script>
+
+
+
+        const str = 'table football';
+        const regex = /foo*/
+        // const globalRegex = new RegExp('foo*','g')
+        console.log(regex.test(str));
+        // Expected output: true
+
+        // console.log(globalRegex.lastIndex);
+        // // Expected output: 0
+
+        // console.log(globalRegex.test(str));
+        // // Expected output: true
+
+        // console.log(globalRegex.lastIndex);
+        // // Expected output: 9
+
+        // console.log(globalRegex.test(str));
+
+
+        // const str = "hello world!";
+        // str1 = "hello"
+        // const result = /^hello/.test(str);
+        // console.log(result);
+    </script>
+</body>
+
+</html>

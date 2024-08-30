@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disable Dates</title>
+    <style>
+        h1 {
+            color: green;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-decoration: underline;
+        }
+
+        h3 {
+            color: goldenrod;
+        }
+
+        strong {
+            color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Disable Specific Dates</h1>
+
+        <h3>Explanation:</h3>
+        <ul>
+            <li><strong>new Date():</strong> This creates a new JavaScript Date object with the current date and time.
+            </li>
+            <li><strong>toISOString():</strong>This converts the date to a string in ISO 8601 format
+                (YYYY-MM-DDTHH:MM:SSZ). This format includes both the date and time.</li>
+            <li><strong>split('T')[0]:</strong> The .split('T') method splits the ISO string into an array of two
+                substrings: one for the date (YYYY-MM-DD) and one for the time (HH:MM:SSZ). The [0] accesses the first
+                part of the array, which is the date (YYYY-MM-DD), effectively extracting the date part from the ISO
+                string.</li>
+            <li><strong>dateInput.setAttribute('min', today):</strong>his sets the min attribute of the dateInput
+                element to the value of today.</li>
+            <ul>
+                <li>The min attribute specifies the minimum date that the user can select in the date picker.
+                    By setting min to today's date, the code ensures that the user cannot select any date before today.
+                </li>
+            </ul>
+        </ul>
+    </div>
+
+    <form action="">
+        <input type="date" id="dateinput">
+    </form>
+    <script>
+        const dateinput = document.getElementById("dateinput");
+        const todaysDate = new Date()
+        console.log(todaysDate);
+
+        const today = new Date().toISOString().split("T")[0];
+
+        console.log(today);
+        dateinput.setAttribute("min", today)
+
+
+
+    </script>
+</body>
+
+</html>
