@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generator Iterator</title>
+  <style>
+    h1 {
+      color: green;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    h2 {
+      color: coral;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    strong {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>function* and generator:</h1>
+  <summary>function*:</summary>
+  <p>The function* declaration creates a binding of a new generator function to a given name. A generator function can
+    be exited and later re-entered, with its context (variable bindings) saved across re-entrances.</p>
+    <details>
+    <p>Syntax:</p>
+    <pre>
+            function* name(param0) {
+                statements
+              }
+              function* name(param0, param1) {
+                statements
+              }
+              function* name(param0, param1, /* …, */ paramN) {
+                statements
+              }
+    </pre>
+    <p>Syntax: with multiple parameters</p>
+
+    <pre>
+      function* myGenerator() {
+        yield 1;
+        yield 2;
+        yield 3;
+        yield 4;
+      }
+
+      const generator = myGenerator();
+
+      console.log(generator.next());
+      console.log(generator.next());
+      console.log(generator.next());
+      console.log(generator.next());
+      console.log(generator.next());
+    </pre>
+
+  </details>
+  <p>In javaScript, a <mark>generator</mark> is a special type of function that can be paused and resumed, allowing
+    you to produce a series of values over time. Genertors are defined using the <mark>function*</mark> syntax and use
+    the <mark>yield</mark> keyword to produce values.</p>
+  <h2>Key Concepts of Generators</h2>
+  <ol>
+    <li><strong>Genertor Function:</strong>A generator function is declared using the function* syntax (notice the *
+      after the function keyword). When called, it returns a generator object instead of executing immediately.</li>
+    <li><strong>"yield" Keyword:</strong>Inside a generator function, the "yield" keyword is used to pause the
+      function's execution and return a value. The generator functin can then be resumed from where it left off.</li>
+    <li><strong>Generator object</strong>The object returned by a generator function's execution until it encounters
+      the next "yield" statements.</li>
+    <li><strong>next() Method:</strong>Each call to the next() method resumes executio of the generator function, runs
+      until the next "yield" statement, and returns an object with two properties:</li>
+    <ul>
+      <li><strong>value:</strong>The value yielded by the generator.</li>
+      <li><strong>done:</strong>A boolean indicating whether the generator function has completed execution("true" if
+        the function has finished, "false" otherwise).</li>
+    </ul>
+  </ol>
+
+  <h2>Practical Uses of Generators</h2>
+  <ul>
+    <li>Generators are useful where you want to generate values on demand rather than all at once.</li>
+    <li>Generators can represent infinite sequences.</li>
+    <li>Combined with async/await generators can help manage asynchronous code in a more synchronous-looking style.</li>
+  </ul>
+
+  <script src="./32generator_iterator.js"></script>
+</body>
+
+</html>
