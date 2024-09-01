@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module</title>
+    <style>
+        h1 {
+            color: green;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        h2{
+            color: blue;
+        }
+
+        h3 {
+            color: coral;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript Modules</h1>
+    <p>In JavaScript, modules are a way to encapsulate and reuse code across different parts of an application. Modules
+        help in organizing code, improving maintainability, and avoiding global namespace pollution. JavaScript has
+        different module systems, each serving different purposes and use cases.</p>
+    <ul>
+        <li>JavaScript modules allow you to break up your code into separate files.</li>
+        <li>This makes it easier to maintain a code-base.</li>
+        <li> Modules also rely on type="module" in the &lt;script&gt; tag.</li>
+        <li>Modules are imported from external files with the import statement.</li>
+    </ul>
+    <h2>ES6 Modules:</h2>
+    <p>ES6 introduced a standardized module system for JavaScript. This is now the most common way to use modules in
+        modern JavaScript, especially in environments that support ES6, such as modern browsers and Node.js.</p>
+
+    <h3>Syntax:</h3>
+    <ul>
+        <li> <strong>export:
+            </strong> Used to export functions, objects, or primitive values from a module.</li>
+        <li><strong>import:</strong>Used to import functions, objects, or primitives from a module.</li>
+    </ul>
+    <h3>Example:</h3>
+    <details>
+        <summary>Exporting</summary>
+        <pre>
+            // module.js
+            export const myFunction = () => {
+              console.log("Hello from myFunction");
+            };
+            
+            export const myVariable = 42;
+            
+            export default function defaultFunction() {
+              console.log("This is the default export");
+            }
+        </pre>
+    </details>
+    <details>
+        <summary>Importing:</summary>
+        <pre>
+            // main.js
+            import { myFunction, myVariable } from './module.js';
+            import defaultFunction from './module.js';
+            
+            myFunction(); // Output: Hello from myFunction
+            console.log(myVariable); // Output: 42
+            defaultFunction(); // Output: This is the default export
+            
+        </pre>
+    </details>
+</body>
+
+</html>
