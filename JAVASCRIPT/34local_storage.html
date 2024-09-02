@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <style>
+        * {
+            color: rgb(54, 96, 134);
+
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+
+            <h1>Local Storage:</h1>
+            <p>Local Storage ia a web storage object which are not sent to server with each request. This data survives
+                a full
+                page refresh and even full browser restart. </p>
+            <p><strong>These are the methods provided by local Storage:</strong></p>
+            <ul>
+                <li>setItem(key,value): Store Key/Value pair</li>
+                <li>getItem(key): get the Value by Key.</li>
+                <li>removeItem(key): remove the key with it's value.</li>
+                <li>clear(): delete everything.</li>
+                <li>key(index): get the key on a given index.</li>
+                <li>Length: The number of stored items</li>
+            </ul>
+            <p>
+                <strong style="color: red;">Important Note:</strong>
+            <ul>
+                <li>Both key and values must be strings.</li>
+                <li>We can use the two JSON methods to store objects in local Storage:
+                    <p>JSON.stringify(object): Converts objects to JSON string.</p>
+                    <p>JSON.parse(string): Converts string to objects(must be a valid JSON).</p>
+                </li>
+            </ul>
+            </p>
+            <div class="button">
+                <button id="btn">Click me</button>
+            </div>
+        </div>
+
+        <script>
+            let key = prompt("Enter key you want to set");
+            let value = prompt("Enter value you want to set");
+            document.getElementById("btn").addEventListener("click", () =>{
+                prompt("Enter key you want to set");
+                prompt("Enter value you want to set");
+            });
+            localStorage.setItem(key,value);
+            // localStorage.clear();
+        </script>
+
+    </section>
+</body>
+
+</html>
