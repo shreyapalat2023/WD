@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <style>
+        .lists li{
+            list-style: none;
+        }
+        .imp-word{
+            color: rgb(200, 36, 184);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fetch API</h1>
+    <p>The fetch API provides an interface for fetching (sending/receiving) resources.</p>
+    <p>It uses Request and Response objects.</p>
+    <p>The fetch() method is used to fetch a resourece(data)</p>
+    <pre style="color: blue;">
+        let promise = fetcch(url,[options])
+    </pre>
+    <h2>Understanding Terms</h2>
+    <p><strong class="imp-word">AJAX</strong> is Asynchronous JS and XML.</p>
+    <p><strong class="imp-word">JSON</strong> is JavaScript Object Notation.</p>
+    <p><strong class="imp-word">json()</strong> method: returns a second promise that resolves with the rsult of parsing the response body text as JSON.(Input is JSON, outpur is JS object)</p>
+    <h3>Important Segment of API</h3>
+    <ul class="lists">
+        <li><a href="./36HTTP_Request-methods.html">HTTP Request Methods</a></li>
+        <li><a href="./37HTTP_Response_status_code.html">HTTP Response Status Code</a></li>
+    </ul>
+    <h4>Example: Calling API</h4>
+    <button id="btn">Get Facts</button>
+    <div id="fact"></div>
+    <script src="./35Fetch_Api.js"></script>
+</body>
+</html>
