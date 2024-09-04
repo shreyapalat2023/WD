@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chunk</title>
+</head>
+
+<body>
+    <h1>Write a method that splits an array into parts of determined size.</h1>
+    <p><strong>Explanation:</strong></p>
+    <ol>
+        <li>
+            <strong>Function Parameter:</strong>
+        </li>
+        <ul>
+            <li>array: The input array that you want to split into chunks.</li>
+            <li>size:The size of each chunk.</li>
+        </ul>
+        <li><strong>Initialization:</strong></strong>li>
+            <ul>
+                <li>const chunkedArr = []: This initializes an empty array "chinkedArr", which will store all the
+                    resulting
+                    chunks.</li>
+                <li>"let index= 0" : This initializes an index variable to keep track of the current position in the
+                    array
+                    as you loop through it.</li>
+            </ul>
+        <li><strong>While Loop:</strong></li>
+        <ul>
+            <li>"While (index &lt; array.length)" : The loop continues as long as "index" is less than the length of the
+                array. This ensures that all elments of the array are processed.</li>
+        </ul>
+        <li><strong>Slicing the Array</strong></li>
+        <ul>
+            <li>"ChunkedArray.push(array.slice(index + size)): It creates a subarray (or chunk) starting from the
+                current "index" and ending at "index + size"</li>
+            <li>This subarray is then pushed into "chunkedArr"</li>
+        </ul>
+        <li><strong>Incrementing the Index:</strong></li>
+        <ul>
+            <li>"index += size" After each iteration, the index is incremented by "size", so the next chunk starts from
+                where the previous chunk ended.</li>
+        </ul>
+    </ol>
+    <p><strong style="color: brown;">For Example,</strong></p>
+    <p> If size = 2 and the array is [1,2,3,4]
+    <ul>
+        <li>First iteration: "index = 0", slice from 0 to 2 resulting in [1,2]</li>
+        <li>Second iteration: "index = 2", slice from 2 to 4 resulting in [3,4]</li>
+    </ul>
+    </p>
+
+    <script>
+        const chunk = (array, size) => {
+            const chunkedArray = [];
+            let index = 0;
+            while (index < array.length) {
+                chunkedArray.push(array.slice(index, size + index));
+                index += size;
+            }
+            return chunkedArray;
+            console.log(array.length);
+        }
+
+        console.log(chunk([1, 2, 3, 4, 5, 6, 7], 3));
+        console.log(chunk([2, 3, 6, 7, 2, 4, 5, 6, 4,6], 3));
+
+
+
+
+    </script>
+
+</body>
+
+</html>

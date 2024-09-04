@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Without</title>
+</head>
+
+<body>
+    <h1>Write a method that returns an array without listed values.</h1>
+    <script>
+        const OriginalArray = [1, 2, 3, 4, 5, 6, 7];
+        const without = (array, ...valuToRemove) => {
+            return array.filter(item => !valuToRemove.includes(item));
+        }
+
+        const newArray = without(OriginalArray, 2, 4, 5);
+
+        console.log(newArray); 
+    </script>
+</body>
+
+</html>

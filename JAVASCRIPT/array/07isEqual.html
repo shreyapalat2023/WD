@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>isEqual</title>
+</head>
+
+<body>
+    <h1> Write a method that makes a shallow compare of two arrays and returns true if they are
+        identical.</h1>
+    <ul>
+        <li>
+            <strong>Length Check:</strong> The function first checks if the lengths of arr1 and arr2 are the same. If
+            not, it immediately returns false because arrays of different lengths cannot be identical.
+        </li>
+        <li>
+            <strong>Element-wise Comparison:</strong> If the lengths are the same, the function then iterates through
+            each element of the arrays. It compares corresponding elements (arr1[i] and arr2[i]) at each index.
+        </li>
+        <li>
+            <strong>Return false on Mismatch</strong> If any pair of elements does not match (arr1[i] !== arr2[i]), the
+            function returns false, indicating that the arrays are not identical.
+        </li>
+        <li>
+            <strong>Return true if No Mismatches:</strong>If all elements match, the function returns true, indicating
+            that the arrays are identical.
+        </li>
+    </ul>
+    <script>
+        const isIdenticalArray = (arr1, arr2) => {
+            if (arr1.length !== arr2.length) {
+                return false
+            }
+
+
+
+            for (let i = 0; i < arr1.length; i++
+            ) {
+                if (arr1[i] !== arr2[i]) {
+                    return false;
+                }
+
+            }
+            return true;
+        }
+        const array1 = [1, 2, 3];
+        const array2 = [1, 2, 3];
+        const array3 = [1, 2, 6];
+        console.log("Output using for loop:");
+
+        console.log(isIdenticalArray(array1, array2));
+        console.log(isIdenticalArray(array1, array3));
+
+        // Using reduce method
+        const findIdenticalArray = (arr1, arr2) => {
+            if (arr1.length !== arr2.length) {
+                return false
+            }
+
+            return arr1.reduce((acc, curr, index) => {
+                return acc && curr === arr2[index];
+            }, true)
+        }
+        const arrayOne = [1, 2, 3, 4];
+        const arrayTwo = [1, 2, 3, 4];
+        const arrayThree = [1, 2, 3, 7];
+        console.log("Output using reduce method:");
+
+        console.log(findIdenticalArray(arrayOne, arrayTwo));
+        console.log(findIdenticalArray(arrayOne, arrayThree));
+
+
+    </script>
+</body>
+
+</html>

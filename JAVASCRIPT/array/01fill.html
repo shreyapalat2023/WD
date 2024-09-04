@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill</title>
+</head>
+
+<body>
+    <h1>JavaScript Array fill() Method</h1>
+    <p>The fill() method in JavaScript is used to fill all the elements of an array from a start index to an end index
+        with a static value.
+
+        It mutates the original array and returns the modified array.</p>
+    <p>Syntax:</p>
+    <pre>
+            arr.fill(value, start, end)
+    </pre>
+    <p><b>fill</b> - Write a method that creates a new array with given values.</p>
+
+    <script>
+        let arr = Array(3).fill("a");
+        console.log(arr);
+
+        const fill = (arraySize, value) => new Array(3).fill("a");
+        console.log(fill());
+    </script>
+</body>
+
+</html>

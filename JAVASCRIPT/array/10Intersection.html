@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intersection</title>
+</head>
+
+<body>
+    <h1>Write a method that creates an array of unique values that are included in all given
+        arrays.</h1>
+    <h2>Explanation:</h2>
+    <ol>
+        <li><strong>Start with the First Array.</strong></li>
+        <ul>
+
+            <li>We begin with the first array (acc initially). This is the starting point.</li>
+            <li>acc stands for <mark>accumulator</mark> and second parameter stands for next element of arrays.</li>
+        </ul>
+        <li><strong>Check Each Array One by One:</strong></li>
+        <ul>
+            <li>For each array in the input, we look at the current list of common elements (acc) and filter it down to
+                only those elements that also exist in the next array (array).</li>
+        </ul>
+        <li><strong>Filter to Keep Only Common Elements:</strong></li>
+        <ul>
+            <li>The filter method checks each element in the current list (acc) to see if it's in the next array
+                (array).</li>
+            <li>If it is, the element stays in the list; if not, it's removed.</li>
+        </ul>
+        <li> <strong>Repeat Until All Arrays Are Processed:</strong></li>
+        <ul>
+            <li>This process continues until all arrays are processed. The final result is a list of elements that
+                appear in every array.</li>
+        </ul>
+    </ol>
+    <script>
+        const intersection = (...arrays) => {
+            return arrays.reduce((acc, array) => {
+                return acc.filter(element => array.includes(element));
+            })
+        }
+        const intersectionArrayOne = intersection([1, 2, 3], [2, 3, 6], [3, 4, 5]);
+        const intersectionArrayTwo = intersection([1, 2, 3, 4, 5], [4, 5, 8, 9, 10]);
+        console.log(intersectionArrayOne);
+        console.log(intersectionArrayTwo);
+
+
+    </script>
+</body>
+
+</html>

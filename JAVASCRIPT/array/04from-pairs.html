@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>from-pairs</title>
+</head>
+
+<body>
+    <p><b>fromPairs</b> - Write a method that returns an object composed of key-value pairs.</p>
+    <script>
+
+        let arr = [["a", 1], ["b", 2], ["c", 3]];
+        const fromPairs = (array) => arr.reduce((acc, value) => {
+            if (Array.isArray(value)) {
+                acc[value[0] = value[1]];
+            }
+            return acc;
+        }, {});
+
+        console.log(fromPairs());
+        console.log(arr.length);
+        console.log(arr[0]);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flatten</title>
+</head>
+<body>
+    <h1>Write a method that turns a deep array into a plain array.</h1>
+    <p>JavaScript also provides a built-in method flat() that can flatten an array up to a specified depth. To fully flatten a deeply nested array, you can use:</p>
+    <p>flat(Infinity): The flat() method flattens the array to the specified depth. By passing Infinity, you ensure that all levels of nested arrays are flattened into a single array.</p>
+    <script>
+        const deepArray = [1,[2,[3,4],5],6];
+        const flatArray = deepArray.flat(Infinity);
+        console.log(deepArray);
+        console.log(flatArray);
+        
+        
+    </script>
+</body>
+</html>
