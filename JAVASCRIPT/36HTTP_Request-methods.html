@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Request Method</title>
+</head>
+
+<body>
+    <h1 style="color: rgb(139, 0, 86); text-decoration: underline;">HTTP Request methods</h1>
+    <p>HTTP defines a set of request methods to indicate the desired action to be performed for a given resource. Although they can also be nouns, these request methods are sometimes referred to as HTTP verbs.</p>
+    <h2>What is HTTP?</h2>
+    <p>The Hypertext Transfer Protocol (HTTP) is designed to enable communications between clients and servers.</p>
+    <p>HTTP works as a request-response protocol between a client and server.</p>
+
+    <p><strong>Example:</strong>A client (browser) sends an HTTP request to the server; then the server returns a
+        response to the client. The response contains status information about the request and may also contain the
+        requested content.</p>
+
+    <h4>HTTP Methods</h4>
+    <ul>
+        <li>GET</li>
+        <li>POST</li>
+        <li>PUT</li>
+        <li>HEAD</li>
+        <li>DELETE</li>
+        <li>PATCH</li>
+        <li>OPTIONS</li>
+        <li>CONNECT</li>
+        <li>TRACE</li>
+    </ul>
+    <p>The two most commin HTTP methods are: GET and POST</p>
+    <!-- The GET method START -->
+    <h3>The GET Method</h3>
+    <p>GET is used to request data from a specified resource.</p>
+    <p><strong style="color: green;">Some notes on GET requests:</strong></p>
+    <ul>
+        <li>GET requests can be cached.</li>
+        <li>GET requests remain in the browser history.</li>
+        <li>GET requests can be bookmarked.</li>
+        <li>GET requests should never be used when dealing with sensitive data.</li>
+        <li>GET requests have length restrictions.</li>
+        <li>GET requests are only used to request data(not modify).</li>
+    </ul>
+    <!-- The GET method END -->
+    <!-- The PUT method START -->
+    <h3>The POST Method</h3>
+    <p>POST is used to send data to a server to create/update a resource.</p>
+    <p>The data sent to the server with POST is stored in the request body of the HTTP request:</p>
+    <p><strong>Some notes on POST requests:</strong></p>
+    <ul>
+        <li>POST requests are never cached.</li>
+        <li>POST requests do not remain in the browser history.</li>
+        <li>POST requests cannot be bookmarked.</li>
+        <li>POST requests have no restrictions on data length.</li>
+    </ul>
+    <!-- The PUT method END -->
+    <!-- Compare START -->
+    <h3 style="color: blueviolet; text-decoration: underline;">Compare GET vs. POST</h3>
+    <table border="1">
+        <tr>
+            <th>DESCRIPTION</th>
+            <th>GET</th>
+            <th>POST</th>
+        </tr>
+        <tr>
+            <th>Purpose</th>
+            <td>The 'GET' method is used to request data from a specified resource.</td>
+            <td>The POST method is used to send data to a server to create or update a resource.</td>
+        </tr>
+        <tr>
+            <th>Data Transmission:</th>
+            <td>Data is appended to the URL as query parameters (e.g., http://example.com/page?name=John).</td>
+            <td> Data is included in the body of the request, not in the URL.</td>
+        </tr>
+        <tr>
+            <th>Visibility</th>
+            <td>The data is visible in the URL, which makes it less secure for sensitive information.</td>
+            <td>The data is not visible in the URL, which makes it more secure for sensitive information.</td>
+        </tr>
+        <tr>
+            <th>Caching</th>
+            <td> GET requests can be cached by the browser and stored in the browser history.</td>
+            <td>POST requests are not cached by the browser.</td>
+        </tr>
+        <tr>
+            <th>Idempotent</th>
+            <td>Multiple identical GET requests will have the same effect on the server and will not cause any side
+                effects</td>
+            <td>Not inherently idempotent. Multiple identical POST requests can result in different outcomes (e.g.,
+                submitting a form multiple times may result in multiple entries in a database).</td>
+        </tr>
+        <tr>
+            <th>Data Length</th>
+            <td> Limited by the maximum URL length, which varies by browser but is generally around 2048 characters.
+            </td>
+            <td> Not limited by URL length, allowing for larger amounts of data to be sent.</td>
+        </tr>
+        <tr>
+            <th>Usage:</th>
+            <td> Suitable for retrieving data (e.g., querying a database for information).</td>
+            <td>Suitable for sending data that will change the state of the server (e.g., submitting a form, uploading a
+                file).</td>
+        </tr>
+    </table>
+    <!-- Compare END -->
+    <!-- Put Method START -->
+    <h3>The PUT Method</h3>
+    <p>PUT is used to send data to a server to create/update a resource.</p>
+    <p>The difference between POST and PUT is that PUT requests are idempotent. That is, calling the same PUT request
+        multiple times will always produce the same result. In contrast, calling a POST request repeatedly have side
+        effects of creating the same resource multiple times.</p>
+    <!-- Put Method END -->
+    <!-- HEAD Method START -->
+    <h3>The HEAD Method</h3>
+    <p>HEAD is almost identical to GET, but without the response body.</p>
+    <p>In other words, if GET /users returns a list of users, then HEAD /users will make the same request but will not
+        return the list of users.</p>
+    <p>A HEAD request is useful for checking what a GET request will return before actually making a GET request - a
+        HEAD request can read the Content-Length header to check the size of the file, without actually downloading the
+        file.</p>
+    <!-- HEAD Method END -->
+    <!-- DELETE Method START -->
+    <h3>The DELETE Method</h3>
+    <p>The DELETE method deletes the specified resource.</p>
+    <!-- DELETE Method END -->
+    <!-- PATCH Method START -->
+    <h3>The PATCH Method</h3>
+    <p>The PATCH method is used to apply partial modifications to a resource.</p>
+    <!-- PATCH Method END -->
+    <!-- OPTIONS Method START -->
+    <h3>The OPTIONS Method</h3>
+    <p>The OPTIONS method describes the communication options for the target resource.</p>
+    <!-- OPTIONS Method END -->
+    <!-- The CONNECT Method START -->
+    <h3>The CONNECT Method</h3>
+    <p>The CONNECT method is used to start a two-way communications (a tunnel) with the requested resource.</p>
+    <!-- The CONNECT Method END-->
+    <!-- The trace method start -->
+    <h3>The TRACE Method</h3>
+    <p>The TRACE method is used to perform a message loop-back test that tests the path for the target resource (useful
+        for debugging purposes).</p>
+    <!-- The trace method end -->
+
+</body>
+
+</html>
