@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce-Method</title>
+</head>
+
+<body>
+    <h2>Reduce Array Method</h2>
+    <p>Performs some operations and reduces the array to single value. It returns that single value.</p>
+    <p>
+        The reduce method in JavaScript is a powerful array method used to "reduce" all elements in an array into a
+        single value. This value could be a sum, a product, an object, another array, etc., depending on the logic you
+        provide.</p>
+    <p>Syntax:</p>
+    <pre>
+        array.reduce((accumulator, currentValue) => { /* ... */ }, initialValue);
+
+    </pre>
+    <ul>
+        <li><strong>accumulator:</strong>This is the value that accumulates the result of the function as it processes
+            each element in the array. It's like a running total or a collector of results.
+        </li>
+        <li><strong>currentvalue:</strong> This is the current element being processed in the array.</li>
+        <li><strong>initialvalue:</strong>This is the starting value for the accumulator. If not provided, </li>
+    </ul>
+
+    <p><strong>Question1:</strong>Find summation of numbers.</p>
+    <p><strong>Question2:</strong>For a given array of marks of students. Filter out of the marks of students that
+        scored 90 above.</p>
+    <p><strong>Questin3:</strong>Take a number n as input from user. Create an array of numbers from 1 to n.</p>
+    <ul>
+        <li>Use the reduce method to calculate sum of all numbers in the array.</li>
+        <li>Use the reduce method to calculate product of all numbers in the array.</li>
+    </ul>
+    <script src="./reduce.js"></script>
+</body>
+
+</html>
