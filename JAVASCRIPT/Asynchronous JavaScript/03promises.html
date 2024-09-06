@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+    <style>
+        .para {
+            color: rgb(95, 135, 33);
+        }
+
+        .syntax {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Promises</h1>
+    <p>Promise is for "eventual" completion of task. It is an object in Js.</p>
+    <p>It is a solution to callback hell.</p>
+    <pre class="syntax">
+        let promise = new Promise((resolve,reject) =>{...})
+    </pre>
+    <p class="para"><strong style="color: red;">Note:</strong> resolve & reject are callbacks provided by JS.</p>
+    <p>A JavaScript Promise Object can be:</p>
+    <ul>
+        <li><strong>Pending: the result is undefined</strong></li>
+        <li><strong>Resolved: the result is a value(fullfilled)</strong></li>
+        <li><strong>Rejected: the result is an error object</strong></li>
+    </ul>
+    <p>resolve(result)</p>
+    <p>reject(error)</p>
+    <p class="para"><strong style="color: red;">Note:</strong>Promise has state(pending,fulfilled) and some
+        result(result for resolve and error for reject)</p>
+    <p>.then() and .catch()</p>
+    <pre class="syntax">
+        promise.then((res) => {....})
+        promise.catch((err) => {....})
+    </pre>
+    <h2>Promise Chain</h2>
+    <p></p>
+
+    <!-- <script ssrc="./promise.js"></script> -->
+    <!-- <script src="./resolve_callbackhell.js"></script> -->
+    <script src="./promise_chain.js"></script>
+
+</body>
+
+</html>
