@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.head{
+    color: white;
+    background-color: rgb(142, 36, 169);
+    padding: 2rem;
+    border-radius: 2rem;
+    line-height: 2rem;
+    box-shadow: outset;
+    text-align: center;
+} 
+.height-container input{
+    padding: 0.3rem;
+    border-radius: 2rem;
+} 
+.weight-container input{
+    padding: 0.3rem;
+    border-radius: 2rem;
+} 
+.submit input{
+    color: purple;
+    font-weight: 600;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin: 1rem 6rem;
+}        
