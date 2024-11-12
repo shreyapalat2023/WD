@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myiframe</title>
+    <style>
+        * {
+            color: rgb(54, 96, 134);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HTML Ifrmaes</h1>
+    <p>The HTML &lt;iframe&gt; tag is used to embed a webpage within a webpage. It is also called an inline frame. </p>
+    <ul>
+        <li>src: It is used to specify the URL of the website to be loaded.</li>
+        <li> title: It is good practice to include a title attribute so that screen readers can read the title to users.
+        </li>
+    </ul>
+    <h4>Other Attributes</h4>
+    <p>
+        There are some importat attributes for They are:
+    <details>
+        <summary>height and width</summary>
+        <p>We can set the height and width of the &lt;iframe&gt; element with the height or width attribute. </p>
+    </details>
+    <details>
+        <summary>name</summary>
+        <p>
+            The name attribute is used to specify the name for an iframe. It can be used as a target for other HTML elements like the &lt;:a&gt; tag.
+        </p>
+    </details>
+    <details>
+        <summary>srcdoc</summary>
+        <p>Instead of a website URL, we can send HTML directly to the iframe, which will be displayed instead of another website.</p>
+    </details>
+    </p>
+
+    <table border="1" width="100%">
+        <tr>
+            <td width="10%">
+                <ul>
+                    <li><a target="my-file" href="./17.1homee.html">Home</a></li>
+                    <li><a target="my-file" href="./17.2contactt.html">contact</a></li>
+                    <li><a target="my-file" href="./17.3help.html">help</a></li>
+                    <li><a target="my-file" href="./17.4about.html">about</a></li>
+                </ul>
+            </td>
+            <td>
+                <iframe name="my-file" src="./17.1homee.html" frameborder="">
+
+                </iframe>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

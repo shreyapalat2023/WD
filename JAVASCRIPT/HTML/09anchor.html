@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+           color: rgb(54, 96, 134);
+       }
+    </style>
+</head>
+<body>
+    <h1>HTML &lt;a&gt; Tag</h1>
+    <p>The &lt;a&gt;tag defines a hyperlink, which is used to link from one page to another.</p>
+    <p>The most important attribute of the &lt;a&gt; element is the href attribute, which indicates the link's destination.</p>
+    <p>By default, links will appear as follows in all browsers:</p>
+    <ul>
+        <li> unvisited link is underlined and blue</li>
+        <li> visited link is underlined and purple</li>
+       <li>An active link is underlined and red</li>
+    </ul>
+
+    <h4>Target Attribute</h4>
+    <p>By default, any link clicked will open in the same browser window. This may lead to a bad user experience. This is where the target attribute becomes useful.</p>
+    <p>Here, target= "_blank" opens the link in a new browser tab.</p>
+    <p>We use the target attribute to specify where the link is opened. The target attribute has 4 values.</p>
+    <ul>
+        <li>_Self - Opens the link in the same browser tab.</li>
+        <li>_blank - Opens the links in a new browser tab.</li>
+        <li>_parent - Opens the link in the parent frame.</li>
+        <li>_top - Opens the link in the current tab window(topmost parent).</li>
+    </ul>
+    
+    <h4>Linking to an HTML element</h4>
+    <p>As previously mentioned, along with linking to web sources, an <a> tag can also link to a respecific element within the web page. We use that by adding # to the URL followed by the id of the specific element.</p>
+
+    <ul> 
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Product</a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    padding: 10px;
+}
+.logo h1{
+    border: 2px solid;
+}
+span{
+    background-color: black;
+    color: white;
+    padding: 2px;
+}
+header{
+    background-color:silver;
+}
+.icon i{
+    font-size: 20px;
+    padding: 10px;
+}
+ul li{
+    display: inline-block;
+    padding: 0 20px;
+    list-style: none;
+}
+ul li a{
+    text-decoration: none;
+    font-size: 20px;
+}
+.container{
+    background-color: beige;
+    height: 500px;
+    border: 2px solid;
+}
+.row h1, p{
+    text-align: center;
+    padding: 20px;
+}

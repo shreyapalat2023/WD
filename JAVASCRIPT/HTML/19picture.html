@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>&lt;picture&gt; The Picture element</h1>
+    <p>
+        The &lt;picture&gt; HTML element contains zero or more &lt;source&gt; elements and one &lt;img&gt; element to
+        offer alternative versions of an image for different display/device scenarios.
+    </p>
+    <p>
+        The browser will consider each child &lt;source&gt; element and choose the best match among them. If no matches are found—or the browser doesn't support the  &lt;picture&gt; element—the URL of the &lt;img&gt; element's src attribute is selected.
+    </p>
+    <picture>
+        <source srcset="https://picsum.photos/id/237/200/300" media="(min-width:900px)">
+        <source srcset="https://picsum.photos/id/1/200/300" media="(min-width:500px)">
+        <img src="./img/bird.jpg" alt="image">
+    </picture>
+</body>
+
+</html>
