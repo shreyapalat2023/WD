@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            height: 200px;
+            width: 200px;
+            border: 2px solid;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* animation-name: nav1; */
+            /* animation-duration: 2s; */
+            animation: nav1 2s infinite;
+            /* animation: identifier 3s infinite; */
+        }
+        @keyframes nav1{
+            from{background-color: lightcoral;}
+            to{background-color: aqua;}
+        }
+        .div2{
+            height: 200px;
+            width: 200px;
+            border: solid 2px;
+            animation: identifier 3s infinite;
+            margin: 40px;
+        }
+        @keyframes identifier {
+            0%{background-color: aqua;}
+            20%{background-color: lightcoral; border: 50%;}
+            40%{background-color: blue;border: 0;}
+            60%{background: linear-gradient(red,green,blue);transform: translate(opx,100px);}
+            100%{background-color: lightgreen;transform: rotate(50deg);}
+        }
+    </style>
+</head>
+<body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: rgb(132, 234, 232);
+    border: 2px solid;
+}
+.logo h1{
+    border: 2px solid black;
+    display: inline;
+    color: white;
+    margin: 5px;
+}
+.logo h1 span{
+    background-color: black;
+    padding: 2px;
+    color: white;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul li{
+    display: inline-block;
+    list-style: none;
+    padding: 15px 30px;
+    /* position: relative; */
+}
+.icon a i:hover{
+    color: black;
+}
+li a::after{
+    content: "";
+    height: 5px;
+    background-color: black;
+    width: 0%;
+    position: absolute;
+    left: 0%;
+    top: 100%;
+    transition: 2s;
+}
+li a:hover{
+    color: black;
+}
+li a:hover::after{
+    width: 100%;
+}
+/* li a:hover{
+    color: black;
+} */
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding:5px ;
+    position: relative;
+}
+.navbar .icon i {
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+}
+.content{
+    /* background-color: seagreen; */
+    height: 600px;
+    background-image: url("./images/bg-1.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.contain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0;
+    /* justify-content: center; */
+}
+.contain h1{
+    color: white;
+}
+.contain p{
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+footer{
+    background-color: black;
+    border: 2px solid;
+    padding: 10px;
+}
+footer h3{
+    color: white;
+    text-align: center;
+}

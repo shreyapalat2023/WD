@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .center {
+            height: 200px;
+            width: 200px;
+            border: 2px solid;
+            margin: 200px auto;
+            overflow: hidden;
+        }
+
+        .left {
+            height: 200px;
+            width: 200px;
+            background-color: rgba(53, 65, 65, 0.4);
+            transition: 1s;
+            background-color: transparent;
+        }
+
+        .center:hover .left {
+            transform: translate(0%, 0%);
+        }
+
+        .right {
+            height: 200px;
+            width: 200px;
+            background-color: rgba(65, 78, 78, 0.4);
+            transform: translate(100%, -200%);
+            transition: 1s;
+        }
+
+        .center:hover .right {
+            transform: translate(0%, -100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <div class="left">
+
+        </div>
+        <div class="right"></div>
+    </div>
+</body>
+
+</html>

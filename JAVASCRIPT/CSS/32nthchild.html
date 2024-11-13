@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            color: rgb(54, 96, 134);
+
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        .tr-1:nth-child(odd) {
+            background-color: chartreuse;
+        }
+
+        .tr-2:nth-child(even) {
+            background-color: orange;
+        }
+
+        .tr-3:nth-child(2n+1) {
+            background-color: antiquewhite;
+        }
+
+        .tr-4:first-child {
+            background-color: coral;
+        }
+
+        .tr-5:last-child {
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>nth:child() Selector</h1>
+    <p>The :nth-child(n) selector matches every element that is the nth child of its parent.</p>
+    <p>n can be a number, a keyword (odd or even), or a formula (like an + b).</p>
+    <!-- nth-child(ODD) START -->
+    <h3>nth-child(odd)</h3>
+    <table width="50%" border="1" align="center">
+        <tr class="tr-1">
+            <td>username</td>
+            <td>age</td>
+            <td>data</td>
+            <td>city</td>
+            <td>card</td>
+        </tr>
+        <tr class="tr-1">
+            <td>username</td>
+            <td>age</td>
+            <td>data</td>
+            <td>city</td>
+            <td>card</td>
+        </tr>
+        <tr class="tr-1">
+            <td>username</td>
+            <td>age</td>
+            <td>data</td>
+            <td>city</td>
+            <td>card</td>
+        </tr>
+        <tr class="tr-1">
+            <td>username</td>
+            <td>age</td>
+            <td>data</td>
+            <td>city</td>
+            <td>card</td>
+        </tr>
+        <tr class="tr-1">
+            <td>username</td>
+            <td>age</td>
+            <td>data</td>
+            <td>city</td>
+            <td>card</td>
+        </tr>
+    </table>
+    <!-- nth-child(ODD) END -->
+    <!-- nth-child(EVEN) START -->
+    <h3>nth-child(even)</h3>
+    <table width="50%" border="1" align="center">
+        <tr class="tr-2">
+            <td>username</td>
+            <td>age</td>
+            <td>data</td>
+            <td>city</td>
+            <td>card</td>
+        </tr>
+        <tr class="tr-2">
+            <td>username</td>
+            <td>age</td>
+            <td>data</td>
+            <td>city</td>
+            <td>card</td>
+        </tr>
+        <tr class="tr-2">
+            <td>username</td>
+            <td>age</td>
+            <td>data</td>
+            <td>city</td>
+            <td>card</td>
+        </tr>
+        <tr class="tr-2">
+            <td>username</td>
+            <td>age</td>
+            <td>data</td>
+            <td>city</td>
+            <td>card</td>
+        </tr>
+        <tr class="tr-2">
+            <td>username</td>
+            <td>age</td>
+            <td>data</td>
+            <td>city</td>
+            <td>card</td>
+        </tr>
+    </table>
+    <!-- nth-child(EVEN) END -->
+    <!-- nth-child(2n+1) END -->
+    <h3>nth-child(2n+1)</h3>
+    <table width="50%" border="1" align="center">
+        <tr class="tr-3">
+            <td>username</td>
+            <td>age</td>
+            <td>data</td>
+            <td>city</td>
+            <td>card</td>
+        </tr>
+        <tr class="tr-3">
+            <td>username</td>
+            <td>age</td>
+            <td>data</td>
+            <td>city</td>
+            <td>card</td>
+        </tr>
+        <tr class="tr-3">
+            <td>username</td>
+            <td>age</td>
+            <td>data</td>
+            <td>city</td>
+            <td>card</td>
+        </tr>
+        <tr class="tr-3">
+            <td>username</td>
+            <td>age</td>
+            <td>data</td>
+            <td>city</td>
+            <td>card</td>
+        </tr>
+        <tr class="tr-3">
+            <td>username</td>
+            <td>age</td>
+            <td>data</td>
+            <td>city</td>
+            <td>card</td>
+        </tr>
+    </table>
+    <!-- nth-child(2n+1) END -->
+    <!-- nth-child(firstchild) START -->
+    <h3>nth-child(firstchild)</h3>
+    <table width="50%" border="1" align="center">
+        <tr class="tr-4">
+            <td>username</td>
+            <td>age</td>
+            <td>data</td>
+            <td>city</td>
+            <td>card</td>
+        </tr>
+        <tr class="tr-4">
+            <td>username</td>
+            <td>age</td>
+            <td>data</td>
+            <td>city</td>
+            <td>card</td>
+        </tr>
+        <tr class="tr-4">
+            <td>username</td>
+            <td>age</td>
+            <td>data</td>
+            <td>city</td>
+            <td>card</td>
+        </tr>
+        <tr class="tr-4">
+            <td>username</td>
+            <td>age</td>
+            <td>data</td>
+            <td>city</td>
+            <td>card</td>
+        </tr>
+        <tr class="tr-4">
+            <td>username</td>
+            <td>age</td>
+            <td>data</td>
+            <td>city</td>
+            <td>card</td>
+        </tr>
+    </table>
+    <!-- nth-child(firstchild) END -->
+    <!-- nth-child(lastchild) START -->
+    <h3>nth-child(lastchild)</h3>
+    <table width="50%" border="1" align="center">
+        <tr class="tr-5">
+            <td>username</td>
+            <td>age</td>
+            <td>data</td>
+            <td>city</td>
+            <td>card</td>
+        </tr>
+        <tr class="tr-5">
+            <td>username</td>
+            <td>age</td>
+            <td>data</td>
+            <td>city</td>
+            <td>card</td>
+        </tr>
+        <tr class="tr-5">
+            <td>username</td>
+            <td>age</td>
+            <td>data</td>
+            <td>city</td>
+            <td>card</td>
+        </tr>
+        <tr class="tr-5">
+            <td>username</td>
+            <td>age</td>
+            <td>data</td>
+            <td>city</td>
+            <td>card</td>
+        </tr>
+        <tr class="tr-5">
+            <td>username</td>
+            <td>age</td>
+            <td>data</td>
+            <td>city</td>
+            <td>card</td>
+        </tr>
+    </table>
+    <!-- nth-child(lastchild) END -->
+</body>
+
+</html>

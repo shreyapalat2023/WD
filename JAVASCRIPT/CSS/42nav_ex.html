@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li{
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            background-color: rgb(165, 165, 10);
+            position: relative;
+            
+        }
+        ul li a{
+            text-decoration: none;
+        }
+        li::after{
+            content:"";
+            height: 5px;
+            width: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: black;
+            transition: 1s;
+        }
+        li:hover::after{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="#">contact</a></li>
+        <li><a href="#">help</a></li>
+    </ul>
+</body>
+</html>

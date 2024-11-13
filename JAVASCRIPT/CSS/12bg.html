@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./12style.css">
+
+</head>
+
+<body>
+    <section>
+        <h1>CSS Background Properties</h1>
+        <ul>
+            <!-- background-color START -->
+            <li><strong>Background-color:</strong></li>The background-color property sets the background color of an
+            element.The background of an element is the total size of the element, including padding and border.
+            <p>Example:</p>
+
+            <div class="background-color">background-color</div>
+
+            <!-- background-color START -->
+            <!-- background-IMG START -->
+
+            <li><strong>Background-img</strong></li>The background-image CSS property sets one or more background images
+            on an element.
+            <p>Example:</p>
+            <div class="background-img">background-img</div>
+
+
+            <!-- background-IMG END -->
+            <!-- background-REPEAT START -->
+            <li><strong>Background-repeat</strong></li>The background-repeat property sets if/how a background image
+            will be
+            repeated.By default, a background-image is repeated both vertically and horizontally.
+            <p>Example:</p>
+            <div class="background-repeat">background-repeat</div>
+
+            <!-- background-REPEAT END -->
+            <!-- background-attachment START -->
+
+            <li><strong>Background-attachment</strong></li>The background-attachment property sets whether a background
+            image
+            scrolls with the rest of the page, or is fixed.
+            <div class="background-attachment">background-attachment</div>
+
+            <!-- background-attachment END -->
+            <!-- background-POSITION START -->
+
+            <li><strong>Background-position</strong></li>The background-position property in CSS is mainly used to sets
+            the
+            initial position for the background image ie., it is used to set an image at a certain position. The
+            position that is relative to the positioning layer, can be set by using the background-origin property.
+            <p><strong style="color: red;">Note:</strong>The background-image is placed default to the top-left corner
+                of an element with a
+                repetition on both horizontally & vertically.</p>
+
+            <li>background-position: center</li>
+            <li>background-position: right</li>
+            <li>background-position: bottom</li>
+            <li>background-position: left top</li>
+            <li>background-position: left center</li>
+            <li>background-position: left bottom</li>
+            <li>background-position: center top</li>
+            <li>background-position: center center</li>
+            <li>background-position: center bottom</li>
+            <li>background-position: right top</li>
+            <li>background-position: right center</li>
+            <li>background-position: right bottom</li>
+
+            <p>Example:</p>
+            <div class="background-position">background-position</div>
+
+            <!-- background-POSITION START -->
+            <!-- background-SIZE START -->
+
+            <li><strong>background-size</strong></li>
+            The background-size CSS property sets the size of the element's background image. The image can be left to
+            its natural size, stretched, or constrained to fit the available space.
+            <p>Example:</p>
+            <div class="background-size">background-size</div>
+
+            <!-- background-SIZE END -->
+            <!-- background START -->
+            <li><strong>Background(Shorthand Property)</strong></li>The background shorthand CSS property sets all
+            background style properties at once, such as color, image, origin and size, or repeat method. Component
+            properties not set in the background shorthand property value declaration are set to their default values.
+            <p>Example:</p>
+            <div class="background">background</div>
+            <!-- background-flag END -->
+            <!-- background-flag START -->
+            <li><strong>Background-flag</strong></li>
+            <p>Example</p>
+            <div class="background-flag">background-flag</div>
+            <!-- background-flag END -->
+            <!-- CSS Gradients START -->
+            <section>
+                <h1>CSS Gradients</h1>
+                <p>CSS gradients let you display smooth transitions between two or more specified colors.</p>
+                <p>CSS</p>
+                <ul>
+                    <li>Linear Gradients(goes down/up/left/right/diagonally)</li>
+                    <li>Radiant Gradients(defined by their center)</li>
+                    <li>Conic Gradients(rotated around a center point)</li>
+                </ul>
+                <p>
+                    To create a linear gradient you must define at least two color stops. Color stops are the colors you want to render smooth transitions among. You can also set a starting point and a direction (or an angle) along with the gradient effect.
+                </p>
+                <p>Syntax:</p>
+                <pre>
+                    background-image: linear-gradient(direction, color-stop1, color-stop2, ...);
+                </pre>
+                <h2>Direction- Top to Bottom(this is default)</h2>
+                <div class="toptobott">top to bottom(default)</div>
+                <h2>Direction- left to right</h2>
+                <div class="lefttoright">left to right</div>
+                <h2>Direction-Diagonal</h2>
+                <div class="dirdia">top left to bottom right</div>
+
+                <h1>Using Angles</h1>
+                <p>If you want more control over the direction of the gradient, you can define an angle, instead of the predefined directions (to bottom, to top, to right, to left, to bottom right, etc.). A value of 0deg is equivalent to "to top". A value of 90deg is equivalent to "to right". A value of 180deg is equivalent to "to bottom".</p>
+                <p>Syntax:</p>
+                <pre>
+                    background-image: linear-gradient(angle, color-stop1, color-stop2);
+                </pre>
+                <div class="angle">180deg</div>
+                <h3>Rainbow Background</h3>
+                <div class="rainbow">Rainbow Background</div>
+            </section>
+
+            <!-- CSS Gradients END -->
+        </ul>
+    </section>
+</body>
+
+</html>

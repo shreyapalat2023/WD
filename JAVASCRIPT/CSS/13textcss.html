@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+    <style>
+        *{
+            color: rgb(54, 96, 134);
+         }
+        .para-col {
+            color: red;
+        }
+
+        .para-align {
+            text-align: center;
+        }
+
+        .para-dec {
+            text-decoration: underline;
+        }
+
+        
+        .remove li a {
+            text-decoration: none;
+        }
+
+        .para-indent {
+            text-indent: 20px;
+        }
+
+        .para-trans {
+            text-transform: uppercase;
+        }
+
+        .para-letter {
+            letter-spacing: 20px;
+        }
+
+        .para-word {
+            word-spacing: 5px;
+        }
+
+        .div-lh {
+            line-height: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Text propery in CSS</h1>
+    <p>The CSS text formatting properties are used to format text, style the text, and perform different types of
+        manipulations like word spacing, alignment, justification, and text transformation.</p>
+    <ul>
+        <!-- Text Color START -->
+        <li><strong>Text color:</strong></li>
+        <p>
+            CSS Colors are an essential part of web design, providing the ability to bring your HTML elements to life.
+            This feature allows developers to set the color of various HTML elements, including font color, background
+            color, and more.
+            This property is used to set the color of the text and the color can be
+            set by using a color name like “red”, hex value “#ff0000”, or by its RGB value “rgb(255,0,0)”;
+        </p>
+        <p>There are several ways to defines the color of an element in CSS:</p>
+        <ul>
+            <li>Built-In Color:</li>
+            <p>
+                These are a set of predefined colors which are used by their names. For example: red, blue, green etc.
+            </p>
+            <li>RGB Format:</li>
+            <p> These are a set of predefined colors which are used by their names. For example: red, blue, green etc.
+            </p>
+            <li>RGBA Format:</li>
+            <p>The RGBA format is similar to the RGB, but it includes an Alpha component that specifies the transparency
+                of elements.</p>
+            <li>Hexadecimal Notation:</li>
+            <p> The hexadecimal notation begins with a # symbol followed by 6 characters each ranging from 0 to F.</p>
+            <li>HSL:</li>
+            <p>HSL stands for Hue, Saturation, and Lightness respectively. This format uses the cylindrical coordinate
+                system.</p>
+            <li>HSLA:</li>
+            <p> The HSLA color property is similar to the HSL property, but it includes an Alpha component that
+                specifies the transparency of elements.</p>
+            <p>Example:</p>
+            <p class="para-col">Text Color</p>
+        </ul>
+        <!-- Text Color END -->
+        <li><strong>Text Alignments</strong></li>This property in CSS is used to specify the horizontal alignment of
+        text in an element inside a block element or table-cell box.
+        <p>Example:</p>
+        <p class="para-align">Text Alignment</p>
+        <!-- Text alignment START -->
+        <li><strong>Text Decoration</strong></li>text-decoration property is used to “decorate ” the content of the
+        text.
+
+        <p>Example:</p>
+        <p class="para-dec">Text Decoration</p>
+        <!-- Text decoration end -->
+        <!-- list style start -->
+        <li><strong>Remove the Defailt underline from links:</strong></li>Using list style property we can remove the
+        default underline
+        from links.
+        <p>Example:</p>
+        <ul class="remove">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">Product</a></li>
+        </ul>
+        <!-- list-style end-->
+        <!--text indentation start-->
+        <li><strong>Text Indentation</strong></li>It is used to indent the first line of the paragraph and the size can
+        be in px, cm, pt.
+        <p>Example</p>
+        <p class="para-indent">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error officiis ratione ullam
+            rem quaerat suscipit sint quos odio sunt doloribus.</p>
+        <!--text indentation end-->
+        <!-- text transformation start-->
+        <li><strong>Text transformation</strong></li> It is used to control the capitalization of the text.
+        <p>Example</p>
+        <p class="para-trans">text transformation</p>
+        <!-- text transformation end-->
+        <!-- letter spacing start-->
+        <li><strong>letter-spacing</strong></li> This property is used to specify the space between the characters of
+        the text.
+        <p>Example</p>
+        <p class="para-letter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, voluptatem?</p>
+        <!-- letter spacing end-->
+        <!-- word spacing start-->
+        <li><strong>Word-spacing</strong></li>It is used to specify the space between the words of the line.
+        <p>Example:</p>
+        <p class="para-word">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, quod.</p>
+        <!-- word spacing end-->
+        <!-- line-height start-->
+        <li><strong>line-height</strong></li>
+        It is used to set the space between the lines.
+        <p>Example:</p>
+        <p><strong>Normal Paragraph </strong></p>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, nemo!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et sint officia ullam ipsa similique culpa ex,
+            distinctio suscipit aliquid cupiditate!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas magni ducimus nostrum mollitia. Ut dolore
+            molestias eligendi et cumque hic! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
+            debitis dicta veritatis cupiditate, saepe aut cumque, officiis animi maiores maxime quia recusandae? Hic,
+            iure amet? Quasi amet repudiandae perspiciatis quaerat.
+        </div>
+        <p><strong>After giving line-height</strong></p>
+        <div class="div-lh">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, nemo!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et sint officia ullam ipsa similique culpa ex,
+            distinctio suscipit aliquid cupiditate!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas magni ducimus nostrum mollitia. Ut dolore
+            molestias eligendi et cumque hic! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
+            debitis dicta veritatis cupiditate, saepe aut cumque, officiis animi maiores maxime quia recusandae? Hic,
+            iure amet? Quasi amet repudiandae perspiciatis quaerat.
+        </div>
+        <!-- line-height end-->
+    </ul>
+
+
+
+
+
+
+
+</body>
+
+</html>

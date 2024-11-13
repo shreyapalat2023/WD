@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        * {
+            color: rgb(54, 96, 134);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>What is CSS?</h1>
+    <ul>
+        <li>CSS stands for Cascading Style Sheets</li>
+        <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
+        <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
+        <li> External stylesheets are stored in CSS files</li>
+        <li>CSS is a rule-based language — you define the rules by specifying groups of styles that should be applied to
+            particular elements or groups of elements on your web page.</li>
+    </ul>
+
+    <h2>Include CSS in a webpage</h2>
+    <p>CSS is used for styling the look and formatting of a document written in HTML. There are three ways to add CSS in
+        HTML</p>
+    <ul>
+        <!-- Inline CSS start -->
+        <li><strong>Inline CSS:</strong>Styles added directly to the HTML element.</li>
+        <p>Inline style is the approach of adding CSS rules directly to the HTML element using the style attribute.</p>
+        <!-- Inline CSS end -->
+        <!-- Internal CSS start -->
+        <li><strong>Internal CSS:</strong>Styles defined at the head section of the document.</li>
+        <p>
+            Internal CSS applies CSS styles to a specific HTML document. Internal CSS is defined inside an HTML document
+            using &lt;style&gt; attribute within the head tag of an HTML.
+        </p>
+        <!-- Internal CSS end -->
+        <!-- External CSS start -->
+        <li><strong>External CSS:</strong>Styles defined in a separate file.</li>
+        <p>External CSS is an approach to applying CSS styles to HTML pages by defining the CSS in a separate file.</p>
+        <p> The external CSS file should have a .css extension.</p>
+        <p>We use &lt;link&gt; tag to link the css file to an HTML document.</p>
+        <p>href - URL or file path to the external CSS file. </p>
+        <p>rel = "stylesheet" indicates the linked document is a CSS file.</p>
+        <!-- External CSS end -->
+    </ul>
+    <h2>Inline Style Override Internal Style</h2>
+    <p>
+        If an internal CSS and inline CSS are both applied to a tag, the styling from the inline tag is applied.
+    </p>
+</body>
+
+</html>

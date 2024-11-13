@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* p::first-letter {
+            font-size: 50px;
+        }
+
+        p::first-line {
+            background-color: gray;
+        }
+
+        h1::after {
+            content: "~";
+        }
+
+        h1::before {
+            content: "~";
+        }
+
+        p::selection {
+            background-color: hotpink;
+        } */
+
+        /* anchor pseudo classes START */
+        a:hover {
+            color: hotpink;
+        }
+
+        /* a:visited{
+            color: green;
+        } */
+        a:active {
+            color: blue;
+        }
+
+        /* anchor pseudo classes START */
+
+        /* hover START */
+        .hover-element h1:hover{
+            color: coral;
+        }
+
+        .hover-element p:hover{
+            color:skyblue;
+        }
+        /* hover END */
+    </style>
+</head>
+
+<body>
+    <h1>What are Pseudo-classes?
+    </h1>
+    <p>A pseudo-class is used to define a special state of an element.</p>
+    <p>For example, it can be used to:</p>
+    <!-- Anchor pseudo classes START -->
+    <h3>Anchor Pseudo-classes</h3>
+    <ul>
+        <li>Style an element when a user mouses over it</li>
+        <li>Style visited and unvisited links differently</li>
+        <li>Style an element when it gets focus
+        </li>
+    </ul>
+    <p>Example:</p>
+    <p>Styling a link depending on state</p>
+    <a href="#">This is a link</a>
+    <p><strong style="color: red;">Note:</strong> a:hover MUST come after a:link and a:visited in the CSS definition in
+        order to be effective.</p>
+    <p><strong style="color: red;">Note:</strong> a:active MUST come after a:hover in the CSS definition in order to be
+        effective.</p>
+    <!-- Anchor pseudo classes END -->
+    <!-- hover over div START-->
+    <h3>Hover over div element or paragraph</h3>
+    <div class="hover-element">
+        <h1>Data of CSS</h1>
+        <p>This is a paragraph</p>
+    </div>
+    <!-- hover over div END-->
+    <p><strong>Hover over a &lt;div&gt; element to show a element (like a tooltip): </strong></p>
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas inventore, possimus quaerat ad at eum et laborum
+        dolorem quidem id, esse eveniet! Ad asperiores repellat nisi vel,
+        perspiciatis vitae aliquam architecto! Voluptate sequi adipisci, repudiandae tenetur et corporis. Nulla, vel
+        est? Rem vero iste amet ratione fugit. Aliquid facere ut fugit,
+        pariatur voluptates perferendis mollitia dolores officia non optio maiores nihil doloremque nemo asperiores hic!
+        Veritatis dignissimos possimus iste sed quas amet hic cupiditate aspernatur rerum, repellat, sequi,
+        temporibus vel dolore laudantium. Fuga, possimus fugit ratione facere quidem optio quam. Saepe ab aspernatur
+        est. Minus, culpa. Temporibus veritatis saepe hic?</p>
+    <h1>data of css</h1>
+    <input type="text">
+    <!-- <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Home</a></li>
+    </ul> -->
+</body>
+
+</html>

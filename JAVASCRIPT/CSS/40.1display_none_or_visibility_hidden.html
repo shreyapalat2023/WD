@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display none or visibility hidden</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .cotainer {
+            width: 100%;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            border: 2px solid;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .h-one {
+            margin: 0 auto;
+            text-align: center;
+            border: 2px solid;
+            background-color: rgb(222, 44, 222);
+            width: 50%;
+            padding: 10px;
+        }
+
+        .h-two span {
+            color: red;
+        }
+
+        .btn button {
+            width: 90%;
+            color: white;
+            background-color: rgb(10, 162, 10);
+            opacity: 0.5;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5%;
+            font-size: 20px;
+        }
+        .para-one{
+            text-align: center;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section class="sec-one">
+            <h1 class="h-one">Display:none VS Visibility Hidden</h1>
+            <div class="para-one">
+                <p> <strong>visibility:hidden</strong> hides the element, but it still takes up space in the layout.</p>
+                <p> <strong>display:none</strong> removes the element from the document. It does not take up any space.
+                </p>
+            </div>
+            <div class="row">
+                <div class="box" id="box1">
+                    <div class="h-two">
+                        <h1>Display:
+                            <span>None</span>
+                        </h1>
+                    </div>
+                    <div class="img">
+                        <img src="./images/bird.jpg" alt="">
+                    </div>
+                    <div id="btn1" class="btn">
+                        <button>Remove</button>
+                    </div>
+                </div>
+                <!-- box2 start -->
+                <!-- box2 start -->
+                <div class="box" id="box2">
+                    <div class="h-two">
+                        <h1>Visibility: <span>Hidden</span></h1>
+                    </div>
+                    <div class="img">
+                        <img src="./images/bird.jpg" alt="">
+                    </div>
+                    <div id="btn2" class="btn">
+                        <button>Hide</button>
+                    </div>
+                </div>
+                <!-- box1 end -->
+                <!-- box3 start -->
+                <div class="box" id="box3">
+                    <div class="h-two">
+                        <h1>Reset</h1>
+                    </div>
+                    <div class="img">
+                        <img src="./images/bird.jpg" alt="">
+                    </div>
+                    <div id="btn3" class="btn">
+                        <button>Reset All</button>
+                    </div>
+                </div>
+                <!-- box3 end-->
+                <!-- para2 start -->
+                <!-- para2 end -->
+            </div>
+        </section>
+    </div>
+    <script>
+
+        document.getElementById("btn1").addEventListener("click", () => {
+            document.getElementById("box1").style.display = "none";
+        })
+
+        document.getElementById("btn2").addEventListener("click", () => {
+            document.getElementById("box2").style.visibility = "hidden";
+        })
+
+        document.getElementById("btn3").addEventListener("click", () => {
+
+            document.getElementById("box1").style.display = "block";
+            document.getElementById("box2").style.visibility = "visible";
+        })
+    </script>
+</body>
+
+</html>

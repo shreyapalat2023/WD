@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div h2::before{
+            content: "S";
+        }
+        div h3::after{
+            content: "xyz";
+            height: 10px;
+            width: 10px;
+            border: solid 2px;
+        }
+        .lore::first-line{
+            background-color: aqua;
+        }
+        .lore::first-letter{
+            columns: red;
+        }
+        .lore::selection{
+            background-color: brown;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>hreya</h2>
+        <h3>Mihir</h3>
+        <h3>Krish</h3>
+    </div>
+    <div class="lorem">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam deserunt tempore ea in architecto perspiciatis
+        temporibus repellendus quam, dolorem nemo.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis voluptatum fuga voluptatem porro
+        repudiandae minima mollitia quisquam alias. Possimus, tempore!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, ratione. Vero, asperiores. Dicta dolores
+        soluta illo assumenda deserunt commodi asperiores!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos cumque perferendis necessitatibus officia
+        suscipit debitis dolorem sunt sed consequuntur nesciunt!
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        section {
+            background-color: gray;
+            text-align: center;
+            color: white;
+        }
+
+        .logo {
+            background-color: green;
+            text-align: center;
+            color: white;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .links {
+            background-color: orange;
+            text-align: center;
+            color: white;
+            grid-column-start: 3;
+            grid-column-end: 11;
+        }
+
+        .data {
+            background-color: darkcyan;
+            text-align: center;
+            color: white;
+            grid-column-start: 1;
+            grid-column-end: 11;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        .card {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .img {
+            width: 30%;
+            border: 2px dotted;
+            margin: 20px;
+        }
+
+        .img img {
+            width: 100%;
+            height: 300px;
+        }
+
+        .footer {
+            /* height: 30px; */
+            background-color: black;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="grid">
+                <div class="logo">
+                    <h1>logo</h1>
+                </div>
+                <div class="links">
+                    <h1>links</h1>
+                </div>
+                <div class="data">
+                    <h1>data</h1>
+                </div>
+            </div>
+            <div class="para1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias deserunt ex reprehenderit fuga fugiat
+                facere necessitatibus facilis, dolorem minus non.
+            </div>
+            <div class="para2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ullam. Provident, molestias repellendus
+                culpa consequuntur obcaecati deserunt iusto rerum illo quas beatae adipisci eius quibusdam amet eveniet
+                accusantium possimus aliquam!
+            </div>
+            <div class="para3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque totam, ab expedita voluptas sunt quia
+                inventore unde nostrum ex porro? Harum quo atque dicta molestiae dolorum eos, soluta architecto officia
+                dignissimos ab tempore quibusdam numquam placeat tempora quasi a explicabo quam praesentium consequatur
+                non? Perspiciatis quam odio magni facere! Esse!
+            </div>
+        </div>
+        <div class="card">
+            <div class="img1 img">
+                <img src="./images/bird.jpg" alt="">
+            </div>
+            <div class="img2 img">
+                <img src="./images/dog.jpg" alt="">
+            </div>
+            <div class="img3 img">
+                <img src="./images/humming bird.jpg" alt="">
+            </div>
+        </div>
+        <div class="para4">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam repellendus rem aut deleniti aspernatur dolorem hic voluptates qui deserunt, consectetur perferendis minima, consequatur mollitia modi similique atque quod! Ut placeat deleniti odit praesentium voluptate repudiandae enim, vitae ipsum blanditiis eum?
+        </div>
+        <div class="para5">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe eligendi exercitationem dolorem iure laboriosam, perspiciatis velit praesentium amet eos! Consequatur dignissimos esse nihil iusto veniam. Porro repellat molestias officia quisquam iure unde dolor incidunt voluptas ex fugiat mollitia eum nemo earum fuga atque esse, quo quam. Accusantium magnam recusandae quam!
+        </div>
+        <div class="para6">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, modi! Ratione debitis ipsam eius similique architecto! Sit atque veritatis iure vel officia. Labore mollitia saepe itaque. Nihil expedita, recusandae molestiae culpa at qui libero magnam incidunt eos, commodi quibusdam pariatur facere harum, debitis minus. Nostrum velit debitis distinctio vel quis!
+        </div>
+        <div class="para7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, sed cupiditate omnis praesentium facilis esse nisi facere nesciunt exercitationem aperiam tempore officia fuga obcaecati sapiente nulla nihil unde vero in.</div>
+        <div class="para8">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta est, similique provident harum odio quae modi officia. Porro debitis explicabo harum ducimus praesentium alias consequuntur veritatis minus commodi sint ipsa, aliquam quod rerum et quos perspiciatis, molestiae suscipit recusandae rem!
+        </div>
+        <div class="footer">
+            <span>footer</span>
+            <span>&copy</span>
+        </div>
+    </section>
+</body>
+
+</html>

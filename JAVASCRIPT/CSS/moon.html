@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon</title>
+    <style>
+        section {
+            height: 500px;
+            width: 1200px;
+            background-color: black;
+            margin: 100px;
+            border: 50px solid burlywood;
+        }
+
+        .moon {
+            height: 100px;
+            width: 100px;
+            background-color: whitesmoke;
+            border-radius: 50%;
+            margin: 200px;
+            padding: 30px;
+            display: inline-block;
+            position: relative;
+            box-shadow:
+                0 0 0 0.6em rgba(255, 255, 255, 0.05),
+                0 0 0 1.2em rgba(255, 255, 255, 0.05),
+                0 0 0 1.8em rgba(255, 255, 255, 0.05)
+        }
+
+        .moon::after {
+            content: "";
+            height: 0.9em;
+            width: 0.9em;
+            background-color: rgb(216, 212, 212);
+            border-radius: 50%;
+            position: absolute;
+            top: 50px;
+            box-shadow:
+                0.9em -2.1em 0 0.2em rgb(216, 212, 212),
+                1.5em -0.3em 0 -0.06em rgb(216, 212, 212);
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <section>
+        <div class="moon"></div>
+    </section>
+</body>
+
+</html>

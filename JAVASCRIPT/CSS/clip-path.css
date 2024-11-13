@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    border: 2px solid;
+    width: 1400px;
+    background-color: antiquewhite;
+}
+.div1{
+    height: 200px;
+    width: 200px;
+    background-color: black;
+    clip-path: polygon();
+}

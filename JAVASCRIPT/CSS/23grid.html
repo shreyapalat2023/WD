@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./23style.css">
+</head>
+
+<body>
+    <h1>CSS grid</h1>
+    <p>The CSS Grid is a two-dimensional layout system that allows designers and developers to create complex and
+        responsive layouts with ease.</p>
+    <p>Grid layout creates a grid structure of rows and columns and positions elements within the grid's individual
+        cells.
+    </p>
+    <p>Grid allows rows and columns to be flexible and resized to fit the available screen space.</p>
+    <p>This means that we can create layouts that look good and work well on all devices, regardless of the screen size.
+        For example, we could create a layout with two columns on a large screen but only one column on a small screen.
+    </p>
+    <p><strong style="color: red;">Note:</strong> Prior to the grid-based layout, developers used tables, followed by
+        floats, positioning, and inline blocks. However, these were not designed for layout purposes and had several
+        limitations.</p>
+
+    <!-- Working of Grid Layout START -->
+    <h1>Working of Grid Layout</h1>
+    <p>The Grid Layout consists of the following steps:</p>
+    <details>
+        <summary>
+            <strong>1.Set up the Grid Container</strong>
+        </summary>
+        <p>The first step for a grid-based layout is to define a grid container. This container will hold the grid
+            items.</p>
+        <p>The display: grid declaration converts an element as a grid container.</p>
+    </details>
+    <details>
+        <summary>
+            <strong>2.Create a Grid Structure</strong>
+        </summary>
+        <p>This second step involves specifying a structure for the grid by defining rows and columns.</p>
+        <p>The grid-template-rows and grid-template-column properties allow to specify rows and columns in a grid
+            container.</p>
+    </details>
+    <details>
+        <summary>
+            <strong>3.Place Items in Grid Cells</strong>
+        </summary>
+        <p>The third and final step involves placing items into the individual cells of the grid. These items can be
+            any HTML elements that we want to position within the grid layout.</p>
+        <p>In the following image, we have placed different HTML elements in a grid container with three rows and
+            three columns.</p>
+        <div class="img">
+            <img src="./images/css-grid-item-placement.png" alt="">
+        </div>
+    </details>
+    <!-- Working of Grid Layout END  -->
+    <!-- Grid Layout Terminologies START -->
+    <h1>Grid Layout Terminologies</h1>
+    <p>The Grid Layout consists of the following terminologies:</p>
+    <details>
+        <summary>
+            <strong>Grid Container and Grid Items </strong>
+        </summary>
+        <p>The Grid container is a parent element that holds the grid items. Grid items are the direct children of
+            the grid container.</p>
+        <p>The following image shows a grid container having three grid items.</p>
+        <div class="img">
+            <img src="./images/css-grid-container-items.png" alt="">
+        </div>
+    </details>
+    <details>
+        <summary>
+            <strong>Grid Line </strong>
+        </summary>
+        <p>Grid line refers to the vertical and horizontal lines that divide the grid. Horizontal lines separate rows,
+            and vertical lines separate columns. </p>
+    </details>
+    <details>
+        <summary>
+            <strong>Grid Track </strong>
+        </summary>
+        <p>The grid track refers to the adjacent space between two grid lines. This can be vertical or horizontal
+            space. For example,</p>
+        <div class="img">
+            <img src="./images/css-grid-track.png" alt="">
+        </div>
+    </details>
+    <details>
+        <summary>
+            <strong>Grid Area </strong>
+        </summary>
+        <p>The grid track refers to theGrid area refers to the space surrounded by four grid lines. A grid area can
+            have any number of grid cells. For example,</p>
+        <div class="img">
+            <img src="./images/css-grid-area.png" alt="">
+        </div>
+    </details>
+    <details>
+        <summary>
+            <strong>Grid Cell </strong>
+        </summary>
+        <p>Grid cells are the individual units formed by the intersection of rows and columns. For example,</p>
+        <div class="img">
+            <img src="./images/css-grid-cell-layout.png" alt="">
+        </div>
+    </details>
+    <details>
+        <summary>
+            <strong>Grid Gap </strong>
+        </summary>
+        <p>The grid gap refers to the space between the rows and columns in a grid. For example,</p>
+        <div class="img">
+            <img src="./images/css-grid-gap-layout.png" alt="">
+        </div>
+    </details>
+    <!-- Grid Layout Terminologies END -->
+
+    <!-- CSS grid-template-columns START -->
+    <h1>CSS grid-template-columns</h1>
+    <p>The grid-template-columns property defines the size and the number of columns within the grid container.</p>
+    <p>Here, the grid-template-columns property takes different length values (px, em, percentage, etc.) as the size of the column.</p>
+    <p>The number of column size values determines the number of columns.</p>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+    </div>
+    <p>In the above example,</p>
+    <p>
+        creates a grid of three columns of size 100px, 200px, and 100px, respectively.
+        
+        The column size values can also be mixed together as required</p>
+    <!-- CSS grid-template-columns END -->
+    <!-- CSS grid-template-rows START -->
+    <h1>CSS grid-template-rows
+    </h1>
+    <p>The grid-template-rows property defines the size and number of rows in a grid container.</p>
+    <div class="container1">
+        <div class="item1">1</div>
+        <div class="item1">2</div>
+        <div class="item1">3</div>
+        <div class="item1">4</div>
+        <div class="item1">5</div>
+        <div class="item1">6</div>
+        <div class="item1">7</div>
+        <div class="item1">8</div>
+        <div class="item1">9</div>
+    </div>
+    <!-- CSS grid-template-rows END -->
+    <!-- CSS Fractional(Fr) Unit  START -->
+    <h1>CSS Fractional (Fr) Unit
+    </h1>
+    <p>The fractional unit (fr) divides the available space in the grid container into fractions. It distributes available space within the grid container among columns or rows in a flexible and dynamic way.</p>
+    <div class="container2">
+        <div class="item2">1</div>
+        <div class="item2">2</div>
+        <div class="item2">3</div>
+        <div class="item2">4</div>
+        <div class="item2">5</div>
+        <div class="item2">6</div>
+        <div class="item2">7</div>
+        <div class="item2">8</div>
+        <div class="item2">9</div>
+    </div>
+    <!-- CSS Fractional(Fr) Unit  END -->
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display</title>
+    <style>
+        * {
+            color: rgb(54, 96, 134);
+        }
+
+        .box div {
+            border: 2px solid black;
+            margin-bottom: 12px;
+            padding: 4px;
+        }
+
+        .after {
+            display: inline;
+        }
+
+        .box1 span {
+            border: 2px solid;
+            margin-bottom: 12px;
+            padding: 4px;
+        }
+
+        .after1 {
+            display: block;
+        }
+
+        .sp {
+            width: 60px;
+            height: 30px;
+            padding: 10px;
+            margin: 20px;
+
+            border: 2px solid black;
+            background-color: rgb(140, 236, 92);
+        }
+
+        .after2 {
+            display: inline-block;
+        }
+
+        .parent {
+            display: flex;
+            background-color: greenyellow;
+            padding: 0px;
+            border: dashed 2px palevioletred;
+        }
+
+        .parent li {
+            background: skyblue;
+            border: 1px solid black;
+            padding: 12px;
+            margin: 8px;
+            list-style: none;
+        }
+
+        .head-none {
+            border: 2px solid;
+            background-color: greenyellow;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .head2-none {
+            display: none;
+        }
+
+        .img img {
+            width: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="">
+
+</head>
+
+<body>
+
+
+
+    <!-- CSS display inline START -->
+    <h1>CSS Display Inline</h1>
+    <p>The inline value of the display property allows a block-level element to behave like an inline element. The
+        inline elements occupy only the required width for their content.</p>
+    <p>For Example,</p>
+    <h3>Before display: inline</h3>
+    <div class="box">
+        <div>I am a first div element</div class>
+        <div>I am a second div element</div>
+
+        <h3>After display: inline</h3>
+        <div class="after">I am a first div element</div>
+        <div class="after">I am a second div element</div>
+        <p>In the above example, the inline value causes the block-level element div to behave like an inline element.
+        </p>
+    </div>
+    <!-- CSS display inline END -->
+    <!-- CSS display block start -->
+    <h1>CSS Display Block</h1>
+    <p>The block value of the display property causes an inline element to behave like a block element. For example,</p>
+    <div class="box1">
+        <h3>Before display: block</h3>
+        <span>I am a first span element.</span>
+        <span>I am a second span element.</span>
+
+        <h3>After display: block</h3>
+        <span class="after1">I am a first span element.</span>
+        <span class="after1">I am a second span element.</span>
+        <p>In the above example, the block value causes the inline-level element span to behave like a block element.
+        </p>
+    </div>
+    <!-- CSS display block END -->
+    <!-- CSS display inline-block START -->
+    <h1>CSS Display Inline Block</h1>
+    <p>The inline-block value of the display property combines characteristics of inline and block elements.</p>
+    <p>When an element is set to inline-block,</p>
+    <ul>
+        <li>It flows like an inline element allowing other elements to flow around horizontally.
+        </li>
+        <li>It accepts the width and height properties. (By default, width and height don't work in inline elements.)
+        </li>
+        <li>
+            It accepts the padding and margin values. (By default, top and bottom margins don't work for inline
+            elements, and padding also doesn't push other elements away.)
+        </li>
+    </ul>
+    <p>Example:</p>
+    <h3>Before display:inline-block</h3>
+    <p>
+        In this paragraph, the <span class="sp">span</span> element is color in
+        green-yellow color. The width and height don't work, the padding
+        value doesn't push surrounding content away, and the top/bottom
+        margins don't work.
+    </p>
+
+    <h3>After display: inline-block</h3>
+    <p>
+        In this paragraph, the <span class="sp after2">span</span> element is
+        color in green-yellow color. The width and height work, the padding
+        value push surrounding content away, and the top/bottom margins
+        work.
+    </p>
+
+    <!-- CSS display inline-block END -->
+    <!-- CSS display flex start -->
+    <h1>CSS Display Flex</h1>
+    <p>The flex value of the display property allows for efficient alignment and distribution of the space between the
+        child elements within the parent element.</p>
+    <p>For Example,</p>
+    <ul class="parent">
+        <li>Home</li>
+        <li>About</li>
+        <li>Gallery</li>
+        <li>Blogs</li>
+        <li>Contact</li>
+    </ul>
+    <p>In the above example, the flex value of the display property aligns the li elements in a horizontal layout.</p>
+    <!-- CSS display flex end -->
+    <!-- CSS display none start -->
+    <h1>CSS Display None</h1>
+    <p>The none value of the display property is used to hide an element and remove it from the normal flow of the
+        document.</p>
+    <!-- before display none START -->
+    <h3><strong>Before applying display:none</strong></h3>
+    <h3 class="head-none">Heading: CSS Display Property</h3>
+    <p>
+        The display: none hides the element and removes the space from the
+        document.
+    </p>
+    <!-- before display none END -->
+
+    <!-- after display none START -->
+    <h3><strong>After applying display: none</strong></h3>
+    <h3 class="head-one head2-none">Heading: CSS Display Property</h3>
+    <p>
+        The display: none hides the element and removes the space from the
+        document.
+    </p>
+    <p>Here, h1 is hidden, and the space is removed from the document.</p>
+    <!-- after display none END -->
+    <!-- CSS display none end -->
+</body>
+
+</html>

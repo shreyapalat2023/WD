@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container div{
+            transition: 1s;
+        }
+    /* .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    } */
+        .circle{
+            height: 100px;
+            width: 100px;
+            background-color: lightblue;
+            clip-path: circle(45%);
+        }
+        .triangle{
+            height: 200px;
+            width: 200px;
+            background-color: aqua;
+            /* clip-path: polygon(x y,x y, x y,x y); */
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+        }
+        .pantagon{
+            height: 200px;
+            width: 200px;
+            background-color: lightcoral;
+            clip-path: polygon(50% 0%, 100% 38%, 82% 100%,18% 100%,0% 38%);
+        }
+        .hexagon{
+            height: 200px;
+            width: 200px;
+            background-color: hotpink;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+        .hexagon{
+            height: 200px;
+            width: 200px;
+            background-color: slateblue;
+            clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0* 60%, 10% 20%);
+        }
+        .heptagon{
+            height: 200px;
+            width: 200px;
+            background-color: cadetblue;
+            clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+        }
+        .octagon{
+            height: 200px;
+            width: 200px;
+            background-color: lightslategray;
+            clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+        }
+        .nonagon{
+            height: 200px;
+            width: 200px;
+            background-color: lightgreen;
+            clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+        }
+        div :hover {
+            /* transform:rotate3d(50deg); */
+            background-color: rgb(218, 241, 11);
+            transform: rotate(50deg);
+        }
+        .mar{
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circle mar"></div>
+        <div class="triangle mar"></div>
+        <div class="pantagon mar"></div>
+        <div class="hexagon mar"></div>
+        <div class="heptagon mar"></div>
+        <div class="octagon mar"></div>
+        <div class="nonagon mar"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: space-between;
+        }
+        .circle{
+            height: 200px;
+            width: 200px;
+            background-color: aqua;
+            clip-path: circle(35%);
+        }
+        .triangle{
+            height: 200px;
+            width: 200px;
+            background-color: blue;
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circle"></div>
+        <div class="triangle"></div>
+    </div>
+</body>
+</html>
