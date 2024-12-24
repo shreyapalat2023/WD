@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shallow and Deep Copy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #11121a;
+            color: white;
+        }
+        h1{
+            color: rgb(213, 86, 213);
+            text-decoration: underline;
+            padding: 10px 0;
+        }
+        h2{
+            color: rgb(99, 32, 138);
+            text-decoration: underline;
+        }
+        h3{
+            color: rgb(209, 65, 113);
+            text-decoration: underline;
+        }
+
+
+        .container {
+            width: 1300px;
+            margin: 0 auto;
+        }
+
+        .pre {
+            width: 500px;
+            background-color: rgb(246, 246, 135);
+            margin: 10px 0;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Acme&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>How to differentiate between deep and shallow copies in JavaScript</h1>
+        <p>In functional programming you shouldn't modify any existing data. In order to do that you have to know how to
+            safely copy values in JavaScript.</p>
+        <h3>First of all, what is a copy?</h3>
+        <p>A copy just looks like the old thing, but isn’t. When you change the copy, you expect the original thing to
+            stay
+            the same, whereas the copy changes.</p>
+        <h2>deep copying vs. shallow copying.</h2>
+        <p>A deep copy means that all of the values of the new variable are copied and <b>disconnected from the
+                original</b>
+            variable. A shallow copy means that certain values are <b>still connected </b> to the original variable.</p>
+        <p>You do not really worry about copying primitive data types in JavaScript. When you make a copy, it will be a
+            real
+            copy.</p>
+        <h3>Example:</h3>
+        <div class="pre">
+
+            <pre>
+                const a = 5
+                let b = a // this is the copy
+                b = 6
+                console.log(b) // 6
+                console.log(a) // 5
+            </pre>
+        </div>
+        <p>By executing b = a , you make the copy. Now, when you reassign a new value to b, the value of b changes, but
+            not
+            of a.</p>
+        <h2>Composite data types — Objects and Arrays</h2>
+        <p>Assigning a variable just creates a pointer (reference) to that value.</p>
+        <p>Now, if we make a copy b = a , and change some nested value in b, it actually changes a’s nested value as
+            well,
+            since a and b actually point to the same thing.</p>
+        <h3>Example:</h3>
+        <div class="pre">
+
+            <pre>
+                const a = {
+                    en: 'Hello',
+                    de: 'Hallo',
+                    es: 'Hola',
+                    pt: 'Olà'
+                  }
+                  
+                  let b = a
+                  b.pt = 'Oi'
+                  
+                  console.log(b.pt) // Oi
+                  console.log(a.pt) // Oi
+            </pre>
+        </div>
+
+        <!-- -----------------------------Make copies in Objects---------- -->
+        <p>Let’s have a look at how we can make copies of objects and arrays.</p>
+        <p>There are multiple ways to make copies of objects, especially with the new expanding and improving JavaScript
+            specification.</p>
+        <h3>Spread Operator</h3>
+        <p>Introduced with ES2015, this operator is just great, because it is so short and simple. It ‘spreads’ out all
+            of the values into a new object. You can use it as follows:</p>
+        <div class="pre">
+            <pre>
+                const a = {
+                    en: 'Bye',
+                    de: 'Tschüss'
+                  }
+                  
+                  let b = {...a}
+                  b.de = 'Ciao'
+                  
+                  console.log(b.de) // Ciao
+                  console.log(a.de) // Tschüss
+            </pre>
+        </div>
+
+        <h3>Object.assign(target,source)</h3>
+        <ul>
+            <li>This was mostly used before the spread operator was around, and it basically does the same thing.</li>
+            <li>You have to be careful though, as the first argument in the Object.assign() method actually gets
+                modified and returned. So make sure that you pass the object to copy at least as the second argument.
+                Normally, you would just pass an empty object as the first argument to prevent modifying any existing
+                data.</li>
+        </ul>
+
+        <div class="pre">
+            <pre>
+                const a = {
+                    en: 'Bye',
+                    de: 'Tschüss'
+                  }
+                  
+                  let b = Object.assign({}, a)
+                  b.de = 'Ciao'
+                  
+                  console.log(b.de) // Ciao
+                  console.log(a.de) // Tschüss
+            </pre>
+        </div>
+
+        <h3>Nested Objects</h3>
+        <ul>
+            <li> there is one big caveat when dealing with copying objects, which applies to both methods listed above.
+                When you have a nested object (or array) and you copy it, nested objects inside that object will not be
+                copied, since they are only pointers / references. Therefore, if you change the nested object, you will
+                change it for both instances, meaning you would end up doing a shallow copy again.</li>
+        </ul>
+        <h3>Example:</h3>
+        <div class="pre">
+            <pre>
+                const a = {
+                    foods: {
+                      dinner: 'Pasta'
+                    }
+                  }
+                  
+                  let b = {...a}
+                  b.foods.dinner = 'Soup' // changes for both objects
+                  
+                  console.log(b.foods.dinner) // Soup
+                  console.log(a.foods.dinner) // Soup
+            </pre>
+        </div>
+        <h3>Making deep copies without thinking</h3>
+        <ul>
+            <li>
+
+                What if you don’t know how deep the nested structures are? It can be very tedious to manually go through
+                big objects and copy every nested object by hand. There is a way to copy everything without thinking.
+                You
+                simply stringify your object and parse it right after
+            </li>
+        </ul>
+        <div class="pre">
+            <pre>
+
+                const a = {
+                foods: {
+                dinner: 'Pasta'
+                }
+                }
+    
+                let b = JSON.parse(JSON.stringify(a))
+                b.foods.dinner = 'Soup'
+    
+                console.log(b.foods.dinner) // Soup
+                console.log(a.foods.dinner) // Pasta
+            </pre>
+
+        </div>
+
+        <!-- --------------------------------Make copies in Arrays ---------------------->
+        <h2>Arrays</h2>
+        <ul>
+            <li>Copying arrays is just as common as copying objects. A lot of the logic behind it is similar, since
+                arrays are also just objects under the hood.</li>
+        </ul>
+        <h3>Spread Operator</h3>
+        <h3>Example:</h3>
+        <div class="pre">
+            <pre>
+                const a = [1,2,3]
+                let b = [...a]
+                b[1] = 4
+                
+                console.log(b[1]) // 4
+                console.log(a[1]) // 2
+            </pre>
+        </div>
+
+        <h2>Array functions - map,filter,reduce</h2>
+        <p>These methods will return a new array with all values of the originall one. while doing that, you can also
+            modify the values, which comes in very handy.</p>
+        <div class="pre">
+            <pre>
+                const a = [1,2,3]
+                let b = a.map(el => el)
+                b[1] = 4
+                
+                console.log(b[1]) // 4
+                console.log(a[1]) // 2
+            </pre>
+        </div>
+
+        <h3>Array.slice</h3>
+        <ul>
+            <li>This method is normally used to return a subset of the elements, starting at a specific index and
+                optionally ending at a specific index of the original array. When using array.slice() or array.slice(0)
+                you will end up with a copy of the original array.</li>
+        </ul>
+
+        <div class="pre">
+            <pre>
+                const a = [1,2,3]
+                let b = a.slice(0)
+                b[1] = 4
+                
+                console.log(b[1]) // 4
+                console.log(a[1]) // 2  
+            </pre>
+        </div>
+
+    </div>
+
+    <script>
+        // const a = {
+        //     en: "Hello",
+        //     de: "hallo",
+        //     es: "Hola",
+        //     pt:"ola"
+
+        // };
+
+        // let b = a;
+        // b.pt = "Oi";
+        // console.log(b.pt);
+        // console.log(a.pt);
+
+        // Spread Operator
+
+        const a = {
+            en: "Bye",
+            de: "Tschüss"
+
+        }
+
+        let b = { ...a };
+        b.de = "Ciao";
+
+        console.log(b.de);
+        console.log(a.de);
+
+        // Object.assign
+
+        let c = Object.assign({}, a);
+        c.de = "Leo"
+        console.log(a.de);
+        console.log(c.de);
+
+        // Nested Objects
+
+        const a1 = {
+            foods: {
+                dinner: "Pasta"
+            }
+        }
+
+        let b1 = JSON.parse(JSON.stringify(a1));
+        b1.foods.dinner = "Manchurian";
+
+        console.log(b1.foods.dinner);
+        console.log(a1.foods.dinner);
+
+
+        // Make copies in Arrays
+
+        const a2 = [1, 2, 3]
+        let b2 = [...a2];
+        b2[1] = 4;
+        console.log(b2[1]);
+        console.log(a2[1]);
+
+        // Array Functions-map,filter,reduce
+
+        const a3 = [1, 2, 3];
+        let b3 = a3.map((el) => el);
+        b3[1] = 4;
+        console.log(b3[1]);
+        console.log(a3[1]);
+
+        // Array.slice
+        const a4 = [1, 2, 3];
+        let b4 = a4.slice(0);
+        b4[1] = 4;
+        console.log(b4[1]);
+        console.log(a4[1]);
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
