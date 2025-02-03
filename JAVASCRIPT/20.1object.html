@@ -1,12 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Object</title>
+    <link rel="stylesheet" href="./common.css">
 </head>
+
 <body>
-    <h1>JavaScript Object</h1>
+    <div class="container">
+        <h1>JavaScript Object</h1>
+        <p>
+        <h4>Definition:</h4>In Javascript, an object is <span class="highlight">a collection of properties and methods
+            that store and organize data.</span>Objects are a fundamental part of JavaScript.</p>
+        <h2>Methods for Defining JavaScript Objects</h2>
+        <ul>
+            <li>Using an Object Literal</li>
+            <li>Using an new keyword</li>
+            <li>Using an Object Constructor</li>
+            <li>Using an Object.assign()</li>
+            <li>Using an Object.create()</li>
+            <li>Using an Object Literal.fromEntries()</li>
+        </ul>
+
+        <!-- Method 1 -->
+
+        <h3>Using an Object Literal</h3>
+        <p>An object literal is a list of property <span class="highlight">names: values</span> inside curly braces{}
+        </p>
+        <h4>Syntax</h4>
+        <pre>
+            const person = {
+                firstname: "John",
+                lastname: "Doe",
+                age:50,
+                eyeColor: "blue"
+            }
+        </pre>
+
+        <!-- Method 2 -->
+
+        <h3>Using a new keyword</h3>
+        <p>Create an empty JavaScript object using new Object(), and add 4 properties:</p>
+        <h4>Syntax</h4>
+        <pre>
+            // Create an Object
+             const person = new Object();
+             
+             // Add Properties
+             person.firstName = "John";
+             person.lastName = "Doe";
+             person.age = 50;
+             person.eyeColor = "blue";
+        </pre>
+        <!-- Method 3 -->
+        <h3>Object Constructor Functions</h3>
+        <ul>
+            <li>somethimes we need to create many objects of the same <span class="highlight">type.</span></li>
+            <li>To create an <span class="highlight">object type</span> we use an <span class="highlight">object
+                    constructor function.</span></li>
+        </ul>
+
+        <h4>Syntax: Object Type Person</h4>
+        <pre>
+            function Person(first,last,age,eye){
+                this.firstname = first;
+                this.lastname = last;
+                this.age = age;
+                this.eyeColor = eye;
+            }
+         </pre>
+        <p><strong style="color: red;">Note:</strong>In the Construcor function <span class="highlight">this</span> has
+            no value.</p>
+        <p>The value of <span class="highlight">this</span> will become the new object when a new object is created.</p>
+        <pre>
+            const myFather = new Person("John", "Doe", 50, "blue");
+            const myMother = new Person("Sally", "Rally", 48, "green");
+            const mySister = new Person("Anna", "Rally", 18, "green");
+            
+            const mySelf = new Person("Johnny", "Rally", 22, "green");
+                     
+        </pre>
+
+        <!-- Object methods -->
+        <h2>JavaScript Object Methods</h2>
+        <ul>
+            <li>General methods</li>
+            <li>Property Management Methods</li>
+            <li>object Protection Methods</li>
+        </ul>
+
+        <!-- General Methods -->
+
+        <h3>General Methods</h3>
+
+        <h4>JavaScript Object.assign()</h4>
+        <p>The Object.assign() method copies properties from one or more source objects to a target object.</p>
+        <h4>Example</h4>
+        <pre>
+            // Create Target Object
+            const person1 = {
+              firstName: "John",
+              lastName: "Doe",
+              age: 50,
+              eyeColor: "blue"
+            };
+            
+            // Create Source Object
+            const person2 = {firstName: "Anne",lastName: "Smith"};
+            
+            // Assign Source to Target
+            Object.assign(person1, person2);
+         </pre>
+
+        <!-- Object.entries() -->
+
+        <h4>JavaScript Object.entries()</h4>
+        <p>Object.entries() returns an <span class="higlight">array</span> of the key/value pairs in an object.</p>
+        <h4>Example</h4>
+        <pre>
+            const person = {
+                firstName : "John",
+                lastName : "Doe",
+                age : 50,
+                eyeColor : "blue"
+              };
+              
+              let text = Object.entries(person);
+         </pre>
+        <p>Object.entries() makes it simple to use objects in loops</p>
+        <h4>Example</h4>
+        <pre>
+            const fruits = {Bananas:300, Oranges:200, Apples:500};
+
+            let text = "";
+            for (let [fruit, value] of Object.entries(fruits)) {
+              text += fruit + ": " + value + "<br>";
+            }
+         </pre>
+
+        <!-- Object.fromEntries() -->
+        <h4>JavaScript Object.fromEntries()</h4>
+        <p>The fromEntries() method creates an <span class="highlight">object</span> from a list of key/value pairs.</p>
+        <pre>
+            const fruits = [
+              ["apples", 300],
+              ["pears", 900],
+              ["bananas", 500]
+             ];            
+
+            const myObj = Object.fromEntries(fruits);
+          </pre>
+        <!-- Object.values() -->
+        <h4>JavaScript Object.values()</h4>
+        <p>Object.values() is similar to Object.entries(), but returns a single dimension array of the object values</p>
+        <h4>Example</h4>
+        <pre>
+            const person = {
+                firstName : "John",
+                lastName : "Doe",
+                age : 50,
+                eyeColor : "blue"
+              };
+              
+              let text = Object.values(person);
+        </pre>
+        <!-- Object.groupBy() -->
+        <h4>JavaScript Object.groupBy()</h4>
+        <p>The Object.groupBy() method groups elements of an object according to <span class="highlight">string
+                values</span> returned from a callback function.</p>
+        <p><strong style="color: red;">Note:</strong>The Object.groupBy() method does not change the original object.
+        </p>
+        <h4>Example</h4>
+        <pre>
+            // Create an Array
+            const fruits = [
+              {name:"apples", quantity:300},
+              {name:"bananas", quantity:500},
+              {name:"oranges", quantity:200},
+              {name:"kiwi", quantity:150}
+            ];
+            
+            // Callback function to Group Elements
+            function myCallback({ quantity }) {
+              return quantity > 200 ? "ok" : "low";
+            }
+            
+            // Group by Quantity
+            const result = Object.groupBy(fruits, myCallback);
+        </pre>
+
+        <!-- Protection Methods START -->
+
+        <!-- Protection Methods END -->'
+        <h3>Object Protection Methods</h3>
+
+        <!-- Object.preventExtensions() -->
+
+        <h4>JavaScript Object.preventExtensions()</h4>
+        <p>The Object.preventExtensions() method prevents <span class="highlight">adding properties</span> to an object.
+        </p>
+        <h4>Example</h4>
+        <pre>
+            // Create Object
+            const person = {firstName:"John", lastName:"Doe"};
+            
+            // Prevent Extensions
+            Object.preventExtensions(person);
+            
+            // This will throw an error
+            person.nationality = "English";
+        </pre>
+        <p><strong style="color: red;">Note:</strong>Since arrays are objects, arrays can be prevented from extensions
+            too</p>
+
+        <h4>JavaScript Object.isExtensible()</h4>
+        <p>You can use Object.isExtensible() to check if an object is extensible.</p>
+        <p>The Object.isExtensible() returns <span class="highlight">true</span> if an object is extensible.</p>
+
+        <h4>Example</h4>
+        <pre>
+            // Create Object
+            const person = {firstName:"John", lastName:"Doe"};
+            
+            // Prevent Extensions
+            Object.preventExtensions(person);
+            
+            // This will return false
+            let answer = Object.isExtensible(person);
+        </pre>
+
+        <!-- Object.seal() -->
+        <h4>JavaScript Object.seal()</h4>
+        <p>The Object.seal() method prevents <span class="highlight">additions or deletions</span> of new properties.
+        </p>
+        <p>The <span class="highlight">Object.isSealed()</span> method can be used to check if an object is sealed.</p>
+        <h4>Example</h4>
+        <pre>
+            // Create Object
+            const person = {firstName:"John", lastName:"Doe"};
+            
+            // Seal Object
+            Object.seal(person);
+            
+            // This will return true
+            let answer = Object.isSealed(person);
+        </pre>
+
+        <!-- Object.freeze() -->
+        <h4>JavaScript Object.freeze()</h4>
+        <p>The Object.freeze() method <span class="highlight">any changes</span> to an object.</p>
+        <p>The <span class="highlight">Object.isFrozen()</span> method can be used to check if an object is frozen.The
+            Object.isFrozen() returns true
+            if an object is frozen.</p>
+        <h4>Example</h4>
+        <pre>
+                // Create Object
+               const person = {firstName:"John", lastName:"Doe"};
+               
+               // Freeze Object
+               Object.freeze(person);
+               
+               // This will return true
+               let answer = Object.isFrozen(person);
+        </pre>
+
+        <!-- Question Answer -->
+         <h1>Question Answer</h1>
+
+        <!-- Question ONE -->
+         <details>
+            <summary><strong class="que">1.Difference between Object.freeze() and Object.seal()</strong></summary>
+         </details>
+
+         <!-- Question TWO -->
+          <details>
+            <summary><strong class="que">2.What is the use of strict mode in javaScript?</strong></summary>
+          </details>
+
+          <!-- Question THREE -->
+           <details>
+            <summary><strong class="que">3.Use of new keyword while creating an Object?</strong></summary>
+           </details>
+
+
+
+
+    </div>
     <script src="./20.1object.js"></script>
 </body>
-</html>  
+
+</html>

@@ -5,60 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Variables</title>
-    <style>
-        * {
-            color: rgb(54, 96, 134);
-            /* font-size: 20px; */
-        }
-
-        .que {
-            font-size: 20px;
-        }
-    </style>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="common.css">
 </head>
 
 <body>
-    <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
-        <a class="navbar-brand" href="#"></a>
-        <ul class="nav nav-pills">
-            <li class="nav-item">
-                <a class="nav-link" href="#scrollspyHeading1">Overview</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#scrollspyHeading2">QA</a>
-            </li>
-        </ul>
-    </nav>
-    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
-        data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
-        <h1 id="scrollspyHeading1">Variable</h1>
+    <div class="container">
+        <h1>Variable</h1>
         <p>
-        <p><strong>Definition:</strong>A varibles stores data, lika a number we might use in a sum, or a string that we
+        <p><strong style="color: crimson;">Definition:</strong> A varibles <span class="highlight">stores data,</span> lika a number we might use in a sum, or a string that we
             might use as part of a sentence.</p>
         </p>
-        <h1 id="scrollspyHeading2">Question Answer</h1>
+
+        <h3>Variable Declaration</h3>
+        <p>JavaScript Variables can be declared in 4 ways:</p>
+        <ul>
+            <li>Automatically</li>
+            <li>Using var</li>
+            <li>Using let</li>
+            <li>Using const</li>
+        </ul>
+        <h1>Question Answer</h1>
         <p>
             <!-- What is a Variable -->
         <details>
             <summary><strong class="que">1.What is a Variable ?</strong></summary>
-            <p>Variables are used to store data in JavaScript. Variables aren't the values themselves; they are
+            <p>- Variables are used to store data in JavaScript. Variables aren't the values themselves; they are
                 containers
                 for values. The values of the variables are allocated using the assignment operator(“=”).</p>
-            <p>A varibles stores data, lika a number we might use in a sum, or a string that we might use as part of a
+            <p>- A varibles stores data, lika a number we might use in a sum, or a string that we might use as part of
+                a
                 sentence.</p>
-            <p>One special thing about variables is that they can contain just about anything- not just strings and
+            <p>- One special thing about variables is that they can contain just about anything- not just strings and
                 numbers.
                 Variables can also contain complex data and even entire functions to do amazing things.</p>
-            <h2>There are terms related to variables :</h2>
+            <h2>- There are terms related to variables :</h2>
             <ol>
-                    <li>Declaring a variable</li>
-                    <li>Initializing a variable</li>
-                </ol>
+                <li>Declaring a variable</li>
+                <li>Initializing a variable</li>
+            </ol>
             <details>
                 <summary>Declaring a Variable:</summary>
 
@@ -99,7 +83,8 @@
                 <summary>Use descriptive names: </summary>
                 <p> Variable names should clearly convey their purpose or the data they hold. Avoid single-letter
                     variable
-                    names (x, y, etc.) unless they are used as loop counters or in other specific contexts where their
+                    names (x, y, etc.) unless they are used as loop counters or in other specific contexts where
+                    their
                     meaning is obvious.</p>
                 <p>Example</p>
                 <pre>
@@ -114,7 +99,8 @@
             </details>
             <details>
                 <summary>Use camelCase: </summary>
-                <p> In JavaScript, it's conventional to use camelCase for variable names. Start with a lowercase letter,
+                <p> In JavaScript, it's conventional to use camelCase for variable names. Start with a lowercase
+                    letter,
                     and
                     capitalize the first letter of each subsequent word within the name. This convention applies to
                     variable
@@ -138,7 +124,8 @@
 
             <details>
                 <summary>Use meaningful abbreviations: </summary>
-                <p> While descriptive names are encouraged, it's acceptable to use common abbreviations as long as they
+                <p> While descriptive names are encouraged, it's acceptable to use common abbreviations as long as
+                    they
                     are
                     widely understood within the context of your codebase.</p>
                 <p>Example</p>
@@ -148,13 +135,15 @@
             </details>
             <details>
                 <summary>Be consistent: </summary>
-                <p> Maintain consistency in naming conventions throughout your codebase to improve readability and make
+                <p> Maintain consistency in naming conventions throughout your codebase to improve readability and
+                    make
                     it
                     easier for others (or your future self) to understand the code</p>
             </details>
             <details>
                 <summary>Constants: </summary>
-                <p> Use uppercase letters for constants to differentiate them from regular variables. Separate multiple
+                <p> Use uppercase letters for constants to differentiate them from regular variables. Separate
+                    multiple
                     words with underscores.</p>
                 <p>Example</p>
                 <pre>
@@ -185,16 +174,20 @@
             </p>
             <p>It is common to have errors while writing codes and the errors can be due to syntax or logic. These
                 errors
-                create a lot of ambiguity in the logic and understanding of both users and programmers. There can also
+                create a lot of ambiguity in the logic and understanding of both users and programmers. There can
+                also
                 be
-                errors in the code which can remain invisible to the programmer’s eye and can create havoc. To identify
-                these errors we need Debuggers that can go through the entire code or program, identify the errors and
+                errors in the code which can remain invisible to the programmer’s eye and can create havoc. To
+                identify
+                these errors we need Debuggers that can go through the entire code or program, identify the errors
+                and
                 also
                 fix them.</p>
 
             <details>
                 <summary>Console.log():</summary>
-                <p>One of the simplest and most widely used debugging techniques is to insert console.log() statements
+                <p>One of the simplest and most widely used debugging techniques is to insert console.log()
+                    statements
                     at
                     various points in your code to output values of variables, objects, or messages to the browser
                     console.
@@ -207,16 +200,20 @@
 
             <details>
                 <summary>Browser Developer Tools:</summary>
-                <p>Modern web browsers come with built-in developer tools that include powerful debugging capabilities.
+                <p>Modern web browsers come with built-in developer tools that include powerful debugging
+                    capabilities.
                     You
-                    can open the developer tools by pressing F12 or right-clicking on a webpage and selecting "Inspect"
+                    can open the developer tools by pressing F12 or right-clicking on a webpage and selecting
+                    "Inspect"
                     or
                     "Inspect Element". Within the developer tools, you can:</p>
                 <ul>
-                    <li>Set breakpoints: Pause code execution at specific points to inspect variables and step through
+                    <li>Set breakpoints: Pause code execution at specific points to inspect variables and step
+                        through
                         your
                         code line by line.</li>
-                    <li>Examine variable values: View the current values of variables and objects in different scopes.
+                    <li>Examine variable values: View the current values of variables and objects in different
+                        scopes.
                     </li>
                     <li>Debugging console: Access the console to log messages and evaluate expressions.</li>
                     <li>Network monitoring: Analyze network requests and responses.</li>
@@ -227,7 +224,8 @@
                 <summary>Debugger Statement:</summary>
                 <p>You can insert the debugger statement directly into your JavaScript code to pause execution and
                     launch
-                    the browser's debugger when that line of code is reached. This is useful for situations where you
+                    the browser's debugger when that line of code is reached. This is useful for situations where
+                    you
                     want
                     to debug specific parts of your code without modifying it.</p>
                 <p>Example</p>
@@ -248,7 +246,8 @@
             </details>
             <details>
                 <summary>Debugging Tools in IDEs:</summary>
-                <p> Integrated Development Environments (IDEs) such as Visual Studio Code, WebStorm, and others offer
+                <p> Integrated Development Environments (IDEs) such as Visual Studio Code, WebStorm, and others
+                    offer
                     advanced debugging features that can enhance your debugging workflow. These tools often provide
                     features
                     like breakpoints, variable inspection, call stack visualization, and more.</p>
@@ -262,12 +261,14 @@
         <details>
             <summary><strong class="que">4. What's the difference between let and var?</strong></summary>
             <p>
-                In JavaScript, both let and var are used for variable declaration, but they have some key differences:
+                In JavaScript, both let and var are used for variable declaration, but they have some key
+                differences:
             </p>
             <details>
                 <summary>Scope:</summary>
                 <ul>
-                    <li>var is function-scoped. This means that variables declared with var are scoped to the function
+                    <li>var is function-scoped. This means that variables declared with var are scoped to the
+                        function
                         in
                         which they are declared or, if declared outside of any function, to the global scope.</li>
                     <li>let is block-scoped. Variables declared with let are scoped to the nearest enclosing block,
@@ -278,12 +279,15 @@
             <details>
                 <summary>Hoisting:</summary>
                 <ul>
-                    <li>Variables declared with var are hoisted to the top of their function or global scope. This means
-                        that you can access and use the variable before it's declared in the code, but its value will be
+                    <li>Variables declared with var are hoisted to the top of their function or global scope. This
+                        means
+                        that you can access and use the variable before it's declared in the code, but its value
+                        will be
                         undefined.</li>
                     <li>Variables declared with let are also hoisted, but they are not initialized until their
                         declaration
-                        statement is evaluated. Accessing a let variable before its declaration (within the same block)
+                        statement is evaluated. Accessing a let variable before its declaration (within the same
+                        block)
                         results in a ReferenceError.</li>
                 </ul>
             </details>
@@ -292,7 +296,8 @@
                 <ul>
                     <li>Variables declared with var become properties of the global object (window in a browser
                         environment). This can lead to unintended consequences and potential naming conflicts.</li>
-                    <li>Variables declared with let do not become properties of the global object, even if declared in
+                    <li>Variables declared with let do not become properties of the global object, even if declared
+                        in
                         the
                         global scope.</li>
                 </ul>
@@ -323,7 +328,8 @@
 
         <!-- Question five START -->
         <details>
-            <summary><strong class="que">5. What are the ways of defining a variable in JavaScript?</strong></summary>
+            <summary><strong class="que">5. What are the ways of defining a variable in JavaScript?</strong>
+            </summary>
             <p>In JavaScript, there are several ways to define variables, each with its own characteristics and use
                 cases:
             </p>
@@ -331,15 +337,18 @@
                 <summary>var:</summary>
                 <p>The traditional way of defining variables in JavaScript. Variables declared with var are
                     function-scoped
-                    or globally scoped, hoisted to the top of their scope, and can be re-declared and re-assigned.</p>
+                    or globally scoped, hoisted to the top of their scope, and can be re-declared and re-assigned.
+                </p>
                 <p>Example</p>
                 <pre>var x = 10;</pre>
             </details>
             <details>
                 <summary>let:</summary>
-                <p> Introduced in ECMAScript 6 (ES6), let allows for block-scoped variables. Variables declared with let
+                <p> Introduced in ECMAScript 6 (ES6), let allows for block-scoped variables. Variables declared with
+                    let
                     are
-                    limited to the block, statement, or expression in which they are defined. They are hoisted to the
+                    limited to the block, statement, or expression in which they are defined. They are hoisted to
+                    the
                     top of
                     their block but are not initialized until their declaration is evaluated.</p>
                 <p>Example</p>
@@ -347,8 +356,10 @@
             </details>
             <details>
                 <summary>const:</summary>
-                <p> Also introduced in ES6, const is used to declare constants, which are block-scoped like variables
-                    declared with let. The value of a const variable cannot be re-assigned once initialized. However, if
+                <p> Also introduced in ES6, const is used to declare constants, which are block-scoped like
+                    variables
+                    declared with let. The value of a const variable cannot be re-assigned once initialized.
+                    However, if
                     the
                     value is an object or array, its properties or elements can still be modified. </p>
                 <p>Example</p>
@@ -356,7 +367,8 @@
             </details>
             <details>
                 <summary>Implicit declaration:</summary>
-                <p> If you assign a value to a variable without declaring it using var, let, or const, JavaScript will
+                <p> If you assign a value to a variable without declaring it using var, let, or const, JavaScript
+                    will
                     create an implicit global variable. However, it's considered bad practice because it can lead to
                     naming
                     conflicts and make code harder to understand and maintain. </p>
@@ -369,7 +381,8 @@
         <!-- Question six START -->
         <details>
             <summary><strong class="que">6. What are Imports and Exports in JavaScript?</strong></summary>
-            <p>In JavaScript, imports and exports are mechanisms for modularizing code and facilitating the organization
+            <p>In JavaScript, imports and exports are mechanisms for modularizing code and facilitating the
+                organization
                 and
                 reuse of functionality across different parts of a program or multiple programs.</p>
             <details>
@@ -377,11 +390,13 @@
                 <ul>
                     <li>
                         <strong>Exporting:</strong>
-                        <span> This is the process of making variables, functions, or objects available for use in other
+                        <span> This is the process of making variables, functions, or objects available for use in
+                            other
                             JavaScript files or modules.</span>
                     </li>
                     <li><strong>Exporting Named Entities:</strong>
-                        <span> You can export individual variables, functions, or objects by using the export keyword
+                        <span> You can export individual variables, functions, or objects by using the export
+                            keyword
                             followed by the name of the entity you want to export.</span>
                         <p>Example</p>
                         <pre>
@@ -392,7 +407,8 @@
                     </pre>
                     </li>
                     <li><strong>Exporting Named Entities in Bulk:</strong>
-                        <span> You can also export multiple entities at once using the export keyword with the export {
+                        <span> You can also export multiple entities at once using the export keyword with the
+                            export {
                             entity1, entity2 } syntax.</span>
                         <p>Example</p>
                         <pre>// Exporting multiple entities at once
@@ -402,7 +418,8 @@
                     </pre>
                     </li>
                     <li><strong>Default Exports</strong>
-                        <span> A module can also have a default export, which is the primary entity exported from the
+                        <span> A module can also have a default export, which is the primary entity exported from
+                            the
                             module. You can only have one default export per module..</span>
                         <p>Example</p>
                         <pre>
@@ -434,7 +451,8 @@
                     </li>
                     <li>
                         <strong>Default Imports</strong>
-                        <span>For importing the default export from a module, you use the import keyword followed by any
+                        <span>For importing the default export from a module, you use the import keyword followed by
+                            any
                             name you choose to assign to the default export.</span>
                         <p>Example</p>
                         <pre>
@@ -458,7 +476,8 @@
             <summary><strong class="que">7. What is the difference between Undefined and Undeclared in
                     JavaScript?</strong>
             </summary>
-            <p>In JavaScript, "undefined" and "undeclared" are two distinct concepts that relate to variables and their
+            <p>In JavaScript, "undefined" and "undeclared" are two distinct concepts that relate to variables and
+                their
                 states:</p>
             <details>
                 <summary>Undefined</summary>
@@ -471,7 +490,8 @@
                     </li>
                     <li>
                         <strong>When a Variable is Undefined:</strong>
-                        <span>A variable is said to be "undefined" when it has been declared but has not been assigned a
+                        <span>A variable is said to be "undefined" when it has been declared but has not been
+                            assigned a
                             value, or when it has been explicitly assigned the value undefined.</span>
                         <p>Example</p>
                         <pre>
@@ -484,7 +504,8 @@
                     </li>
                     <li>
                         <strong>Return Value:</strong>
-                        <span>If a function does not explicitly return a value, it implicitly returns undefined.</span>
+                        <span>If a function does not explicitly return a value, it implicitly returns
+                            undefined.</span>
                     </li>
                 </ul>
             </details>
@@ -497,7 +518,8 @@
                         <strong>Undeclared:</strong>
                         <span>: This refers to a variable that has not been declared using the var, let, or const
                             keyword
-                            before its first use. Using an undeclared variable typically results in a runtime error in
+                            before its first use. Using an undeclared variable typically results in a runtime error
+                            in
                             strict mode and creates a global variable in non-strict mode.
                         </span>
                     </li>
@@ -514,7 +536,8 @@
                         // Undeclared variable
                         console.log(y); // ReferenceError: y is not defined
                     </pre>
-                        <p>Here, z is undeclared because it has not been declared or defined anywhere in the code.</p>
+                        <p>Here, z is undeclared because it has not been declared or defined anywhere in the code.
+                        </p>
                     </li>
                 </ul>
             </details>
@@ -525,14 +548,17 @@
 
         <!-- Question eight START -->
         <details>
-            <summary><strong class="que">8. What is the difference between Undefined and Null in JavaScript?</strong>
+            <summary><strong class="que">8. What is the difference between Undefined and Null in
+                    JavaScript?</strong>
             </summary>
             <details>
                 <summary>Undefined</summary>
-                <p>This is a special value in JavaScript that indicates the absence of a value. It is a primitive data
+                <p>This is a special value in JavaScript that indicates the absence of a value. It is a primitive
+                    data
                     type.
                 </p>
-                <p> This refers to a variable that has not been declared using the var, let, or const keyword before its
+                <p> This refers to a variable that has not been declared using the var, let, or const keyword before
+                    its
                     first use. Using an undeclared variable typically results in a runtime error in strict mode and
                     creates
                     a global variable in non-strict mode.</p>
@@ -546,7 +572,8 @@
                     </li>
                     <li>
                         <strong>Explicit Assignment:</strong>
-                        <span> It must be explicitly assigned to a variable to indicate that the variable intentionally
+                        <span> It must be explicitly assigned to a variable to indicate that the variable
+                            intentionally
                             does
                             not have an assigned value.
                         </span>
@@ -561,7 +588,8 @@
                     </li>
                     <li>
                         <strong>Usage:</strong>
-                        <span>: It is often used to represent an absence of an object or to explicitly reset an object's
+                        <span>: It is often used to represent an absence of an object or to explicitly reset an
+                            object's
                             value.</span>
                     </li>
                 </ul>
@@ -579,10 +607,13 @@
         <details>
             <summary><strong class="que">9. Explain Hoisting in javascript. (with examples)</strong></summary>
             <p>
-                Hoisting in JavaScript is a behavior where variable and function declarations are moved to the top of
+                Hoisting in JavaScript is a behavior where variable and function declarations are moved to the top
+                of
                 their
-                containing scope during the compilation phase, before the code is executed. This means that you can use
-                variables and functions before they are declared in your code. However, it's important to note that only
+                containing scope during the compilation phase, before the code is executed. This means that you can
+                use
+                variables and functions before they are declared in your code. However, it's important to note that
+                only
                 the
                 declarations are hoisted, not the initializations or assignments.
             </p>
@@ -622,7 +653,8 @@
                     console.log(x); // Output: undefined
                     var x = 5;
                 </pre>
-                <p>In the above example, even though the variable x is declared and initialized on the second line, the
+                <p>In the above example, even though the variable x is declared and initialized on the second line,
+                    the
                     console.log statement doesn't throw an error. Instead, it outputs undefined. This is because the
                     declaration of x is hoisted to the top of its containing scope during compilation.</p>
             </details>
@@ -636,9 +668,11 @@
                     console.log("Hello, World!");
                     }
                 </pre>
-                <p>In this example, the foo() function is called before its declaration in the code. Despite this, the
+                <p>In this example, the foo() function is called before its declaration in the code. Despite this,
+                    the
                     code
-                    runs successfully and outputs "Hello, World!". This is because function declarations are hoisted to
+                    runs successfully and outputs "Hello, World!". This is because function declarations are hoisted
+                    to
                     the
                     top of their containing scope along with variable declarations.</p>
             </details>
@@ -648,9 +682,12 @@
         <details>
             <summary><strong class="que">10. Implicit Type Coercion in javascript (in detail with examples)</strong>
             </summary>
-            <p>Implicit type coercion in JavaScript refers to the automatic conversion of values from one data type to
-                another by the JavaScript engine during runtime. This occurs when an operation involving different data
-                types is performed. JavaScript will attempt to convert one or both of the values to a common data type
+            <p>Implicit type coercion in JavaScript refers to the automatic conversion of values from one data type
+                to
+                another by the JavaScript engine during runtime. This occurs when an operation involving different
+                data
+                types is performed. JavaScript will attempt to convert one or both of the values to a common data
+                type
                 before executing the operation. Implicit type coercion can be convenient but may lead to unexpected
                 behavior
                 if not understood properly.</p>
@@ -661,7 +698,8 @@
                 let b = "10";
                 let result = a + b; // Result: "510"
             </pre>
-            <p>In this example, JavaScript implicitly coerces the number 5 to a string to perform concatenation rather
+            <p>In this example, JavaScript implicitly coerces the number 5 to a string to perform concatenation
+                rather
                 than
                 arithmetic addition.</p>
             <p>Example 2: Equality Operator (==):</p>
@@ -670,7 +708,8 @@
                 let str = "10";
                 console.log(num == str); // Result: true
             </pre>
-            <p>In this example, JavaScript implicitly coerces the string "10" to a number to check for equality with the
+            <p>In this example, JavaScript implicitly coerces the string "10" to a number to check for equality with
+                the
                 numeric value 10.</p>
             <p>Example 3: Logical Operators (&&, ||, !):</p>
             <pre>
@@ -679,7 +718,8 @@
                 console.log(!true); // Result: false
     
             </pre>
-            <p>In these examples, JavaScript implicitly coerces the operands to boolean values (true or false) before
+            <p>In these examples, JavaScript implicitly coerces the operands to boolean values (true or false)
+                before
                 performing the logical operation.</p>
             <p>Example 4: Conditional (Ternary) Operator (? :):</p>
             <pre>
@@ -692,12 +732,15 @@
         <!-- Question Ten END-->
         <!-- Question ELEVEN START-->
         <details>
-            <summary><strong class="que">11. Is javascript a statically typed or a dynamically typed language?</strong>
+            <summary><strong class="que">11. Is javascript a statically typed or a dynamically typed
+                    language?</strong>
             </summary>
             <p>JavaScript is a dynamically typed language.</p>
-            <p>In statically typed languages, variable types are explicitly declared and checked at compile time. Once a
+            <p>In statically typed languages, variable types are explicitly declared and checked at compile time.
+                Once a
                 variable is declared with a specific type, its type cannot be changed</p>
-            <p>In dynamically typed languages like JavaScript, variable types are determined at runtime. You don't need
+            <p>In dynamically typed languages like JavaScript, variable types are determined at runtime. You don't
+                need
                 to
                 declare the type of a variable explicitly. Instead, the type of a variable is inferred based on the
                 value
@@ -709,7 +752,8 @@
         <!-- Question twelve START -->
         <details>
             <summary><strong class="que">12. NaN property in JavaScript</strong></summary>
-            <p>In JavaScript, NaN is a global property representing "Not-A-Number." It indicates that a value is not a
+            <p>In JavaScript, NaN is a global property representing "Not-A-Number." It indicates that a value is not
+                a
                 legal
                 number. The NaN property is a special value of the global object and is of the type "number".</p>
             <p><strong>Characteristics of NaN:</strong></p>
@@ -724,7 +768,8 @@
                 </li>
                 <li>
                     <strong>NaN Comparison: </strong>
-                    <span>NaN is not equal to any other value, including itself. This is because NaN is considered as a
+                    <span>NaN is not equal to any other value, including itself. This is because NaN is considered
+                        as a
                         unique value that is not equal to anything, including itself.</span>
                     <p>Example</p>
                     <pre>
@@ -736,7 +781,8 @@
             <ul>
                 <li>Performing arithmetic operations involving non-numeric values or undefined results in NaN.</li>
                 <li>Parsing non-numeric strings using parseInt() or parseFloat() may result in NaN.</li>
-                <li>Mathematical operations that result in undefined values, such as dividing zero by zero, result in
+                <li>Mathematical operations that result in undefined values, such as dividing zero by zero, result
+                    in
                     NaN.
                 </li>
             </ul>
@@ -751,24 +797,27 @@
         </details>
 
         <!-- Question twelve END -->
-         <!-- Question thirteen START -->
-    <details>
-        <summary><strong class="que">13. Passed by value and passed by reference</strong></summary>
-        <p>"Passed by value" and "passed by reference" are concepts that describe how data is transferred between
-            variables or functions in programming languages, including JavaScript.</p>
-
+        <!-- Question thirteen START -->
         <details>
-            <summary><strong>Passed by Value:</strong></summary>
-            <ul>
-                <li>In "passed by value," a copy of the variable's value is passed to a function or assigned to another
-                    variable.</li>
-                <li>Modifications to the parameter or variable inside the function do not affect the original value
-                    outside the function.</li>
-                <li>This behavior is typical for primitive data types such as numbers, strings, and booleans in
-                    JavaScript.</li>
-            </ul>
-            <p>Example</p>
-            <pre>
+            <summary><strong class="que">13. Passed by value and passed by reference</strong></summary>
+            <p>"Passed by value" and "passed by reference" are concepts that describe how data is transferred
+                between
+                variables or functions in programming languages, including JavaScript.</p>
+
+            <details>
+                <summary><strong>Passed by Value:</strong></summary>
+                <ul>
+                    <li>In "passed by value," a copy of the variable's value is passed to a function or assigned to
+                        another
+                        variable.</li>
+                    <li>Modifications to the parameter or variable inside the function do not affect the original
+                        value
+                        outside the function.</li>
+                    <li>This behavior is typical for primitive data types such as numbers, strings, and booleans in
+                        JavaScript.</li>
+                </ul>
+                <p>Example</p>
+                <pre>
                 function modifyValue(x) {
                     x = 10;
                 }
@@ -777,18 +826,23 @@
                 modifyValue(y);
                 console.log(y); // Output: 5 (unchanged)
             </pre>
-        </details>
-        <details>
-            <summary><strong>Passed by Reference:</strong></summary>
-            <ul>
-                <li>In "passed by reference," the memory address (reference) of the variable is passed to a function or
-                    assigned to another variable.</li>
-                <li>Changes made to the parameter or variable inside the function affect the original value outside the
-                    function because they are referring to the same memory location.</li>
-                <li>This behavior is typical for complex data types such as arrays and objects in JavaScript.</li>
-            </ul>
-            <p>Example</p>
-            <pre>
+            </details>
+            <details>
+                <summary><strong>Passed by Reference:</strong></summary>
+                <ul>
+                    <li>In "passed by reference," the memory address (reference) of the variable is passed to a
+                        function
+                        or
+                        assigned to another variable.</li>
+                    <li>Changes made to the parameter or variable inside the function affect the original value
+                        outside
+                        the
+                        function because they are referring to the same memory location.</li>
+                    <li>This behavior is typical for complex data types such as arrays and objects in JavaScript.
+                    </li>
+                </ul>
+                <p>Example</p>
+                <pre>
                 function modifyArray(arr) {
                     arr.push(4);
                 }
@@ -797,15 +851,15 @@
                 modifyArray(myArray);
                 console.log(myArray); // Output: [1, 2, 3, 4] (modified)
             </pre>
+            </details>
         </details>
-    </details>
-    <h1>Task</h1>
-    <ul>
-        <li><a href="./1.1userdefinedvariable.html">task1</a></li>
-    </ul>
-</p>
-</div>
-</p>
+        <h1>Task</h1>
+        <ul>
+            <li><a href="./1.1userdefinedvariable.html">task1</a></li>
+        </ul>
+        </p>
+    </div>
+
     <script>
         var a = 5;
         var a = 6;
