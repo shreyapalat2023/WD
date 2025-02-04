@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Capturing</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        .div1 {
+            background-color: lightgoldenrodyellow;
+            padding: 24px;
+            border: 1px solid black;
+        }
+
+        .div2 {
+            background-color: yellow;
+            padding: 18px;
+            border: 1px solid black;
+        }
+
+        .div3 {
+            background-color: orange;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Event Capturing</h1>
+        <p><strong style="color: green;">Capturing-</strong>This is the first phase in the event propagation process.
+            When an event is
+            triggered, it starts from the root of the DOM tree and then moves down towards the target element.
+        </p>
+        <p><strong style="color: red;">Note:</strong>By default, event handlers are not executed in this phase</p>
+
+        <h4>Example</h4>
+        <hr>
+
+        <div class="div1">Component 1
+            <div class="div2">
+                Component 2
+                <div class="div3">
+                    Component 3
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JAVASCRIPT CODE FOR EVENT BUBBLING -->
+    <script>
+        let div1 = document.querySelector(".div1");
+        let div2 = document.querySelector(".div2");
+        let div3 = document.querySelector(".div3");
+
+        div1.addEventListener("click", function (event) {
+            alert("Component 1 event clicked");
+        }, true);
+        div2.addEventListener("click", function (event) {
+            alert("Component 2 event clicked");
+        }, true);
+        div3.addEventListener("click", function (event) {
+            alert("Component 3 event clicked");
+        }, true);
+    </script>
+</body>
+
+</html>

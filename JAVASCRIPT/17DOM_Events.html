@@ -4,75 +4,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>dom events</title>
+    <link rel="stylesheet" href="./common.css">
+    <style>
+        h3 {
+            display: inline;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Introduction to events</h1>
-    <p>
-        Events are things that happen in the system you are programming, which the system tells you about so your code
-        can react to them.
-    </p>
-    <p>For example, if the user clicks a button on a webpage, you might want to react to that action by displaying an
-        information box. In this article, we discuss some important concepts surrounding events, and look at how they
-        work in browsers. This won't be an exhaustive study; just what you need to know at this stage.
-    </p>
-    <ul>
-        <li>
-            <strong>onclick:</strong>
-            Triggered when an element is clicked.
-        </li>
-        <li>
-            <strong>onmouseover:</strong>
-            Fired when the mouse pointer moves over an element.
-        </li>
-        <li>
-            <strong>onkeydown:</strong>
-            Fired when a key is pressed down..
-        </li>
-        <li>
-            <strong>onkeyup:</strong>
-            Fired when a key is released.
-        </li>
-        <li>
-            <strong>onchange:</strong>
-            Triggered when the value of an input element changes.
-        </li>
-        <li>
-            <strong>onload:</strong>
-            Occurs when a page has finished loading.
-        </li>
-        <li>
-            <strong>onsubmit:</strong>
-            Fired when a form is submitted.
-        </li>
-        <li>
-            <strong>onfocus:</strong>
-            Occurs when an element gets focus.
-        </li>
-        <li>
-            <strong>onblur:</strong>
-            Fired when an element loses focus.
-        </li>
-    </ul>
-    <!-- Event Object START -->
-     <h1>Event Object</h1>
-     <p>It is a special object that has details about the event.</p>
-     <p>All event handlers have access to the Event Object's properties and methods.</p>
-     <pre>
-        node.event = (e) => {
-            //handle here
-        }
-     </pre>
-     <strong>Ex.</strong><span>e.target, e.type, e.clienttX, e.clientY</span>
-    <!-- Event Object END -->
+    <div class="container">
+        <h1>Introduction to events</h1>
+        <p>
+            Events are things that happen in the system you are programming, which the system tells you about so your
+            code
+            can react to them.
+        </p>
+        <p>For example, if the user clicks a button on a webpage, you might want to react to that action by displaying
+            an
+            information box. In this article, we discuss some important concepts surrounding events, and look at how
+            they
+            work in browsers. This won't be an exhaustive study; just what you need to know at this stage.
+        </p>
+        <ul>
+            <li>
+                <h3>onclick:</h3>
+                Triggered when an element is clicked.
+            </li>
+            <li>
+                <h3>onmouseover:</h3>
+                Fired when the mouse pointer moves over an element.
+            </li>
+            <li>
+                <h3>onkeydown:</h3>
+                Fired when a key is pressed down..
+            </li>
+            <li>
+                <h3>onkeyup:</h3>
+                Fired when a key is released.
+            </li>
+            <li>
+                <h3>onchange:</h3>
+                Triggered when the value of an input element changes.
+            </li>
+            <li>
+                <h3>onload:</h3>
+                Occurs when a page has finished loading.
+            </li>
+            <li>
+                <h3>onsubmit:</h3>
+                Fired when a form is submitted.
+            </li>
+            <li>
+                <h3>onfocus:</h3>
+                Occurs when an element gets focus.
+            </li>
+            <li>
+                <h3>onblur:</h3>
+                Fired when an element loses focus.
+            </li>
+        </ul>
+        <!-- Event Object START -->
+        <h1>Event Object</h1>
+        <p>It is a special object that has details about the event.</p>
+        <p>All event handlers have access to the Event Object's properties and methods.</p>
+        <pre>
+            node.event = (e) => {
+                //handle here
+            }
+         </pre>
+        <strong>Ex.</strong><span>e.target, e.type, e.clienttX, e.clientY</span>
+        <!-- Event Object END -->
+
+        <!-- Event Propagation -->
+        <h2>What is Event propagation, capturing, bubbling ?</h2>
+        <p>
+        <h3>Event Propagation</h3> determines in which order the elements receive the event. There are two
+        ways to handle this
+        event propagation order of HTML DOM is <span class="highlight">Event Bubbling and Event Capturing.</span> </p>
+        <p>For example, suppose there are three components namely component1, component2, component3. Inside these
+            components, we attached the onClickEventListener event handlers. Now when we click on component3 the event
+            handler for all the three components will be executed. Now here the question is in which order the event
+            will execute. Now at this point event bubbling and capturing comes into the picture.</p>
+        <p>It happens in three phases -
+        <ol>
+            <li>Capturing</li>
+            <li>Targeting</li>
+            <li>Bubbling</li>
+        </ol>
+        </p>
+        <p><strong style="color: green;">Targeting-</strong>This phase starts once the event reaches the element
+            where the event was triggered. Any event handlers associated with the target element for the particular
+            event get executed in this phase.</p>
+        <ul>
+            <li><a href="./17.9event_capturing.html">Event Capturing</a></li>
+            <li><a href="./17.8event_bubbling.html">Event Bubbling</a></li>
+        </ul>
     </div>
-    
-    <h1>Excercise:</h1>
+
+    <!-- <h1>Excercise:</h1>
     <p id="para">This is my para</p>
     <input type="text" name="getname" id="inp" class="inb">
     <input type="text" name="getname">
-    <button id="btn" class="inb" onclick="myfunction()">clickme</button>
+    <button id="btn" class="inb" onclick="myfunction()">clickme</button> -->
+
+    </div>
+
     <script>
         function myfunction() {
             const data = document.getElementById("inp");

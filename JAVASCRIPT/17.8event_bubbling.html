@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        .div1 {
+            background-color: lightgoldenrodyellow;
+            padding: 24px;
+            border: 1px solid black;
+        }
+
+        .div2 {
+            background-color: yellow;
+            padding: 18px;
+            border: 1px solid black;
+        }
+
+        .div3 {
+            background-color: orange;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Event Bubbling</h1>
+        <p><strong style="color: red;">Bubbling-</strong>After targeting, the event traces back its path
+            and moves back up to the root of the DOM. It is in this phase that the event handlers execute. JavaScript
+            executes the associated event handlers in order as the event moves up the DOM tree.</p>
+        <h4>What is Event propagation, capturing, bubbling?</h4>
+        <h4>Example</h4>
+        <hr>
+        <div class="div1">Component 1
+            <div class="div2">
+                Component 2
+                <div class="div3">
+                    Component 3
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JAVASCRIPT CODE FOR EVENT BUBBLING -->
+    <script>
+        let div1 = document.querySelector(".div1");
+        let div2 = document.querySelector(".div2");
+        let div3 = document.querySelector(".div3");
+
+        div1.addEventListener("click", function (event) {
+            alert("Component 1 event clicked");
+        });
+        div2.addEventListener("click", function (event) {
+            alert("Component 2 event clicked");
+        });
+        div3.addEventListener("click", function (event) {
+            alert("Component 3 event clicked");
+        });
+    </script>
+</body>
+
+</html>
