@@ -8,20 +8,44 @@
     width: 1000px;
     margin: 0 auto;
 }
-
+.que{
+    color: rgb(39, 39, 167);
+    margin: 10px 0;
+}
+details{
+    margin: 5px 0;
+}
+summary{
+    cursor: pointer;
+}
+pre{
+    padding: 5px 0;
+    background-color: rgb(226, 238, 243);
+    border-radius: 10px;
+    width: 700px;
+}
 h1 {
     color: rgb(255, 0, 140);
     text-decoration: underline;
+    margin: 10px 0;
+}
+.highlight {
+    font-size: 15px;
+    background-color: rgb(221, 242, 174);
 }
 
-h2 {
+h3{
     color: green;
     text-decoration: underline;
 }
-h3{
+h2,h4{
     color: rgb(228, 150, 6)   ;
-}
+    margin: 10px 0;
+}  
 
 ul {
+    margin: 20px;
+}
+ol{
     margin: 20px;
 }
