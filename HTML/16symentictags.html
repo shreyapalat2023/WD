@@ -6,63 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-
-        .container {
-            width: 1400px;
-            margin: 0 auto;
-        }
-
-        h1 {
-            color: rgb(255, 0, 140);
-            text-decoration: underline;
-            margin: 10px 0;
-        }
-
-        h3 {
-            color: green;
-            text-decoration: underline;
-            margin: 10px 0;
-        }
+         * {
+           color: rgb(54, 96, 134);
+       }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <!-- Semantic START -->
-        <h1>Semantic HTML</h1>
-        <p>HTML tags can be categorized into two types based on semantics in HTML. They are:</p>
-        <h3>Semantic Tag</h3>
-
-        <p>The tags which accurately describe their purpose and describe the type of their content are called
-            semantic
+    <!-- Semantic START -->
+    <h1>Semantic HTML</h1>
+    <p>HTML tags can be categorized into two types based on semantics in HTML. They are:</p>
+    <details>
+        <summary><strong>Semantic Tag</strong></summary>
+        <p>The tags which accurately describe their purpose and describe the type of their content are called semantic
             tags.</p>
         <p>Some Examples of semantic tags are - &lt;h1&gt;,&lt;h6&gt;,&lt;form&gt;,&lt;table&gt;</p>
-
-
-        <!-- Semantic END -->
-        <!-- NON-Semantic START -->
-
-        <h3>Non-Semantic Tags</h3>
+    </details>
+    <!-- Semantic END -->
+    <!-- NON-Semantic START -->
+    <details>
+        <summary><strong>Non-Semantic Tags</strong></summary>
         <p>
-            HTML non-semantic tags do not have a specific meaning or purpose. They are used to create
-            general-purpose
+            HTML non-semantic tags do not have a specific meaning or purpose. They are used to create general-purpose
             containers for content without providing any additional meaning or context.
         </p>
         <p>Some examples of non-semantic tags are 一&lt;div&gt;,&lt;span&gt;</p>
-
-        <!-- NON-Semantic END -->
-        <h3>Example</h3>
-        <div>
-            <img src="./img/img_sem_elements.gif" alt="">
-        </div>
-
+    </details>
+    <!-- NON-Semantic END -->
+    <div>
+        <img src="./img/img_sem_elements.gif" alt="">
     </div>
-
 </body>
 
 </html>
