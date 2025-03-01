@@ -5,93 +5,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inheritance</title>
+    <link rel="stylesheet" href="common.css">
     <style>
-        * {
-            color: rgb(54, 96, 134);
+        .img {
+            width: 50%;
+            margin: 0 auto;
         }
-        .img{
-            width: 60%;
+
+        strong {
+            margin: 10px 0;
+            display: inline-block;
+        }
+
+        h3 {
+            display: inline;
+        }
+
+        .chart-head {
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <h1>Inheritance</h1>
-    <p>
-        -In programming, inheritance refers to passing down characteristics from a parent to a child so that a new piece
-        of code can reuse and build upon the features of an existing one. JavaScript implements inheritance by using
-        objects. Each object has an internal link to another object called its prototype. That prototype object has a
-        prototype of its own, and so on until an object is reached with null as its prototype. By definition, null has
-        no prototype and acts as the final link in this prototype chain. It is possible to mutate any member of the
-        prototype chain or even swap out the prototype at runtime, so concepts like static dispatching do not exist in
-        JavaScript.
-    </p>
-    <!-- KeyPoint START -->
-     <ol>
-        <li><strong>'extends' Keyword: </strong>Used to create a class that is a child of another class.</li>
-        <li><strong>'super' Keyword:</strong>Used to call the constructor of the parent class and to access parent class methods.</li>
-        <li><strong>Method Overriding:</strong>Child classes can override methods of the parent class to provide specific implementations.</li>
-     </ol>
-    <!-- KeyPoint END -->
-    <p>-A class created with a class inheritance inherits all the methods from another class:</p>
-    <p>
-        -Although classes are now widely adopted and have become a new paradigm in JavaScript, classes do not bring a new
-        inheritance pattern. While classes abstract most of the prototypal mechanism away, understanding how prototypes
-        work under the hood is still useful.
-    </p>
-    <p>
-        -Inheritance enables you to define a class that takes all the functionality from a parent class and allows you to
-        add more.
-    </p>
-    <p>
-       - Using class inheritance, a class can inherit all the methods and properties of another class.
-    </p>
-    <p>
-        -Inheritance is a useful feature that allows code reusability.
-    </p>
-    <p>
-        -To use class inheritance, you use the extends keyword. For example,
-    </p>
-    <div class="img">
-        <img src="./img/inheritance.png" alt="image" width= 100%>
+    <div class="container">
+        <h1>Inheritance(Reusability)</h1>
+        <hr>
+        <h4>Definition</h4>
+        <p>💬 "Inheritance allows one class to inherit properties and methods from another, reducing code duplication."
+        </p>
+        <strong>👉 Example (Animal and Dog)</strong>
+        <p>"Consider an 'Animal' class with a 'speak()' method. A 'Dog' class can inherit from 'Animal' and override the
+            method to make a barking sound."</p>
+        <strong>🔹 Code Reference (Verbal Explanation)</strong>
+        <p>"In JavaScript, we use <span class="highlight">extends</span> and <span class="highlight">super().</span> The
+            Dog class inherits from Animal, meaning it gets all Animal properties but can customize the speak() method."
+        </p>
+        <!-- KeyPoint START -->
+        <ol>
+            <li>
+                <h3>'extends' Keyword: </h3>Used to create a class that is a child of another class.
+            </li>
+            <li>
+                <h3>'super' Keyword:</h3>Used to call the constructor of the parent class and to access parent
+                class methods.
+            </li>
+            <li>
+                <h3>Method Overriding:</h3>Child classes can override methods of the parent class to provide
+                specific implementations.
+            </li>
+        </ol>
+        <!-- KeyPoint END -->
+        <h4 class="chart-head">Understand Inheritance with a Chart!</h4>
+        <div class="img">
+            <img src="./img/inheritance.png" alt="image" width=100%>
+        </div>
+
+        <h4>Example</h4>
+        <pre>
+            class Animal {
+                constructor(name) {
+                  this.name = name;
+                }
+              
+                speak() {
+                  console.log(`${this.name} makes a noise.`);
+                }
+              }
+              
+              class Dog extends Animal {
+                constructor(name, breed) {
+                  super(name); // Calls the parent constructor
+                  this.breed = breed;
+                }
+              
+                speak() {
+                  console.log(`${this.name} barks!`);
+                }
+              }
+              
+              const dog1 = new Dog("Buddy", "Golden Retriever");
+              dog1.speak(); // Buddy barks!
+              
+        </pre>
+        <p><strong style="color: red;">Note:</strong>The Dog class extends Animal, reusing its functionality and <span
+                class="highlight">overriding speak().</span> </p>
+        <h1>Task</h1>
+        <hr>
+        <ul>
+            <li><a href="./22.1class_object/Practice_Questions.html">task1</a></li>
+            <li><a href="./22.1class_object//example_employee.html">task2</a></li>
+        </ul>
+
     </div>
-    <h2>Task</h2>
-    <ul>
-        <li><a href="./22.1class_object/Practice_Questions.html">task1</a></li>
-        <li><a href="./22.1class_object//example_employee.html">task2</a></li>
-    </ul>
+
 
     <script>
         // Parent Class START
         class MathOperation {
-            additon(a,b){
+            additon(a, b) {
                 return a + b;
             }
-            subtraction(a,b){
+            subtraction(a, b) {
                 return a - b;
             }
-            division(a,b){
+            division(a, b) {
                 return a / b;
             }
-            multiplication(a,b){  
+            multiplication(a, b) {
                 return a * b;
             }
         }
         // Parent Class END
 
         class AvgMathOperation extends MathOperation {
-            averageoftwo(p,q){
+            averageoftwo(p, q) {
                 // let MathOb = n  ew MathOperation;
                 // console.log(MathOb);
                 // let sum = MathOb.additon()
-                let sum = this.additon(a,b)
+                let sum = this.additon(a, b)
                 console.log(sum);
                 return sum / 2;
             }
         }
 
         objectOfAdMath = new AvgMathOperation(); //We always create object with child class
-        console.log(objectOfAdMath.averageoftwo(50,90));
+        console.log(objectOfAdMath.averageoftwo(50, 90));
     </script>
 
 

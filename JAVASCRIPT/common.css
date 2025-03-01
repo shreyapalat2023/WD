@@ -5,7 +5,7 @@
 }
 
 .container {
-    width: 1000px;
+    width: 800px;
     margin: 0 auto;
 }
 .que{
@@ -14,6 +14,9 @@
 }
 details{
     margin: 5px 0;
+}
+details p{
+    margin: 10px;
 }
 summary{
     cursor: pointer;
@@ -26,19 +29,26 @@ pre{
 }
 h1 {
     color: rgb(255, 0, 140);
-    text-decoration: underline;
+    /* text-decoration: underline; */
     margin: 10px 0;
 }
 
-h2{
-    color: green;
-    text-decoration: underline;
+.highlight {
+    font-size: 15px;
+    background-color: rgb(221, 242, 174);
 }
-h3,h4{
+
+h3{
+    color: green;
+    /* text-decoration: underline; */
+    margin: 10px 0;
+}
+h2,h4{
     color: rgb(228, 150, 6)   ;
+    margin: 10px 0;
 }  
 
-ul {
+ul{
     margin: 20px;
 }
 ol{

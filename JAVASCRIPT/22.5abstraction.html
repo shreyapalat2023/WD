@@ -5,21 +5,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abstraction</title>
+    <link rel="stylesheet" href="./common.css">
     <style>
-        * {
-            color: rgb(54, 96, 134);
-            /* font-size: 20px; */
+        strong {
+            margin: 10px 0;
+            display: inline-block;
         }
     </style>
 </head>
 
 <body>
-    <p>
-        <strong>Abstraction:</strong>
-        Abstraction means displaying only essential information and hiding the details.
-        Data abstraction refers to providing only essential information about the data to the outside world, hiding the
-        background details or implementation.
-    </p>
+    <div class="container">
+        <h1> Abstraction (Hiding Implementation Details)</h1>
+        <hr>
+        <h4>Definition</h4>
+        <p>💬 "Abstraction means exposing only essential features and <span class="highlight">hiding complex internal
+                logic</span> from the user."</p>
+        <strong>👉 Example (Car System)</strong>
+        <p>"Think of a car. When you drive, you use a steering wheel and pedals, but you don’t need to understand how
+            the engine works internally."</p>
+        <strong>🔹 Code Reference (Verbal Explanation)</strong>
+        <p>"In JavaScript, we use classes with private fields to hide internal logic. For example, in a bank account
+            system, users only see deposit and withdraw methods but not the internal calculations."</p>
+
+        <h4>Example: using private fields (#) in ES6:</h4>
+        <pre>
+            class BankAccount {
+                #balance;  // Private field
+              
+                constructor(accountNumber, balance) {
+                  this.accountNumber = accountNumber;
+                  this.#balance = balance;
+                }
+              
+                deposit(amount) {
+                  if (amount > 0) this.#balance += amount;
+                }
+              
+                withdraw(amount) {
+                  if (amount > 0 && amount <= this.#balance) {
+                    this.#balance -= amount;
+                  } else {
+                    console.log("Insufficient balance!");
+                  }
+                }
+              
+                getBalance() {
+                  return this.#balance;
+                }
+              }
+              
+              const myAccount = new BankAccount("123456", 1000);
+              console.log(myAccount.accountNumber); // Accessible
+              console.log(myAccount.getBalance());  // 1000 (Public method accessing private data)
+              myAccount.deposit(500);
+              console.log(myAccount.getBalance());  // 1500
+              myAccount.withdraw(2000);  // Insufficient balance!
+              
+        </pre>
+        <p><strong style="color: red;">Note:</strong>The <span class="highlight">#balance</span> field is private and can't be accessed directly.</p>
+
+    </div>
+
 
     <script>
         // Encapsulation example
@@ -46,7 +93,7 @@
         // let person3 = new person('Mukul', 21);
         let person3 = new fulldetailsofperson("mukul", 674)
         person3.add_Address('Delhi');
-        
+
         person3.getDetails();
         person3.detailwithmobile("98666");
 
@@ -63,8 +110,8 @@
 
         // PrintName.sayHi.call(nameObj, 42,"silver radiance");
 
-        
-        </script>
+
+    </script>
 </body>
 
 </html>

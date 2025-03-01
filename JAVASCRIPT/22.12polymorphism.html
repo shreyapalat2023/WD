@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polymorphism</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        strong {
+            margin: 10px 0;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Polymorphism (Multiple Forms)</h1>
+        <hr>
+        <h4>Definition</h4>
+        <p>💬 "Polymorphism allows different classes to have the <span class="highlight"> same method name</span> but
+            different implementations."</p>
+        <strong>👉 Example (Shape Area Calculation)</strong>
+        <p>"A 'Shape' class has an 'area()' method, but different shapes (Circle, Square) implement it differently."</p>
+        <strong>🔹 Code Reference (Verbal Explanation)</strong>
+        <p>"In JavaScript, we override the <span class="highlight">'area()'</span>method in different subclasses so that
+            a circle calculates area as πr², while a square calculates it as side²."</p>
+        <h4>Example</h4>
+        <pre>
+            class Shape {
+                area() {
+                  return "Area method should be implemented in subclass";
+                }
+              }
+              
+              class Circle extends Shape {
+                constructor(radius) {
+                  super();
+                  this.radius = radius;
+                }
+              
+                area() {
+                  return Math.PI * this.radius * this.radius;
+                }
+              }
+              
+              class Square extends Shape {
+                constructor(side) {
+                  super();
+                  this.side = side;
+                }
+              
+                area() {
+                  return this.side * this.side;
+                }
+              }
+              
+              const circle = new Circle(5);
+              console.log(circle.area()); // 78.5398
+              
+              const square = new Square(4);
+              console.log(square.area()); // 16
+        </pre>
+        <p><strong style="color: red;">Note:</strong>The area() method behaves differently in Circle and Square.</p>
+    </div>
+
+</body>
+
+</html>

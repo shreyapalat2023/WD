@@ -5,47 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encapsulation</title>
+    <link rel="stylesheet" href="common.css">
     <style>
-        * {
-            color: rgb(54, 96, 134);
-            /* font-size: 20px; */
+        strong {
+            display: inline-block;
+            margin: 10px 0;
         }
     </style>
 </head>
 
 <body>
-    <h1>Encapsulation</h1>
-    <ul>
+    <div class="container">
+        <h1>Encapsulation(Data Hiding)</h1>
+        <hr>
+        <h4>Definition</h4>
+        <p>💬 "Encapsulation means <span class="highlight">bundling data and methods</span>  together inside an object and restricting direct access to
+            some data to protect its integrity."</p>
+        <strong>👉 Example (Bank Account System)</strong>
+        <p>"Imagine a bank account where the balance should not be modified directly. We keep the balance private and
+            provide methods to deposit and withdraw money safely."</p>
+        <strong>🔹 Code Reference (Verbal Explanation)</strong>
+        <p>"In JavaScript, we can use private fields (#balance) to ensure the balance is not directly accessible. The
+            deposit and withdraw methods provide controlled access."</p>
+        <h4>Example</h4>
+        <pre>
+            class Person {
+                constructor(name, age) {
+                  this.name = name; // Public property
+                  let _age = age;   // Private variable (not truly private but follows convention)
+              
+                  this.getAge = function() {
+                    return _age;
+                  };
+              
+                  this.setAge = function(newAge) {
+                    if (newAge > 0) _age = newAge;
+                    else console.log("Age must be positive!");
+                  };
+                }
+              }
+              
+              const person1 = new Person("John", 25);
+              console.log(person1.name);  // John (public property)
+              console.log(person1.getAge()); // 25 (using method)
+              person1.setAge(30);
+              console.log(person1.getAge()); // 30
+              
+        </pre>
+        <p><strong style="color: red;">Note:</strong> Here, <span class="highlight">_age</span>  is not directly accessible outside the class, ensuring encapsulation.</p>
 
-        <li>The main feature of this object-based model is encapsulation, i.e., everything that the object needs is encapsulated inside that object. This includes object data (variables and arrays) and the methods and functions that operate on them.</li>
-        <li>In OOP, the object contains all the data and methods it needs within it.</li>
-        <li>For example, we can store variables like name and salary inside an Employee class along with a method to calculate the bonus amount.</li>
-        <li>This is known as encapsulation in OOP.</li>
-        <li>Wrapping the Data into a single unit its done through class, class is an example of encapsulation. </li>
-        <li>Class is a collection of datamember and member functions only</li>
-        <li>Without instance of class we are not able to access the property of class at out side of the class.</li>
-        <li>Instance = Object</li>
-        <li>let ObjectVar = new Classname</li>
-        <li><strong>Pros:</strong></li>
-        <li>with the help of class we are providing basic level of security to our code.</li>
-        <li>Classes can make your code more modular and easier to understand.</li>
-        <li>Classes support inheritance, which allows you to create more specialized objects that share some of the same
-            functionality as the base class.</li>
-        <li>Classes can help to organize your code and make it more efficient.</li>
-        <li><strong>Cons:</strong></li>
-        <li>Classes can make your code more complex, which can make it more difficult to understand, debug, and maintain.
-        </li>
-        <li>
-            Classes are not as flexible as other programming constructs, such as functions and prototypes, which can
-            make
-            them difficult to use in certain situations
-        </li>
-        <li>Classes may not be suitable for all types of projects, depending on the specific requirements and goals of the project.</li>
-    </ul>
+
+    </div>
+
+
+
     <script>
         // function addition
         class MathOperation {
-            addition(a,b){
+            addition(a, b) {
                 return a + b
             }
         }
@@ -55,7 +72,7 @@
         // Creating an object with new keyword END
 
         // access / calling methods of class of out side of the class with the help of class instance START
-        let res = MathOperationobj.addition(50,90)
+        let res = MathOperationobj.addition(50, 90)
         console.log(res);
         // access / calling methods of class of out side of the class with the help of class instance END 
     </script>
